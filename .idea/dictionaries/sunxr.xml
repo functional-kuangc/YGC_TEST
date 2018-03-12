@@ -1,13 +1,19 @@
 <component name="ProjectDictionaryState">
   <dictionary name="sunxr">
     <words>
+      <w>apptenant</w>
       <w>asctime</w>
       <w>filehandler</w>
       <w>getlog</w>
       <w>levelname</w>
+      <w>loginbtn</w>
       <w>nowtime</w>
+      <w>okbtn</w>
+      <w>pmcloud</w>
       <w>pymysql</w>
       <w>screenshot</w>
+      <w>selecttext</w>
+      <w>selecttitle</w>
       <w>sendkeys</w>
       <w>smtp</w>
       <w>smtplib</w>

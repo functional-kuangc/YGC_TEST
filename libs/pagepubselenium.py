@@ -503,3 +503,20 @@ class PagePubSelenium:
             return result
         except Exception as msg:
             self.__catchExceptionAndGetScreenshot("验证title异常: %s." % msg)
+
+    def isElementSelected(self, locator, timeout=10):
+        """
+        验证元素是否被选中.
+        locator支持: "id", "xpath", "link text", "partial link text", "name", "tag name", "class name", "css selector".
+        :param locator: ("id", "xxx")
+        :param timeout: 查找元素等待时间
+        :return: 是否选中，布尔值
+        """
+
+        try:
+            expected_element = self.findElement(locator=locator, timeout=timeout)
+            result = expected_element.is_selected()
+            logger.info("验证元素是否被选中: {key} => {value}.".format(key=locator[0], value=locator[1]))
+            return result
+        except Exception as msg:
+            self.__catchExceptionAndGetScreenshot("验证元素是否被选中异常: %s." % msg)
