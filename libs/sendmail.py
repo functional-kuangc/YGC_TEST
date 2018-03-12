@@ -14,10 +14,11 @@ from libs.logger import Logger
 # 导入time模块,用于时间戳定义
 import time
 
-__author__ = "sunxr"
-__version__ = "V1.1"
 
-logger = Logger(logger="SendMail").getlog()
+__author__ = "sunxr"
+__version__ = "V1.2"
+
+logger = Logger(logger="SendMail").getLog()
 
 
 class SendMail:
@@ -33,8 +34,8 @@ class SendMail:
         # 创建配置文件实例
         config = Configuration()
 
-        # 读取配置文件中框架主路径信息
-        self.__home_path = config.getConfigValue("frameworkPath", "path")
+        # 获取框架主路径信息
+        self.__home_path = os.path.dirname(os.path.dirname(__file__))
 
         # 读取发件服务器,端口,账号,密码,收件人
         self.__smtpserver = config.getConfigValue("sendMailInfo", "smtp_server")
@@ -43,7 +44,7 @@ class SendMail:
         self.__psw = config.getConfigValue("sendMailInfo", "password")
         self.__receivers = config.getConfigValue("sendMailInfo", "receivers").split(";")  # 得到收件人列表
 
-    def getReportFile(self):
+    def __getReportFile(self):
         """
         获取最新的测试报告,作为发送邮件的内容以及附件.
         :return: report_file
@@ -64,14 +65,14 @@ class SendMail:
         except Exception as msg:
             logger.error("获取最新测试报告异常: %s." % msg)
 
-    def editMail(self):
+    def __editMail(self):
         """
         读取最新的测试报告,并且编辑到邮件中,返回需要发送的邮件.
         :return: mail
         """
 
         # 读取测试报告内容
-        report_file = self.getReportFile()
+        report_file = self.__getReportFile()
         with open(report_file, "rb") as report:
            test_report_file = report.read()
 
@@ -103,7 +104,7 @@ class SendMail:
 
         # 获取邮件内容
         global smtp
-        mail_file = self.editMail()
+        mail_file = self.__editMail()
 
         # 登录邮箱并发送邮件
         try:

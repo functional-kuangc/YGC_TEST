@@ -1,15 +1,15 @@
 # coding: utf-8
-# 导入Configuration模块,用于操作配置文件
-from libs.configuration import Configuration
 # 导入libs下的logger日志模块
 from libs.logger import Logger
 # 导入selenium中的webdriver
 from selenium import webdriver
+# 导入os模块，获取文件路径
+import os
 
 __author__ = "sunxr"
-__version__ = "V1.1"
+__version__ = "V1.2"
 
-logger = Logger("Browser").getlog()
+logger = Logger("Browser").getLog()
 
 
 def browser(browser_type):
@@ -19,11 +19,8 @@ def browser(browser_type):
     :return: driver
     """
 
-    # 创建配置文件实例
-    config = Configuration()
-
-    # 读取配置文件中框架主路径信息
-    home_path = config.getConfigValue("frameworkPath", "path")
+    # 获取框架主路径信息
+    home_path = os.path.dirname(os.path.dirname(__file__))
 
     # 定义浏览器驱动的路径
     chrome_driver_path = home_path + '/tools/chromedriver'

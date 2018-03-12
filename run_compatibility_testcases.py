@@ -10,7 +10,7 @@ from libs.configuration import Configuration
 import time
 
 __author__ = "sunxr"
-__version__ = "V1.1"
+__version__ = "V1.2"
 
 
 # 集成测试用例执行和发送邮件功能
@@ -19,8 +19,9 @@ def executeCompatibilityTestcasesAndSendMail(thread_browser_type):
     集成测试用例执行和发送邮件功能.
     :param thread_browser_type: 浏览器类型
     """
-    TestCaseSuite().executeCompatibilityTestcases(thread_browser_type)
-    # SendMail().sendTestReport()
+    TestCaseSuite().executeCompatibilityTestCases(thread_browser_type)
+    SendMail().sendTestReport()
+
 
 # 实例化配置文件
 config = Configuration()

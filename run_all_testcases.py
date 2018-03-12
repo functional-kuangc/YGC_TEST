@@ -5,7 +5,7 @@ from libs.testcasesuite import TestCaseSuite
 from libs.sendmail import SendMail
 
 __author__ = "sunxr"
-__version__ = "V1.1"
+__version__ = "V1.2"
 
-TestCaseSuite().executeTestcases()
+TestCaseSuite().executeTestCases()
 SendMail().sendTestReport()

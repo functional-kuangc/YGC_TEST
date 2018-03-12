@@ -7,9 +7,9 @@ from libs.configuration import Configuration
 import pymysql
 
 __author__ = "sunxr"
-__version__ = "V1.1"
+__version__ = "V1.2"
 
-logger = Logger("MySQLOperation").getlog()
+logger = Logger("MySQLOperation").getLog()
 
 
 class MySQLOperation:
@@ -29,10 +29,10 @@ class MySQLOperation:
         self.__database = self.__config.getConfigValue("mysqlInfo", "database")
 
         # 连接数据库,获取操作游标
-        self.__db = self.dbConnect()
+        self.__db = self.__dbConnect()
         self.__cursor = self.__db.cursor()
 
-    def dbConnect(self):
+    def __dbConnect(self):
         """
         连接MySQL数据库.
         """
@@ -56,7 +56,7 @@ class MySQLOperation:
         except Exception as msg:
             logger.error("关闭数据库连接发生异常: %s." % msg)
 
-    def sqlExecute(self, sql):
+    def __sqlExecute(self, sql):
         """
         执行sql语句公共方法.
         :param sql: 需要处理的sql语句
@@ -75,7 +75,7 @@ class MySQLOperation:
         处理sql创建语句.
         :param sql: 需要处理的sql创建语句
         """
-        self.sqlExecute(sql)
+        self.__sqlExecute(sql)
 
     def sqlSelect(self, sql):
         """
@@ -83,7 +83,7 @@ class MySQLOperation:
         :param sql: 需要处理的sql查询语句
         """
 
-        self.sqlExecute(sql)
+        self.__sqlExecute(sql)
 
     def sqlInsert(self, sql):
         """
@@ -91,7 +91,7 @@ class MySQLOperation:
         :param sql: 需要处理的sql插入语句
         """
 
-        self.sqlExecute(sql)
+        self.__sqlExecute(sql)
 
     def sqlUpdate(self, sql):
         """
@@ -99,7 +99,7 @@ class MySQLOperation:
         :param sql: 需要处理的sql修改语句
         """
 
-        self.sqlExecute(sql)
+        self.__sqlExecute(sql)
 
     def sqlDelete(self, sql):
         """
@@ -107,7 +107,7 @@ class MySQLOperation:
         :param sql: 需要处理的sql删除语句
         """
 
-        self.sqlExecute(sql)
+        self.__sqlExecute(sql)
 
     def sqlFetchOne(self, sql):
         """

@@ -3,11 +3,11 @@
 import logging
 # 导入time模块,用于时间戳处理
 import time
-# 导入Configuration模块,用于操作配置文件
-from libs.configuration import Configuration
+# 导入os模块，获取文件路径
+import os
 
 __author__ = "sunxr"
-__version__ = "V1.1"
+__version__ = "V1.2"
 
 
 class Logger:
@@ -29,11 +29,8 @@ class Logger:
         # 定义日志名称中的时间戳
         nowtime = time.strftime("%Y%m%d%H%M%S")
 
-        # 创建配置文件实例
-        config = Configuration()
-
-        # 读取配置文件中框架主路径信息
-        home_path = config.getConfigValue("frameworkPath", "path")
+        # 获取框架主路径信息
+        home_path = os.path.dirname(os.path.dirname(__file__))
 
         # 定义日志存放路径
         log_path = home_path + '/logs/'
@@ -65,5 +62,9 @@ class Logger:
         self.__logger.addHandler(filehandler)
         self.__logger.addHandler(streamhandler)
 
-    def getlog(self):
+    def getLog(self):
+        """
+        获取日志记录器.
+        :return: 日志记录器
+        """
         return self.__logger

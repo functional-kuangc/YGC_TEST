@@ -11,15 +11,17 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 # 导入同目录下的logger日志模块
 from libs.logger import Logger
+# 导入Configuration模块，用于操作配置文件
+from libs.configuration import Configuration
 # 导入时间类
 import time
-# 导入Configuration模块,用于操作配置文件
-from libs.configuration import Configuration
+# 导入os模块，获取文件路径
+import os
 
 __author__ = "sunxr"
-__version__ = "V1.1"
+__version__ = "V1.2"
 
-logger = Logger("PagePubSelenium").getlog()
+logger = Logger("PagePubSelenium").getLog()
 
 
 class PagePubSelenium:
@@ -37,10 +39,10 @@ class PagePubSelenium:
         # 创建配置文件实例
         self.__config = Configuration()
 
-        # 读取配置文件中框架主路径信息
-        self.__home_path = self.__config.getConfigValue("frameworkPath", "path")
+        # 获取框架主路径信息
+        self.__home_path = os.path.dirname(os.path.dirname(__file__))
 
-    def getScreenshot(self):
+    def __getScreenShot(self):
         """
         截图操作,将图片保存在screenshots中.
         """
@@ -57,14 +59,14 @@ class PagePubSelenium:
         except Exception as msg:
             logger.error("截图异常: %s." % msg)
 
-    def catchExceptionAndGetScreenshot(self, msg):
+    def __catchExceptionAndGetScreenshot(self, msg):
         """
-        捕获当前测试异常,并且截图保存在screenshoots文件夹中.
+        捕获当前测试异常,并且截图保存在screenshots文件夹中.
         :param msg: 捕获的异常信息
         """
 
         logger.error(msg)
-        self.getScreenshot()
+        self.__getScreenShot()
 
     def openURL(self):
         """
@@ -81,13 +83,14 @@ class PagePubSelenium:
             self.__driver.get(url)
             logger.info("打开待测网址: %s." % url)
         except Exception as msg:
-            self.catchExceptionAndGetScreenshot("打开待测网址异常: %s." % msg)
+            self.__catchExceptionAndGetScreenshot("打开待测网址异常: %s." % msg)
 
     def openExceptedURL(self, expected_title='', timeout=30):
         """
         打开待测网址,并判断打开的网址title是否符合预期.
         :param expected_title: 待测网址期望title
         :param timeout: 查找元素等待时间
+        :return: 网址的title是否符合预期，布尔值
         """
 
         # 读取待测网址
@@ -99,9 +102,9 @@ class PagePubSelenium:
             self.__driver.get(url)
             logger.info("打开待测网址: %s." % url)
             # EC.title_is  判断当前页面的title是否完全等于预期字符串,返回布尔值
-            WebDriverWait(self.__driver, timeout, 1).until(EC.title_is(expected_title))
+            return WebDriverWait(self.__driver, timeout, 1).until(EC.title_is(expected_title))
         except Exception as msg:
-            self.catchExceptionAndGetScreenshot("打开待测网址异常: %s." % msg)
+            self.__catchExceptionAndGetScreenshot("打开待测网址异常: %s." % msg)
 
     def maximizeWindow(self):
         """
@@ -113,7 +116,7 @@ class PagePubSelenium:
             self.__driver.maximize_window()
             logger.info("浏览器最大化.")
         except Exception as msg:
-            self.catchExceptionAndGetScreenshot("浏览器最大化异常: %s." % msg)
+            self.__catchExceptionAndGetScreenshot("浏览器最大化异常: %s." % msg)
 
     def back(self):
         """
@@ -124,7 +127,7 @@ class PagePubSelenium:
             self.__driver.back()
             logger.info("浏览器执行返回操作.")
         except Exception as msg:
-            self.catchExceptionAndGetScreenshot("浏览器执行返回操作异常: %s." % msg)
+            self.__catchExceptionAndGetScreenshot("浏览器执行返回操作异常: %s." % msg)
 
     def forward(self):
         """
@@ -135,7 +138,7 @@ class PagePubSelenium:
             self.__driver.forward()
             logger.info("浏览器执行前进操作.")
         except Exception as msg:
-            self.catchExceptionAndGetScreenshot("浏览器执行前进操作异常: %s." % msg)
+            self.__catchExceptionAndGetScreenshot("浏览器执行前进操作异常: %s." % msg)
 
     def closeCurrentBrowser(self):
         """
@@ -146,7 +149,7 @@ class PagePubSelenium:
             self.__driver.close()
             logger.info("关闭当前浏览器.")
         except Exception as msg:
-            self.catchExceptionAndGetScreenshot("关闭当前浏览器异常: %s." % msg)
+            self.__catchExceptionAndGetScreenshot("关闭当前浏览器异常: %s." % msg)
 
     def quitAllBrowsers(self):
         """
@@ -157,7 +160,7 @@ class PagePubSelenium:
             self.__driver.quit()
             logger.info("关闭所有浏览器进程.")
         except Exception as msg:
-            self.catchExceptionAndGetScreenshot("关闭所有浏览器进程异常: %s." % msg)
+            self.__catchExceptionAndGetScreenshot("关闭所有浏览器进程异常: %s." % msg)
 
     @staticmethod
     def pageSleep(timeout=5):
@@ -184,9 +187,10 @@ class PagePubSelenium:
             logger.info("定位到指定元素: {key} => {value}.".format(key=locator[0], value=locator[1]))
             return element
         except TimeoutException:
-            self.catchExceptionAndGetScreenshot("没有找到指定元素: {key} => {value}.".format(key=locator[0], value=locator[1]))
+            self.__catchExceptionAndGetScreenshot("没有找到指定元素: {key} => {value}."
+                                                  .format(key=locator[0], value=locator[1]))
         except Exception as msg:
-            self.catchExceptionAndGetScreenshot("定位元素其他异常: %s." % msg)
+            self.__catchExceptionAndGetScreenshot("定位元素其他异常: %s." % msg)
 
     def findElements(self, locator, timeout=10):
         """
@@ -203,9 +207,10 @@ class PagePubSelenium:
             logger.info("定位到指定元素: {key} => {value}.".format(key=locator[0], value=locator[1]))
             return elements
         except TimeoutException:
-            self.catchExceptionAndGetScreenshot("没有找到指定元素: {key} => {value}.".format(key=locator[0], value=locator[1]))
+            self.__catchExceptionAndGetScreenshot("没有找到指定元素: {key} => {value}."
+                                                  .format(key=locator[0], value=locator[1]))
         except Exception as msg:
-            self.catchExceptionAndGetScreenshot("定位元素其他异常: %s." % msg)
+            self.__catchExceptionAndGetScreenshot("定位元素其他异常: %s." % msg)
 
     def click(self, locator, timeout=10):
         """
@@ -220,7 +225,7 @@ class PagePubSelenium:
             element.click()
             logger.info("鼠标左键点击指定元素: {key} => {value}.".format(key=locator[0], value=locator[1]))
         except Exception as msg:
-            self.catchExceptionAndGetScreenshot("鼠标左键点击指定元素异常: %s." % msg)
+            self.__catchExceptionAndGetScreenshot("鼠标左键点击指定元素异常: %s." % msg)
 
     def moveMouseToElement(self, locator, timeout=10):
         """
@@ -235,7 +240,7 @@ class PagePubSelenium:
             ActionChains(self.__driver).move_to_element(mouse).perform()
             logger.info("鼠标悬停在指定元素上: {key} => {value}.".format(key=locator[0], value=locator[1]))
         except Exception as msg:
-            self.catchExceptionAndGetScreenshot("鼠标悬停在指定元素上异常: %s." % msg)
+            self.__catchExceptionAndGetScreenshot("鼠标悬停在指定元素上异常: %s." % msg)
 
     def clear(self, locator, timeout=10):
         """
@@ -250,7 +255,7 @@ class PagePubSelenium:
             element.clear()
             logger.info("清空指定文本框元素中内容,元素为: {key} => {value}.".format(key=locator[0], value=locator[1]))
         except Exception as msg:
-            self.catchExceptionAndGetScreenshot("清空指定文本框元素中内容异常: %s." % msg)
+            self.__catchExceptionAndGetScreenshot("清空指定文本框元素中内容异常: %s." % msg)
 
     def sendText(self, locator, text, timeout=10):
         """
@@ -267,7 +272,7 @@ class PagePubSelenium:
             element.send_keys(text)
             logger.info("在指定文本框元素中输入文本,元素为: {key} => {value}.".format(key=locator[0], value=locator[1]))
         except Exception as msg:
-            self.catchExceptionAndGetScreenshot("在指定文本框中输入文本异常: %s." % msg)
+            self.__catchExceptionAndGetScreenshot("在指定文本框中输入文本异常: %s." % msg)
 
     def selectByIndex(self, locator, index, timeout=10):
         """
@@ -283,7 +288,7 @@ class PagePubSelenium:
             Select(select).select_by_index(index=index)
             logger.info("根据索引选择下拉框中指定内容,指定索引为: %s." % str(index))
         except Exception as msg:
-            self.catchExceptionAndGetScreenshot("根据索引选择下拉框中指定内容异常: %s." % msg)
+            self.__catchExceptionAndGetScreenshot("根据索引选择下拉框中指定内容异常: %s." % msg)
 
     def selectByValue(self, locator, value, timeout=10):
         """
@@ -299,7 +304,7 @@ class PagePubSelenium:
             Select(select).select_by_value(value=value)
             logger.info("根据元素value值选择下拉框中指定内容,指定value值为: %s." % value)
         except Exception as msg:
-            self.catchExceptionAndGetScreenshot("根据元素value值选择下拉框中指定内容异常: %s." % msg)
+            self.__catchExceptionAndGetScreenshot("根据元素value值选择下拉框中指定内容异常: %s." % msg)
 
     def selectByText(self, locator, text, timeout=10):
         """
@@ -315,7 +320,7 @@ class PagePubSelenium:
             Select(select).select_by_visible_text(text=text)
             logger.info("根据下拉选项内容选择下拉框中指定内容,指定内容为: %s." % text)
         except Exception as msg:
-            self.catchExceptionAndGetScreenshot("根据下拉选项内容选择下拉框中指定内容异常: %s." % msg)
+            self.__catchExceptionAndGetScreenshot("根据下拉选项内容选择下拉框中指定内容异常: %s." % msg)
 
     def getTitle(self):
         """
@@ -341,7 +346,7 @@ class PagePubSelenium:
             logger.info("获取到的元素文本为: %s." % element_text)
             return element_text
         except Exception as msg:
-            self.catchExceptionAndGetScreenshot("获取元素文本异常: %s." % msg)
+            self.__catchExceptionAndGetScreenshot("获取元素文本异常: %s." % msg)
 
     def getElementAttribute(self, locator, name, timeout=10):
         """
@@ -359,19 +364,19 @@ class PagePubSelenium:
             logger.info("获取到的元素属性值为: {name} => {value}.".format(name=name, value=value))
             return value
         except Exception as msg:
-            self.catchExceptionAndGetScreenshot("获取元素属性值异常: %s." % msg)
+            self.__catchExceptionAndGetScreenshot("获取元素属性值异常: %s." % msg)
 
-    def switchToFrame(self, iframe_id):
+    def switchToFrame(self, iframe):
         """
         切换网页内嵌iframe框架.
-        :param iframe_id: iframe元素的id
+        :param iframe: iframe元素的定位
         """
 
         try:
-            self.__driver.switch_to.frame(iframe_id)
-            logger.info("切换到指定的iframe: %s." % iframe_id)
+            self.__driver.switch_to.frame(iframe)
+            logger.info("切换到指定的iframe: %s." % iframe)
         except Exception as msg:
-            self.catchExceptionAndGetScreenshot("切换到指定的iframe异常: %s." % msg)
+            self.__catchExceptionAndGetScreenshot("切换到指定的iframe异常: %s." % msg)
 
     def switchToDefaultContent(self):
         """
@@ -422,9 +427,9 @@ class PagePubSelenium:
                 logger.info("切换到弹窗.")
                 return alert
             else:
-                self.catchExceptionAndGetScreenshot("没有发现弹窗.")
+                self.__catchExceptionAndGetScreenshot("没有发现弹窗.")
         except NoAlertPresentException:
-            self.catchExceptionAndGetScreenshot("没有发现弹窗.")
+            self.__catchExceptionAndGetScreenshot("没有发现弹窗.")
 
     def getAlertText(self):
         """
@@ -465,7 +470,7 @@ class PagePubSelenium:
             alert.send_keys(text)
             logger.info("在弹窗的文本框中输入信息.")
         except Exception as msg:
-            self.catchExceptionAndGetScreenshot("在弹窗的文本框中输入信息异常: %s." % msg)
+            self.__catchExceptionAndGetScreenshot("在弹窗的文本框中输入信息异常: %s." % msg)
 
     def isTitle(self, expected_title, timeout=10):
         """
@@ -481,7 +486,7 @@ class PagePubSelenium:
             logger.info("验证title是否为: %s." % expected_title)
             return result
         except Exception as msg:
-            self.catchExceptionAndGetScreenshot("验证title异常: %s." % msg)
+            self.__catchExceptionAndGetScreenshot("验证title异常: %s." % msg)
 
     def isTitleContains(self, expected_title, timeout=10):
         """
@@ -497,4 +502,4 @@ class PagePubSelenium:
             logger.info("验证title是否包含: %s." % expected_title)
             return result
         except Exception as msg:
-            self.catchExceptionAndGetScreenshot("验证title异常: %s." % msg)
+            self.__catchExceptionAndGetScreenshot("验证title异常: %s." % msg)

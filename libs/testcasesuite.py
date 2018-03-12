@@ -11,11 +11,13 @@ from libs.logger import Logger
 from libs.configuration import Configuration
 # 导入setBrowserType方法,用于多线程启动不同浏览器的兼容性测试
 from libs.glo_browsertype import setBrowserType
+# 导入os模块，获取文件路径
+import os
 
 __author__ = "sunxr"
-__version__ = "V1.1"
+__version__ = "V1.2"
 
-logger = Logger("TestCaseSuite").getlog()
+logger = Logger("TestCaseSuite").getLog()
 
 
 class TestCaseSuite:
@@ -28,8 +30,8 @@ class TestCaseSuite:
         # 创建配置文件实例
         config = Configuration()
 
-        # 读取配置文件中框架主路径信息
-        self.__home_path = config.getConfigValue("frameworkPath", "path")
+        # 获取框架主路径信息
+        self.__home_path = os.path.dirname(os.path.dirname(__file__))
 
         # 读取配置文件中的测试用例路径和测试用例执行规则
         self.__test_path = config.getConfigValue("testCaseSuite", "test_path")
@@ -37,7 +39,7 @@ class TestCaseSuite:
         self.__test_rule = config.getConfigValue("testCaseSuite", "test_rule")
         logger.info("测试用例执行规则为: %s." % self.__test_rule)
 
-    def addCase(self):
+    def __addCase(self):
         """
         加载所有测试用例.
         :return: 需要执行的测试用例.
@@ -54,7 +56,7 @@ class TestCaseSuite:
         except Exception as msg:
             logger.error("加载测试用例异常: %s." % msg)
 
-    def runCase(self, testcases):
+    def __runCase(self, testcases):
         """
         执行测试用例,生成测试报告.
         :param testcases: 测试用例
@@ -80,18 +82,18 @@ class TestCaseSuite:
         except Exception as msg:
             logger.error("执行测试用例异常: %s." % msg)
 
-    def executeTestcases(self):
+    def executeTestCases(self):
         """
         加载测试用例,执行测试用例方法集成.
         """
 
-        self.runCase(self.addCase())
+        self.__runCase(self.__addCase())
 
-    def executeCompatibilityTestcases(self, browser_type):
+    def executeCompatibilityTestCases(self, browser_type):
         """
         加载测试用例,设置兼容的浏览器类型,执行测试用例方法集成.
         :param browser_type: 浏览器类型
         """
-        testcases = self.addCase()
+        testcases = self.__addCase()
         setBrowserType(browser_type)
-        self.runCase(testcases=testcases)
+        self.__runCase(testcases=testcases)

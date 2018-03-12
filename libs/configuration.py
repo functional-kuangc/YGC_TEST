@@ -1,15 +1,18 @@
 # coding: utf-8
+# 导入libs下的logger日志模块
+from libs.logger import Logger
 # 导入ConfigParser模块,用于操作配置文件
 from configparser import ConfigParser
+# 导入os模块，获取文件路径
+import os
 
 __author__ = "sunxr"
-__version__ = "V1.1"
+__version__ = "V1.2"
 
-# 手动设置公共的配置文件路径,为了读取其中框架目录
-path_config = ConfigParser()
-config_path = '/Users/sunxr/Documents/automation_framework/config/config.ini'
-path_config.read(config_path)
-home_path = path_config.get("frameworkPath", "path")
+logger = Logger("Configuration").getLog()
+
+# 获取框架主路径信息
+home_path = os.path.dirname(os.path.dirname(__file__))
 
 
 class Configuration:
@@ -24,7 +27,7 @@ class Configuration:
 
         self.__config = ConfigParser()
 
-    def readConfig(self):
+    def __readConfig(self):
         """
         获取配置文件.
         """
@@ -34,9 +37,9 @@ class Configuration:
             config_file_path = home_path + '/config/config.ini'
             self.__config.read(config_file_path)
         except Exception as msg:
-            print("获取配置文件异常: %s." % msg)
+            logger.error("获取配置文件异常: %s." % msg)
 
-    def readConfigOptions(self, section):
+    def __readConfigOptions(self, section):
         """
         读取配置文件中的某个节点下的所有选项.
         :param section: 节点
@@ -47,9 +50,9 @@ class Configuration:
             options = self.__config.options(section=section)
             return options
         except Exception as msg:
-            print("读取配置文件选项错误: %s." % msg)
+            logger.error("读取配置文件选项错误: %s." % msg)
 
-    def readConfigValue(self, section, option):
+    def __readConfigValue(self, section, option):
         """
         读取配置文件中的具体内容.
         :param section: 节点
@@ -61,7 +64,7 @@ class Configuration:
             value = self.__config.get(section=section, option=option)
             return value
         except Exception as msg:
-            print("读取配置文件信息错误: %s." % msg)
+            logger.error("读取配置文件信息错误: %s." % msg)
 
     def getConfigValue(self, section, option):
         """
@@ -71,8 +74,8 @@ class Configuration:
         :return: 配置文件内容
         """
 
-        self.readConfig()
-        return self.readConfigValue(section=section, option=option)
+        self.__readConfig()
+        return self.__readConfigValue(section=section, option=option)
 
     def getConfigOptions(self, section):
         """
@@ -81,5 +84,5 @@ class Configuration:
         :return: 节点下的所有选项,list列表
         """
 
-        self.readConfig()
-        return self.readConfigOptions(section=section)
+        self.__readConfig()
+        return self.__readConfigOptions(section=section)
