@@ -1,8 +1,13 @@
 <component name="ProjectDictionaryState">
   <dictionary name="sunxr">
     <words>
+      <w>appcenter</w>
       <w>apptenant</w>
       <w>asctime</w>
+      <w>basicarchives</w>
+      <w>contacttype</w>
+      <w>dropdown</w>
+      <w>dropdownbtn</w>
       <w>filehandler</w>
       <w>getlog</w>
       <w>levelname</w>
@@ -10,6 +15,7 @@
       <w>nowtime</w>
       <w>okbtn</w>
       <w>pmcloud</w>
+      <w>problemreason</w>
       <w>pymysql</w>
       <w>screenshot</w>
       <w>selecttext</w>
@@ -22,6 +28,7 @@
       <w>testcase</w>
       <w>testcases</w>
       <w>webdriver</w>
+      <w>workquality</w>
       <w>yonyou</w>
     </words>
   </dictionary>

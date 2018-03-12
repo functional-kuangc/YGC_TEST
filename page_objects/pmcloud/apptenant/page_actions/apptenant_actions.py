@@ -2,7 +2,7 @@
 # 导入公共函数Selenium封装类
 from libs.pagepubselenium import PagePubSelenium
 # 导入企业帐号选择页元素定位
-from page_objects.pmcloud.apptenant.page_elements.apptenant_elements import Apptenant
+from page_objects.pmcloud.apptenant.page_elements.apptenant import Apptenant
 # 导入页面等待装饰器
 from libs.timedecorator import timeDecorator
 
@@ -10,13 +10,11 @@ from libs.timedecorator import timeDecorator
 class ApptenantActions(PagePubSelenium):
     """企业帐号选择页操作类"""
 
-    @timeDecorator(1)
     def getApptenantTitle(self):
         """获取企业帐号选择页标题"""
 
         return self.getTitle()
 
-    @timeDecorator(1)
     def getSelectText(self):
         """获取选择框名称"""
 

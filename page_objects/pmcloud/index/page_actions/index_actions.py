@@ -2,7 +2,7 @@
 # 导入公共函数Selenium封装类
 from libs.pagepubselenium import PagePubSelenium
 # 导入友工程首页元素定位
-from page_objects.pmcloud.index.page_elements.pmcloud_index import PMCloudIndex
+from page_objects.pmcloud.index.page_elements.index import PMCloudIndex
 # 导入页面等待装饰器
 from libs.timedecorator import timeDecorator
 

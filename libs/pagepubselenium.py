@@ -366,13 +366,16 @@ class PagePubSelenium:
         except Exception as msg:
             self.__catchExceptionAndGetScreenshot("获取元素属性值异常: %s." % msg)
 
-    def switchToFrame(self, iframe):
+    def switchToFrame(self, locator, timeout=10):
         """
         切换网页内嵌iframe框架.
-        :param iframe: iframe元素的定位
+        locator支持: "id", "xpath", "link text", "partial link text", "name", "tag name", "class name", "css selector".
+        :param locator: ("id", "xxx")
+        :param timeout: 查找元素等待时间
         """
 
         try:
+            iframe = self.findElement(locator=locator, timeout=timeout)
             self.__driver.switch_to.frame(iframe)
             logger.info("切换到指定的iframe: %s." % iframe)
         except Exception as msg:

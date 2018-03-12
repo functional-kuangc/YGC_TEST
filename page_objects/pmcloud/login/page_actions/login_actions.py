@@ -2,7 +2,7 @@
 # 导入公共函数Selenium封装类
 from libs.pagepubselenium import PagePubSelenium
 # 导入友工程登录页元素定位
-from page_objects.pmcloud.login.page_elements.pmcloud_login import PMCloudLogin
+from page_objects.pmcloud.login.page_elements.login import PMCloudLogin
 # 导入页面等待装饰器
 from libs.timedecorator import timeDecorator
 
