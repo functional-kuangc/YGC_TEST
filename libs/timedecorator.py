@@ -4,7 +4,11 @@ import time
 
 
 def timeDecorator(timeout=2):
-    """页面等待装饰器"""
+    """
+    页面等待装饰器.
+    :param timeout: 页面等待时间，单位：秒
+    :return: 执行操作后页面等待一定时间
+    """
     def funcDecorator(func):
         def wrapper(*args, **kwargs):
             func(*args, **kwargs)

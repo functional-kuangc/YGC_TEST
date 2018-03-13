@@ -12,12 +12,19 @@ class PMCloudIndexActions(PagePubSelenium):
 
     @timeDecorator(1)
     def openPMCloudIndex(self, expected_title):
-        """打开友工程首页"""
+        """
+        打开友工程首页，验证网页标题是否正确.
+        :param expected_title: 期望网页标题
+        :return: 打开网页，返回布尔值
+        """
 
         self.openExceptedURL(expected_title=expected_title)
 
     @timeDecorator(1)
     def clickLoginButton(self):
-        """点击登录按钮"""
+        """
+        点击登录按钮.
+        :return: 跳转到登录页面
+        """
 
         self.click(PMCloudIndex.LOGINBTN)
