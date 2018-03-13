@@ -5,13 +5,41 @@
       <w>apptenant</w>
       <w>asctime</w>
       <w>basicarchives</w>
+      <w>cancelbtn</w>
+      <w>cardclose</w>
+      <w>cardinfo</w>
+      <w>closebtn</w>
       <w>contacttype</w>
       <w>createbtn</w>
       <w>deletebtn</w>
       <w>dropdown</w>
       <w>dropdownbtn</w>
+      <w>editapprovaldateinputtext</w>
+      <w>editapprovaldatetext</w>
       <w>editbtn</w>
+      <w>editcodeinputtext</w>
+      <w>editcodetext</w>
+      <w>editdescriptioninput</w>
+      <w>editdescriptioninputtext</w>
+      <w>editdescriptiontext</w>
+      <w>editmanagerinputtext</w>
+      <w>editmanagertext</w>
+      <w>editnameinputtext</w>
+      <w>editnametext</w>
+      <w>endapprovaldateinputtext</w>
+      <w>endapprovaldatetext</w>
       <w>endbtn</w>
+      <w>endcodeinputtext</w>
+      <w>endcodetext</w>
+      <w>enddescriptioninput</w>
+      <w>enddescriptiontext</w>
+      <w>endenddateinput</w>
+      <w>endenddatetext</w>
+      <w>endmanagerinputtext</w>
+      <w>endmanagertext</w>
+      <w>endnameinputtext</w>
+      <w>endnametext</w>
+      <w>endtodaydate</w>
       <w>enterprisebtn</w>
       <w>filehandler</w>
       <w>firestproject</w>
@@ -24,15 +52,44 @@
       <w>firstprojectname</w>
       <w>firstprojectradiobtn</w>
       <w>getlog</w>
+      <w>infoapprovaldateinputtext</w>
+      <w>infoapprovaldatetext</w>
+      <w>infocodeinputtext</w>
+      <w>infocodetext</w>
+      <w>infocommonxpath</w>
+      <w>infodescriptioninputtext</w>
+      <w>infodescriptiontext</w>
+      <w>infoenddateinputtext</w>
+      <w>infoenddatetext</w>
+      <w>infomanagerinputtext</w>
+      <w>infomanagertext</w>
+      <w>infonameinputtext</w>
+      <w>infonametext</w>
       <w>levelname</w>
+      <w>listclose</w>
+      <w>listinfo</w>
       <w>loginbtn</w>
       <w>memberbtn</w>
       <w>modulename</w>
+      <w>newapprovaldateinput</w>
+      <w>newapprovaldatetext</w>
+      <w>newcodeinput</w>
+      <w>newcodetext</w>
+      <w>newdescriptioninput</w>
+      <w>newdescriptiontext</w>
+      <w>newmanagerinput</w>
+      <w>newmanagertext</w>
+      <w>newnameinput</w>
+      <w>newnametext</w>
+      <w>newtodaydate</w>
       <w>nowtime</w>
       <w>okbtn</w>
       <w>pmcloud</w>
       <w>problemreason</w>
       <w>pymysql</w>
+      <w>repeatclose</w>
+      <w>repeatinfo</w>
+      <w>savebtn</w>
       <w>screenshot</w>
       <w>searchbtn</w>
       <w>searchinput</w>
@@ -46,6 +103,7 @@
       <w>streamhandler</w>
       <w>testcase</w>
       <w>testcases</w>
+      <w>todaydate</w>
       <w>webdriver</w>
       <w>workquality</w>
       <w>yonyou</w>
