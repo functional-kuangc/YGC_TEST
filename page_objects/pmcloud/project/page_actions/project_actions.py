@@ -9,4 +9,7 @@ from libs.timedecorator import timeDecorator
 
 class ProjectActions(PagePubSelenium):
     """项目档案操作类"""
-    pass
+
+    @timeDecorator(1)
+    def clickProject(self):
+        """点击项目，打开项目"""

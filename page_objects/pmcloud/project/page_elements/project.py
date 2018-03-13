@@ -121,6 +121,23 @@ class Project:
     NEWAPPROVALDATEINPUT = ("xpath", INFOCOMMONXPATH + "/div[2]/div[2]/div[1]/div/div/input")  # 日期参照
     NEWTODAYDATE = ("xpath", "html/body/div[4]/div/div/div/div/div[2]/div[3]/span/a")  # 今天
 
+    # 取消创建
+    CANCELMSGDIV3 = ("xpath", "html/body/div[3]/div/div/div/div/div[2]")  # 取消提示信息
+    CANCELMSGDIV4 = ("xpath", "html/body/div[4]/div/div/div/div/div[2]")  # 取消提示信息
+    CANCELMSGDIV5 = ("xpath", "html/body/div[5]/div/div/div/div/div[2]")  # 取消提示信息
+
+    CANCELCANCELBTN3 = ("xpath", "html/body/div[3]/div/div/div/div/div[3]/button[1]")  # 取消取消
+    CANCELCANCELBTN4 = ("xpath", "html/body/div[4]/div/div/div/div/div[3]/button[1]")  # 取消取消
+    CANCELCANCELBTN5 = ("xpath", "html/body/div[5]/div/div/div/div/div[3]/button[1]")  # 取消取消
+
+    CANCELOKBTN3 = ("xpath", "html/body/div[3]/div/div/div/div/div[3]/button[2]")  # 确定取消
+    CANCELOKBTN4 = ("xpath", "html/body/div[4]/div/div/div/div/div[3]/button[2]")  # 确定取消
+    CANCELOKBTN5 = ("xpath", "html/body/div[5]/div/div/div/div/div[3]/button[2]")  # 确定取消
+
+    CANCELCLOSEBTN3 = ("xpath", "html/body/div[3]/div/div/div/div/div[1]/button")  # 关闭取消
+    CANCELCLOSEBTN4 = ("xpath", "html/body/div[4]/div/div/div/div/div[1]/button")  # 关闭取消
+    CANCELCLOSEBTN5 = ("xpath", "html/body/div[5]/div/div/div/div/div[1]/button")  # 关闭取消
+
     # 项目编辑
     EDITNAMETEXT = ("xpath", INFOCOMMONXPATH + "/div[2]/div[1]/div[1]")  # 项目名称字段
     EDITCODETEXT = ("xpath", INFOCOMMONXPATH + "/div[2]/div[2]/div[1]")  # 项目编码字段
@@ -152,6 +169,12 @@ class Project:
     ENDENDDATEINPUT = ("xpath", INFOCOMMONXPATH + "/div[2]/div[4]/div/div/div/input")  # 日期参照
     ENDTODAYDATE = ("xpath", "html/body/div[4]/div/div/div/div/div[2]/div[3]/span/a")  # 今天
 
+    # 项目删除
+    DELETEMSG = ("xpath", "html/body/div[2]/div/div/div/div/div/div[2]")  # 删除提示信息
+    DELETECANCELBTN = ("xpath", "html/body/div[2]/div/div/div/div/div/div[3]/button[1]")  # 取消删除
+    DELETEOKBTN = ("xpath", "html/body/div[2]/div/div/div/div/div/div[3]/button[2]")  # 确定删除
+    DELETECLOSEBTN = ("xpath", "html/body/div[2]/div/div/div/div/div/div[1]/button")  # 关闭删除
+
     # 项目详情
     INFONAMETEXT = ("xpath", INFOCOMMONXPATH + "")  # 项目名称字段
     INFOCODETEXT = ("xpath", INFOCOMMONXPATH + "")  # 项目编码字段
@@ -167,19 +190,19 @@ class Project:
     INFOENDDATEINPUTTEXT = ("xpath", INFOCOMMONXPATH + "")  # 结束日期内容
     INFODESCRIPTIONINPUTTEXT = ("xpath", INFOCOMMONXPATH + "")  # 项目描述内容
 
-    # 保存、取消、关闭
+    # 通用保存、取消、关闭
     CANCELBTN = ("xpath", INFOCOMMONXPATH + "/div[3]/button[1]")  # 取消按钮
     SAVEBTN = ("xpath", INFOCOMMONXPATH + "/div[3]/button[2]")  # 保存按钮
     CLOSEBTN = ("xpath", INFOCOMMONXPATH + "/div[1]/button")  # 右上角关闭按钮
 
     # 项目列表页面下的提示信息
-    LISTINFO = ("xpath", "html/body/div[2]/div/span/div/div/div/div/div[2]")
-    LISTCLOSE = ("xpath", "html/body/div[2]/div/span/div/a/span")
+    LISTMSG = ("xpath", "html/body/div[2]/div/span/div/div/div/div/div[2]")  # 列表页面下弹出的提示
+    LISTCLOSE = ("xpath", "html/body/div[2]/div/span/div/a/span")  # 关闭提示
 
     # 项目详情页面下的提示信息
-    CARDINFO = ("xpath", "html/body/div[3]/div/span/div/div/div/div/div[2]")
-    CARDCLOSE = ("xpath", "html/body/div[3]/div/span/div/a/span")
+    CARDMSG = ("xpath", "html/body/div[3]/div/span/div/div/div/div/div[2]")  # 项目详情页面下弹出的提示
+    CARDCLOSE = ("xpath", "html/body/div[3]/div/span/div/a/span")  # 关闭提示
 
     # 字段重复校验的提示信息
-    REPEATINFO = ("xpath", "html/body/div[4]/div/span/div/div/div/div/div[2]")
-    REPEATCLOSE = ("xpath", "html/body/div[4]/div/span/div/a/span")
+    REPEATMSG = ("xpath", "html/body/div[4]/div/span/div/div/div/div/div[2]")  # 校验编码重复弹出的提示
+    REPEATCLOSE = ("xpath", "html/body/div[4]/div/span/div/a/span")  # 关闭提示

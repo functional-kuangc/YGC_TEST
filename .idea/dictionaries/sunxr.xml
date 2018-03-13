@@ -6,12 +6,22 @@
       <w>asctime</w>
       <w>basicarchives</w>
       <w>cancelbtn</w>
+      <w>cancelcancelbtn</w>
+      <w>cancelclosebtn</w>
+      <w>cancelmsg</w>
+      <w>cancelmsgdiv</w>
+      <w>cancelokbtn</w>
       <w>cardclose</w>
       <w>cardinfo</w>
+      <w>cardmsg</w>
       <w>closebtn</w>
       <w>contacttype</w>
       <w>createbtn</w>
       <w>deletebtn</w>
+      <w>deletecancelbtn</w>
+      <w>deleteclosebtn</w>
+      <w>deletemsg</w>
+      <w>deleteokbtn</w>
       <w>dropdown</w>
       <w>dropdownbtn</w>
       <w>editapprovaldateinputtext</w>
@@ -68,6 +78,7 @@
       <w>levelname</w>
       <w>listclose</w>
       <w>listinfo</w>
+      <w>listmsg</w>
       <w>loginbtn</w>
       <w>memberbtn</w>
       <w>modulename</w>
@@ -89,6 +100,7 @@
       <w>pymysql</w>
       <w>repeatclose</w>
       <w>repeatinfo</w>
+      <w>repeatmsg</w>
       <w>savebtn</w>
       <w>screenshot</w>
       <w>searchbtn</w>
