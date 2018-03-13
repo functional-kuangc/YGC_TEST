@@ -14,6 +14,7 @@
       <w>cardclose</w>
       <w>cardinfo</w>
       <w>cardmsg</w>
+      <w>cardtoast</w>
       <w>closebtn</w>
       <w>contacttype</w>
       <w>createbtn</w>
@@ -79,6 +80,7 @@
       <w>listclose</w>
       <w>listinfo</w>
       <w>listmsg</w>
+      <w>listtoast</w>
       <w>loginbtn</w>
       <w>memberbtn</w>
       <w>modulename</w>
@@ -97,10 +99,14 @@
       <w>okbtn</w>
       <w>pmcloud</w>
       <w>problemreason</w>
+      <w>projcode</w>
+      <w>projdescription</w>
+      <w>projname</w>
       <w>pymysql</w>
       <w>repeatclose</w>
       <w>repeatinfo</w>
       <w>repeatmsg</w>
+      <w>repeattoast</w>
       <w>savebtn</w>
       <w>screenshot</w>
       <w>searchbtn</w>
