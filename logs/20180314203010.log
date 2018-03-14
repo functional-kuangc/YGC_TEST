@@ -1,0 +1,82 @@
+2018-03-14 20:30:10,667 - TestProject - INFO - 测试前准备.
+2018-03-14 20:30:13,665 - Browser - INFO - 启动firefox浏览器.
+2018-03-14 20:30:13,666 - PagePubSelenium - INFO - 待测网址为: https://testpmcloud.yonyoucloud.com.
+2018-03-14 20:30:15,393 - PagePubSelenium - INFO - 打开待测网址: https://testpmcloud.yonyoucloud.com.
+2018-03-14 20:30:16,441 - PagePubSelenium - INFO - 定位到指定元素: xpath => .//*[@id='network']/div[1]/div[1]/div/a[1].
+2018-03-14 20:30:18,562 - PagePubSelenium - INFO - 鼠标左键点击指定元素: xpath => .//*[@id='network']/div[1]/div[1]/div/a[1].
+2018-03-14 20:30:19,572 - PagePubSelenium - INFO - 定位到指定元素: id => username.
+2018-03-14 20:30:19,643 - PagePubSelenium - INFO - 清空指定文本框元素中内容,元素为: id => username.
+2018-03-14 20:30:19,652 - PagePubSelenium - INFO - 定位到指定元素: id => username.
+2018-03-14 20:30:19,705 - PagePubSelenium - INFO - 在指定文本框元素中输入文本,元素为: id => username.
+2018-03-14 20:30:20,717 - PagePubSelenium - INFO - 定位到指定元素: id => password.
+2018-03-14 20:30:20,786 - PagePubSelenium - INFO - 清空指定文本框元素中内容,元素为: id => password.
+2018-03-14 20:30:20,803 - PagePubSelenium - INFO - 定位到指定元素: id => password.
+2018-03-14 20:30:20,838 - PagePubSelenium - INFO - 在指定文本框元素中输入文本,元素为: id => password.
+2018-03-14 20:30:21,847 - PagePubSelenium - INFO - 定位到指定元素: xpath => .//*[@id='fm1']/section[7]/label[1].
+2018-03-14 20:30:21,859 - PagePubSelenium - INFO - 验证元素是否被选中: xpath => .//*[@id='fm1']/section[7]/label[1].
+2018-03-14 20:30:22,867 - PagePubSelenium - INFO - 定位到指定元素: id => submit_btn_login.
+2018-03-14 20:30:23,063 - PagePubSelenium - INFO - 鼠标左键点击指定元素: id => submit_btn_login.
+2018-03-14 20:30:28,080 - PagePubSelenium - INFO - 定位到指定元素: xpath => .//*[@id='combo1']/div/span.
+2018-03-14 20:30:28,325 - PagePubSelenium - INFO - 鼠标左键点击指定元素: xpath => .//*[@id='combo1']/div/span.
+2018-03-14 20:30:29,336 - PagePubSelenium - INFO - 定位到指定元素: xpath => .//*[@id='combo1']/ul/li[2]/span.
+2018-03-14 20:30:29,560 - PagePubSelenium - INFO - 鼠标左键点击指定元素: xpath => .//*[@id='combo1']/ul/li[2]/span.
+2018-03-14 20:30:31,574 - PagePubSelenium - INFO - 定位到指定元素: id => submitbtn.
+2018-03-14 20:30:33,693 - PagePubSelenium - INFO - 鼠标左键点击指定元素: id => submitbtn.
+2018-03-14 20:30:34,718 - PagePubSelenium - INFO - 定位到指定元素: xpath => html/body/div[1]/div/ul/li[2]/a.
+2018-03-14 20:30:34,776 - PagePubSelenium - INFO - 鼠标左键点击指定元素: xpath => html/body/div[1]/div/ul/li[2]/a.
+2018-03-14 20:30:35,794 - PagePubSelenium - INFO - 定位到指定元素: xpath => /html/body/div[2]/div[1]/div/div/iframe.
+2018-03-14 20:30:35,828 - PagePubSelenium - INFO - 切换到指定的iframe: <selenium.webdriver.firefox.webelement.FirefoxWebElement (session="cfdeba1d-4a59-6744-b7ec-aa1f2f92c8a1", element="7e83583e-4e33-5747-b5ab-fb65488f4426")>.
+2018-03-14 20:30:36,838 - PagePubSelenium - INFO - 定位到指定元素: xpath => .//*[@id='app']/div/div/div/div[1]/div[3]/button[1].
+2018-03-14 20:30:37,109 - PagePubSelenium - INFO - 鼠标左键点击指定元素: xpath => .//*[@id='app']/div/div/div/div[1]/div[3]/button[1].
+2018-03-14 20:30:38,119 - PagePubSelenium - INFO - 定位到指定元素: xpath => html/body/div[2]/div/div/div/div/div/div[2]/div[1]/div[1]/span.
+2018-03-14 20:30:38,134 - PagePubSelenium - INFO - 获取到的元素文本为: 项目编码.
+2018-03-14 20:30:38,140 - PagePubSelenium - INFO - 定位到指定元素: xpath => html/body/div[2]/div/div/div/div/div/div[2]/div[1]/div[1]/input.
+2018-03-14 20:30:38,160 - PagePubSelenium - INFO - 清空指定文本框元素中内容,元素为: xpath => html/body/div[2]/div/div/div/div/div/div[2]/div[1]/div[1]/input.
+2018-03-14 20:30:38,166 - PagePubSelenium - INFO - 定位到指定元素: xpath => html/body/div[2]/div/div/div/div/div/div[2]/div[1]/div[1]/input.
+2018-03-14 20:30:38,261 - PagePubSelenium - INFO - 在指定文本框元素中输入文本,元素为: xpath => html/body/div[2]/div/div/div/div/div/div[2]/div[1]/div[1]/input.
+2018-03-14 20:30:39,270 - PagePubSelenium - INFO - 定位到指定元素: xpath => html/body/div[2]/div/div/div/div/div/div[2]/div[1]/div[2]/span.
+2018-03-14 20:30:39,278 - PagePubSelenium - INFO - 获取到的元素文本为: 项目名称.
+2018-03-14 20:30:39,282 - PagePubSelenium - INFO - 定位到指定元素: xpath => html/body/div[2]/div/div/div/div/div/div[2]/div[1]/div[2]/input.
+2018-03-14 20:30:39,297 - PagePubSelenium - INFO - 清空指定文本框元素中内容,元素为: xpath => html/body/div[2]/div/div/div/div/div/div[2]/div[1]/div[2]/input.
+2018-03-14 20:30:39,307 - PagePubSelenium - INFO - 定位到指定元素: xpath => html/body/div[2]/div/div/div/div/div/div[2]/div[1]/div[2]/input.
+2018-03-14 20:30:39,337 - PagePubSelenium - INFO - 在指定文本框元素中输入文本,元素为: xpath => html/body/div[2]/div/div/div/div/div/div[2]/div[1]/div[2]/input.
+2018-03-14 20:30:40,349 - PagePubSelenium - INFO - 定位到指定元素: xpath => html/body/div[2]/div/div/div/div/div/div[2]/div[2]/div[1]/span.
+2018-03-14 20:30:40,357 - PagePubSelenium - INFO - 获取到的元素文本为: 立项日期.
+2018-03-14 20:30:40,362 - PagePubSelenium - INFO - 定位到指定元素: xpath => html/body/div[2]/div/div/div/div/div/div[2]/div[2]/div[1]/div/div/input.
+2018-03-14 20:30:40,636 - PagePubSelenium - INFO - 鼠标左键点击指定元素: xpath => html/body/div[2]/div/div/div/div/div/div[2]/div[2]/div[1]/div/div/input.
+2018-03-14 20:30:41,646 - PagePubSelenium - INFO - 定位到指定元素: xpath => html/body/div[3]/div/div/div/div/div[2]/div[3]/span/a.
+2018-03-14 20:30:41,653 - PagePubSelenium - INFO - 获取到的元素文本为: 今天.
+2018-03-14 20:30:41,658 - PagePubSelenium - INFO - 定位到指定元素: xpath => html/body/div[3]/div/div/div/div/div[2]/div[3]/span/a.
+2018-03-14 20:30:41,905 - PagePubSelenium - INFO - 鼠标左键点击指定元素: xpath => html/body/div[3]/div/div/div/div/div[2]/div[3]/span/a.
+2018-03-14 20:30:42,914 - PagePubSelenium - INFO - 定位到指定元素: xpath => html/body/div[2]/div/div/div/div/div/div[2]/div[3]/div[1].
+2018-03-14 20:30:42,920 - PagePubSelenium - INFO - 获取到的元素文本为: 项目描述.
+2018-03-14 20:30:42,924 - PagePubSelenium - INFO - 定位到指定元素: xpath => html/body/div[2]/div/div/div/div/div/div[2]/div[3]/div[2]/textarea.
+2018-03-14 20:30:42,938 - PagePubSelenium - INFO - 清空指定文本框元素中内容,元素为: xpath => html/body/div[2]/div/div/div/div/div/div[2]/div[3]/div[2]/textarea.
+2018-03-14 20:30:42,942 - PagePubSelenium - INFO - 定位到指定元素: xpath => html/body/div[2]/div/div/div/div/div/div[2]/div[3]/div[2]/textarea.
+2018-03-14 20:30:43,003 - PagePubSelenium - INFO - 在指定文本框元素中输入文本,元素为: xpath => html/body/div[2]/div/div/div/div/div/div[2]/div[3]/div[2]/textarea.
+2018-03-14 20:30:44,009 - PagePubSelenium - INFO - 定位到指定元素: xpath => html/body/div[2]/div/div/div/div/div/div[3]/button[1].
+2018-03-14 20:30:44,018 - PagePubSelenium - INFO - 获取到的元素文本为: 取消.
+2018-03-14 20:30:44,023 - PagePubSelenium - INFO - 定位到指定元素: xpath => html/body/div[2]/div/div/div/div/div/div[3]/button[2].
+2018-03-14 20:30:44,265 - PagePubSelenium - INFO - 鼠标左键点击指定元素: xpath => html/body/div[2]/div/div/div/div/div/div[3]/button[2].
+2018-03-14 20:30:46,273 - PagePubSelenium - INFO - 定位到指定元素: xpath => html/body/div[2]/div/span/div/div/div/div/div[2].
+2018-03-14 20:30:46,283 - PagePubSelenium - INFO - 获取到的元素文本为: 成功保存！.
+2018-03-14 20:30:46,288 - PagePubSelenium - INFO - 定位到指定元素: xpath => html/body/div[2]/div/span/div/a/span.
+2018-03-14 20:30:46,516 - PagePubSelenium - INFO - 鼠标左键点击指定元素: xpath => html/body/div[2]/div/span/div/a/span.
+2018-03-14 20:30:46,537 - PagePubSelenium - INFO - 定位到指定元素: xpath => .//*[@id='app']/div/div/div/div[2]/div/div/div/span/div/table/tbody/tr[1]/td[1].
+2018-03-14 20:30:46,818 - PagePubSelenium - INFO - 鼠标左键点击指定元素: xpath => .//*[@id='app']/div/div/div/div[2]/div/div/div/span/div/table/tbody/tr[1]/td[1].
+2018-03-14 20:30:47,829 - PagePubSelenium - INFO - 定位到指定元素: xpath => .//*[@id='app']/div/div/div/div[1]/div[3]/button[6].
+2018-03-14 20:30:48,078 - PagePubSelenium - INFO - 鼠标左键点击指定元素: xpath => .//*[@id='app']/div/div/div/div[1]/div[3]/button[6].
+2018-03-14 20:30:52,129 - PagePubSelenium - ERROR - 没有找到指定元素: xpath => html/body/div[2]/div/div/div/div/div/div[3]/button[1].
+2018-03-14 20:30:52,322 - PagePubSelenium - INFO - 截图已保存在screenshots中,名称为: /Users/sunxr/Documents/ygc_automation_test/screenshots/20180314203052.png.
+2018-03-14 20:30:52,322 - PagePubSelenium - ERROR - 获取元素文本异常: 'NoneType' object has no attribute 'text'.
+2018-03-14 20:30:52,455 - PagePubSelenium - INFO - 截图已保存在screenshots中,名称为: /Users/sunxr/Documents/ygc_automation_test/screenshots/20180314203052.png.
+2018-03-14 20:30:52,460 - PagePubSelenium - INFO - 定位到指定元素: xpath => html/body/div[3]/div/div/div/div/div/div[3]/button[1].
+2018-03-14 20:30:52,470 - PagePubSelenium - INFO - 获取到的元素文本为: 取消.
+2018-03-14 20:30:52,475 - PagePubSelenium - INFO - 定位到指定元素: xpath => html/body/div[3]/div/div/div/div/div/div[3]/button[2].
+2018-03-14 20:30:52,752 - PagePubSelenium - INFO - 鼠标左键点击指定元素: xpath => html/body/div[3]/div/div/div/div/div/div[3]/button[2].
+2018-03-14 20:30:54,757 - TestProject - INFO - 测试后退出.
+2018-03-14 20:30:54,762 - PagePubSelenium - INFO - 释放iframe重新回到主页面上.
+2018-03-14 20:30:55,770 - PagePubSelenium - INFO - 定位到指定元素: xpath => .//*[@id='username']/span[3].
+2018-03-14 20:30:56,153 - PagePubSelenium - INFO - 鼠标左键点击指定元素: xpath => .//*[@id='username']/span[3].
+2018-03-14 20:30:57,161 - PagePubSelenium - INFO - 定位到指定元素: xpath => .//*[@id='moreMenu']/li[5]/a.
+2018-03-14 20:30:57,652 - PagePubSelenium - INFO - 鼠标左键点击指定元素: xpath => .//*[@id='moreMenu']/li[5]/a.
