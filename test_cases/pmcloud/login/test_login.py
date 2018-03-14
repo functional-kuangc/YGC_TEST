@@ -13,6 +13,8 @@ from page_objects import PMCloudIndexActions
 from page_objects import PMCloudLoginActions
 # 导入企业帐号选择页操作类
 from page_objects import ApptenantActions
+# 导入友工程后台外框架操作类
+from page_objects import WorkbenchActions
 
 logger = Logger("TestLogin").getLog()
 
@@ -28,6 +30,7 @@ class TestLogin(unittest.TestCase):
     def tearDown(self):
 
         logger.info("测试后退出.")
+        self.workbench_page.logout()
         self.__driver.quit()
 
     def test_login_success(self):
@@ -37,7 +40,7 @@ class TestLogin(unittest.TestCase):
         expected_result = "测试孙旭冉"
 
         index_page = PMCloudIndexActions(self.__driver)
-        index_page.openPMCloudIndex(expected_title="工程云")
+        index_page.openPMCloudIndex(expected_title="用友云工程服务")
         index_page.clickLoginButton()
 
         login_page = PMCloudLoginActions(self.__driver)
@@ -46,7 +49,8 @@ class TestLogin(unittest.TestCase):
         apptenant_page = ApptenantActions(self.__driver)
         apptenant_page.apptenantLogin()
 
-        result = self.__driver.find_element_by_xpath(".//*[@id='username']/span[2]").text
+        self.workbench_page = WorkbenchActions(self.__driver)
+        result = self.workbench_page.getCurrentUser()
 
         self.assertEqual(expected_result, result, msg="测试不通过，期望结果为：{expect}, 实际结果为：{result}."
                          .format(expect=expected_result, result=result))
