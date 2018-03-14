@@ -307,6 +307,7 @@ class ProjectActions(PagePubSelenium):
         :param projdescription: 项目描述内容
         """
 
+        self.clickCreateButton()
         self.typeProjectCode(projcode=projcode)
         self.typeProjectName(projname=projname)
         self.selectProjectApprovalDate()
@@ -322,6 +323,7 @@ class ProjectActions(PagePubSelenium):
         :param projdescription: 项目描述内容
         """
 
+        self.clickCreateButton()
         self.typeProjectCode(projcode=projcode)
         self.typeProjectName(projname=projname)
         self.selectProjectApprovalDate()
@@ -337,6 +339,7 @@ class ProjectActions(PagePubSelenium):
         :param projdescription: 项目描述内容
         """
 
+        self.clickCreateButton()
         self.typeProjectCode(projcode=projcode)
         self.typeProjectName(projname=projname)
         self.selectProjectApprovalDate()
@@ -350,6 +353,8 @@ class ProjectActions(PagePubSelenium):
         :param projdescription: 编辑后的项目描述内容
         """
 
+        self.selectFirstProject()
+        self.clickEditButton()
         self.editProjectDescription(projdescription=projdescription)
         self.clickSaveButton()
 
@@ -359,6 +364,8 @@ class ProjectActions(PagePubSelenium):
         :param projdescription: 编辑后的项目描述内容
         """
 
+        self.selectFirstProject()
+        self.clickEditButton()
         self.editProjectDescription(projdescription=projdescription)
         self.clickCancelButton()
 
@@ -368,6 +375,8 @@ class ProjectActions(PagePubSelenium):
         :param projdescription: 编辑后的项目描述内容
         """
 
+        self.selectFirstProject()
+        self.clickEditButton()
         self.editProjectDescription(projdescription=projdescription)
         self.clickCloseButton()
 
@@ -377,6 +386,8 @@ class ProjectActions(PagePubSelenium):
         结束项目全流程.
         """
 
+        self.selectFirstProject()
+        self.clickEndButton()
         self.selectProjectEndDate()
         self.clickSaveButton()
 
@@ -385,6 +396,8 @@ class ProjectActions(PagePubSelenium):
         通过取消按钮取消结束项目全流程.
         """
 
+        self.selectFirstProject()
+        self.clickEndButton()
         self.selectProjectEndDate()
         self.clickCancelButton()
 
@@ -393,5 +406,36 @@ class ProjectActions(PagePubSelenium):
         通过右上角关闭按钮取消结束项目全流程.
         """
 
+        self.selectFirstProject()
+        self.clickEndButton()
         self.selectProjectEndDate()
+        self.clickCloseButton()
+
+    # 删除项目
+    def saveDeleteProject(self):
+        """
+        删除项目全流程.
+        """
+
+        self.selectFirstProject()
+        self.clickDeleteButton()
+        self.clickSaveButton()
+
+    def cancelDeleteProjectByCancelButton(self):
+        """
+        通过取消按钮取消删除项目全流程.
+        """
+
+        self.selectFirstProject()
+        self.clickDeleteButton()
+        self.clickCancelButton()
+
+    def cancelDeleteProjectByCloseButton(self):
+        """
+        通过右上角关闭按钮消删除项目全流程.
+        :return:
+        """
+
+        self.selectFirstProject()
+        self.clickDeleteButton()
         self.clickCloseButton()

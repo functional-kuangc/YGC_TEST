@@ -172,9 +172,6 @@ class Project:
 
     # 项目删除
     DELETEMSG = ("xpath", INFOCOMMONXPATH2 + "/div[2]")  # 删除提示信息
-    DELETECANCELBTN = ("xpath", INFOCOMMONXPATH2 + "/div[3]/button[1]")  # 取消删除
-    DELETEOKBTN = ("xpath", INFOCOMMONXPATH2 + "/div[3]/button[2]")  # 确定删除
-    DELETECLOSEBTN = ("xpath", INFOCOMMONXPATH2 + "/div[1]/button")  # 关闭删除
 
     # 项目详情
     INFONAMETEXT = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[1]/div[1]")  # 项目名称字段
