@@ -12,7 +12,8 @@ def timeDecorator(timeout=2):
 
     def funcDecorator(func):
         def wrapper(*args, **kwargs):
-            func(*args, **kwargs)
+            result = func(*args, **kwargs)
             time.sleep(timeout)
+            return result
         return wrapper
     return funcDecorator

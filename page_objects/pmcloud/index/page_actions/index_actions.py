@@ -27,4 +27,4 @@ class PMCloudIndexActions(PagePubSelenium):
         :return: 跳转到登录页面
         """
 
-        self.click(PMCloudIndex.LOGINBTN)
+        self.click(locator=PMCloudIndex.LOGINBTN)
