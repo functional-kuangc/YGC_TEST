@@ -320,7 +320,7 @@ class ProjectActions(PagePubSelenium):
         self.typeEndProjectDescription(projdescription=projdescription)
 
     # 公共按钮操作
-    @timeDecorator(1)
+    @timeDecorator(2)
     def clickSaveButton(self):
         """
         点击创建项目编辑窗体的保存按钮.

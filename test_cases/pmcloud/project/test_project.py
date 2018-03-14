@@ -29,7 +29,24 @@ class TestProject(unittest.TestCase):
         logger.info("测试前准备.")
         self.__driver = browser(glo.GLO_BROWSER_TYPE)
 
+        PMCloudIndexActions(self.__driver).openPMCloudIndex(expected_title="用友云工程服务")
+        PMCloudIndexActions(self.__driver).clickLoginButton()
+        PMCloudLoginActions(self.__driver).pmcloudLogin()
+        ApptenantActions(self.__driver).apptenantLogin()
+        WorkbenchActions(self.__driver).clickProject()
+        WorkbenchActions(self.__driver).switchToIframe()
+
     def tearDown(self):
 
         logger.info("测试后退出.")
         self.__driver.quit()
+
+    def test_create_and_delete_success(self):
+
+        project_page = ProjectActions(self.__driver)
+        project_page.saveCreateProject()
+        project_page.saveDeleteProject()
+
+
+if __name__ == '__main__':
+    unittest.main()
