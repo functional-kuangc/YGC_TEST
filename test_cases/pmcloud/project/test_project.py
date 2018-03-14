@@ -39,6 +39,8 @@ class TestProject(unittest.TestCase):
     def tearDown(self):
 
         logger.info("测试后退出.")
+        WorkbenchActions(self.__driver).switchBackToFrame()
+        WorkbenchActions(self.__driver).logout()
         self.__driver.quit()
 
     def test_create_and_delete_success(self):
