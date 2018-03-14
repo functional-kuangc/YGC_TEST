@@ -48,7 +48,7 @@ class TestProject(unittest.TestCase):
         project_page = ProjectActions(self.__driver)
         project_page.saveCreateProject()
         print(project_page.getListToastMsg())
-        
+        project_page.closeListToast()
         project_page.saveDeleteProject()
 
 
