@@ -103,24 +103,37 @@ class Project:
     DELETEBTN = ("xpath", getProjectOperationXpathByIndex(6))  # 删除按钮
 
     # 项目编辑框公共部分xpath定位
-    INFOCOMMONXPATH = "html/body/div[3]/div/div/div/div/div"
+    INFOCOMMONXPATH3 = "html/body/div[3]/div/div/div/div/div"
     INFOCOMMONXPATH2 = "html/body/div[2]/div/div/div/div/div"
 
     # 项目创建
-    NEWCODETEXT = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[1]/div[1]/span")  # 项目编码字段
-    NEWNAMETEXT = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[1]/div[2]/span")  # 项目名称字段
-    NEWAPPROVALDATETEXT = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[2]/div[1]/span")  # 立项日期字段
-    NEWMANAGERTEXT = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[2]/div[2]/span")  # 项目经理字段
-    NEWDESCRIPTIONTEXT = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[3]/div[1]")  # 项目描述字段
+    NEWCODETEXT2 = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[1]/div[1]/span")  # 项目编码字段
+    NEWNAMETEXT2 = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[1]/div[2]/span")  # 项目名称字段
+    NEWAPPROVALDATETEXT2 = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[2]/div[1]/span")  # 立项日期字段
+    NEWMANAGERTEXT2 = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[2]/div[2]/span")  # 项目经理字段
+    NEWDESCRIPTIONTEXT2 = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[3]/div[1]")  # 项目描述字段
 
-    NEWCODEINPUT = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[1]/div[1]/input")  # 项目编码输入框
-    NEWNAMEINPUT = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[1]/div[2]/input")  # 项目名称输入框
-    NEWMANAGERINPUT = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[3]/div[2]/textarea")  # 项目经理输入框
-    NEWDESCRIPTIONINPUT = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[3]/div[2]/textarea")  # 项目描述输入框
+    NEWCODETEXT3 = ("xpath", INFOCOMMONXPATH3 + "/div[2]/div[1]/div[1]/span")  # 项目编码字段
+    NEWNAMETEXT3 = ("xpath", INFOCOMMONXPATH3 + "/div[2]/div[1]/div[2]/span")  # 项目名称字段
+    NEWAPPROVALDATETEXT3 = ("xpath", INFOCOMMONXPATH3 + "/div[2]/div[2]/div[1]/span")  # 立项日期字段
+    NEWMANAGERTEXT3 = ("xpath", INFOCOMMONXPATH3 + "/div[2]/div[2]/div[2]/span")  # 项目经理字段
+    NEWDESCRIPTIONTEXT3 = ("xpath", INFOCOMMONXPATH3 + "/div[2]/div[3]/div[1]")  # 项目描述字段
+
+    NEWCODEINPUT2 = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[1]/div[1]/input")  # 项目编码输入框
+    NEWNAMEINPUT2 = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[1]/div[2]/input")  # 项目名称输入框
+    NEWMANAGERINPUT2 = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[3]/div[2]/textarea")  # 项目经理输入框
+    NEWDESCRIPTIONINPUT2 = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[3]/div[2]/textarea")  # 项目描述输入框
+
+    NEWCODEINPUT3 = ("xpath", INFOCOMMONXPATH3 + "/div[2]/div[1]/div[1]/input")  # 项目编码输入框
+    NEWNAMEINPUT3 = ("xpath", INFOCOMMONXPATH3 + "/div[2]/div[1]/div[2]/input")  # 项目名称输入框
+    NEWMANAGERINPUT3 = ("xpath", INFOCOMMONXPATH3 + "/div[2]/div[3]/div[2]/textarea")  # 项目经理输入框
+    NEWDESCRIPTIONINPUT3 = ("xpath", INFOCOMMONXPATH3 + "/div[2]/div[3]/div[2]/textarea")  # 项目描述输入框
 
     # 立项日期控件组
-    NEWAPPROVALDATEINPUT = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[2]/div[1]/div/div/input")  # 日期参照
-    NEWTODAYDATE = ("xpath", "html/body/div[4]/div/div/div/div/div[2]/div[3]/span/a")  # 今天
+    NEWAPPROVALDATEINPUT2 = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[2]/div[1]/div/div/input")  # 日期参照
+    NEWTODAYDATE3 = ("xpath", "html/body/div[3]/div/div/div/div/div[2]/div[3]/span/a")  # 今天
+    NEWAPPROVALDATEINPUT3 = ("xpath", INFOCOMMONXPATH3 + "/div[2]/div[2]/div[1]/div/div/input")  # 日期参照
+    NEWTODAYDATE4 = ("xpath", "html/body/div[4]/div/div/div/div/div[2]/div[3]/span/a")  # 今天
 
     # 取消创建
     CANCELMSGDIV3 = ("xpath", "html/body/div[3]/div/div/div/div/div[2]")  # 取消提示信息
@@ -140,58 +153,104 @@ class Project:
     CANCELCLOSEBTN5 = ("xpath", "html/body/div[5]/div/div/div/div/div[1]/button")  # 关闭取消
 
     # 项目编辑
-    EDITNAMETEXT = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[1]/div[1]")  # 项目名称字段
-    EDITCODETEXT = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[2]/div[1]")  # 项目编码字段
-    EDITMANAGERTEXT = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[2]/div[2]")  # 项目经理字段
-    EDITAPPROVALDATETEXT = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[3]/div")  # 立项日期字段
-    EDITDESCRIPTIONTEXT = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[4]/div[1]")  # 项目描述字段
+    EDITNAMETEXT2 = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[1]/div[1]")  # 项目名称字段
+    EDITCODETEXT2 = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[2]/div[1]")  # 项目编码字段
+    EDITMANAGERTEXT2 = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[2]/div[2]")  # 项目经理字段
+    EDITAPPROVALDATETEXT2 = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[3]/div")  # 立项日期字段
+    EDITDESCRIPTIONTEXT2 = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[4]/div[1]")  # 项目描述字段
 
-    EDITNAMEINPUTTEXT = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[1]/div[2]")  # 项目名称内容
-    EDITCODEINPUTTEXT = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[2]/div[1]/span")  # 项目编码内容
-    EDITMANAGERINPUTTEXT = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[2]/div[2]/span")  # 项目经理内容
-    EDITAPPROVALDATEINPUTTEXT = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[3]/div/span")  # 立项日期内容
-    EDITDESCRIPTIONINPUT = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[4]/div[2]/textarea")  # 项目描述内容
+    EDITNAMETEXT3 = ("xpath", INFOCOMMONXPATH3 + "/div[2]/div[1]/div[1]")  # 项目名称字段
+    EDITCODETEXT3 = ("xpath", INFOCOMMONXPATH3 + "/div[2]/div[2]/div[1]")  # 项目编码字段
+    EDITMANAGERTEXT3 = ("xpath", INFOCOMMONXPATH3 + "/div[2]/div[2]/div[2]")  # 项目经理字段
+    EDITAPPROVALDATETEXT3 = ("xpath", INFOCOMMONXPATH3 + "/div[2]/div[3]/div")  # 立项日期字段
+    EDITDESCRIPTIONTEXT3 = ("xpath", INFOCOMMONXPATH3 + "/div[2]/div[4]/div[1]")  # 项目描述字段
+
+    EDITNAMEINPUTTEXT2 = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[1]/div[2]")  # 项目名称内容
+    EDITCODEINPUTTEXT2 = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[2]/div[1]/span")  # 项目编码内容
+    EDITMANAGERINPUTTEXT2 = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[2]/div[2]/span")  # 项目经理内容
+    EDITAPPROVALDATEINPUTTEXT2 = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[3]/div/span")  # 立项日期内容
+    EDITDESCRIPTIONINPUT2 = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[4]/div[2]/textarea")  # 项目描述内容
+
+    EDITNAMEINPUTTEXT3 = ("xpath", INFOCOMMONXPATH3 + "/div[2]/div[1]/div[2]")  # 项目名称内容
+    EDITCODEINPUTTEXT3 = ("xpath", INFOCOMMONXPATH3 + "/div[2]/div[2]/div[1]/span")  # 项目编码内容
+    EDITMANAGERINPUTTEXT3 = ("xpath", INFOCOMMONXPATH3 + "/div[2]/div[2]/div[2]/span")  # 项目经理内容
+    EDITAPPROVALDATEINPUTTEXT3 = ("xpath", INFOCOMMONXPATH3 + "/div[2]/div[3]/div/span")  # 立项日期内容
+    EDITDESCRIPTIONINPUT3 = ("xpath", INFOCOMMONXPATH3 + "/div[2]/div[4]/div[2]/textarea")  # 项目描述内容
 
     # 项目结束
-    ENDNAMETEXT = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[1]/div[1]")  # 项目名称字段
-    ENDCODETEXT = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[2]/div[1]")  # 项目编码字段
-    ENDMANAGERTEXT = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[2]/div[2]")  # 项目经理字段
-    ENDAPPROVALDATETEXT = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[3]/div")  # 立项日期字段
-    ENDENDDATETEXT = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[4]/div/span")  # 结束日期字段
-    ENDDESCRIPTIONTEXT = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[5]/div[1]")  # 项目描述字段
+    ENDNAMETEXT2 = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[1]/div[1]")  # 项目名称字段
+    ENDCODETEXT2 = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[2]/div[1]")  # 项目编码字段
+    ENDMANAGERTEXT2 = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[2]/div[2]")  # 项目经理字段
+    ENDAPPROVALDATETEXT2 = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[3]/div")  # 立项日期字段
+    ENDENDDATETEXT2 = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[4]/div/span")  # 结束日期字段
+    ENDDESCRIPTIONTEXT2 = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[5]/div[1]")  # 项目描述字段
 
-    ENDNAMEINPUTTEXT = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[1]/div[2]")  # 项目名称内容
-    ENDCODEINPUTTEXT = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[2]/div[1]/span")  # 项目编码内容
-    ENDMANAGERINPUTTEXT = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[2]/div[2]/span")  # 项目经理内容
-    ENDAPPROVALDATEINPUTTEXT = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[3]/div/span")  # 立项日期内容
-    ENDDESCRIPTIONINPUT = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[5]/div[2]/textarea")  # 项目描述内容
+    ENDNAMETEXT3 = ("xpath", INFOCOMMONXPATH3 + "/div[2]/div[1]/div[1]")  # 项目名称字段
+    ENDCODETEXT3 = ("xpath", INFOCOMMONXPATH3 + "/div[2]/div[2]/div[1]")  # 项目编码字段
+    ENDMANAGERTEXT3 = ("xpath", INFOCOMMONXPATH3 + "/div[2]/div[2]/div[2]")  # 项目经理字段
+    ENDAPPROVALDATETEXT3 = ("xpath", INFOCOMMONXPATH3 + "/div[2]/div[3]/div")  # 立项日期字段
+    ENDENDDATETEXT3 = ("xpath", INFOCOMMONXPATH3 + "/div[2]/div[4]/div/span")  # 结束日期字段
+    ENDDESCRIPTIONTEXT3 = ("xpath", INFOCOMMONXPATH3 + "/div[2]/div[5]/div[1]")  # 项目描述字段
+
+    ENDNAMEINPUTTEXT2 = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[1]/div[2]")  # 项目名称内容
+    ENDCODEINPUTTEXT2 = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[2]/div[1]/span")  # 项目编码内容
+    ENDMANAGERINPUTTEXT2 = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[2]/div[2]/span")  # 项目经理内容
+    ENDAPPROVALDATEINPUTTEXT2 = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[3]/div/span")  # 立项日期内容
+    ENDDESCRIPTIONINPUT2 = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[5]/div[2]/textarea")  # 项目描述内容
+
+    ENDNAMEINPUTTEXT3 = ("xpath", INFOCOMMONXPATH3 + "/div[2]/div[1]/div[2]")  # 项目名称内容
+    ENDCODEINPUTTEXT3 = ("xpath", INFOCOMMONXPATH3 + "/div[2]/div[2]/div[1]/span")  # 项目编码内容
+    ENDMANAGERINPUTTEXT3 = ("xpath", INFOCOMMONXPATH3 + "/div[2]/div[2]/div[2]/span")  # 项目经理内容
+    ENDAPPROVALDATEINPUTTEXT3 = ("xpath", INFOCOMMONXPATH3 + "/div[2]/div[3]/div/span")  # 立项日期内容
+    ENDDESCRIPTIONINPUT3 = ("xpath", INFOCOMMONXPATH3 + "/div[2]/div[5]/div[2]/textarea")  # 项目描述内容
 
     # 结束日期控件组
-    ENDENDDATEINPUT = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[4]/div/div/div/input")  # 日期参照
-    ENDTODAYDATE = ("xpath", "html/body/div[4]/div/div/div/div/div[2]/div[3]/span/a")  # 今天
+    ENDENDDATEINPUT2 = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[4]/div/div/div/input")  # 日期参照
+    ENDTODAYDATE3 = ("xpath", "html/body/div[3]/div/div/div/div/div[2]/div[3]/span/a")  # 今天
+    ENDENDDATEINPUT3 = ("xpath", INFOCOMMONXPATH3 + "/div[2]/div[4]/div/div/div/input")  # 日期参照
+    ENDTODAYDATE4 = ("xpath", "html/body/div[4]/div/div/div/div/div[2]/div[3]/span/a")  # 今天
 
     # 项目删除
-    DELETEMSG = ("xpath", INFOCOMMONXPATH2 + "/div[2]")  # 删除提示信息
+    DELETEMSG2 = ("xpath", INFOCOMMONXPATH2 + "/div[2]")  # 删除提示信息
+    DELETEMSG3 = ("xpath", INFOCOMMONXPATH3 + "/div[2]")  # 删除提示信息
 
     # 项目详情
-    INFONAMETEXT = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[1]/div[1]")  # 项目名称字段
-    INFOCODETEXT = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[2]/div[1]")  # 项目编码字段
-    INFOMANAGERTEXT = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[2]/div[2]")  # 项目经理字段
-    INFOAPPROVALDATETEXT = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[3]/div[1]")  # 立项日期字段
-    INFOENDDATETEXT = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[3]/div[2]")  # 结束日期字段
-    INFODESCRIPTIONTEXT = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[4]/div[1]")  # 项目描述字段
+    INFONAMETEXT2 = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[1]/div[1]")  # 项目名称字段
+    INFOCODETEXT2 = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[2]/div[1]")  # 项目编码字段
+    INFOMANAGERTEXT2 = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[2]/div[2]")  # 项目经理字段
+    INFOAPPROVALDATETEXT2 = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[3]/div[1]")  # 立项日期字段
+    INFOENDDATETEXT2 = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[3]/div[2]")  # 结束日期字段
+    INFODESCRIPTIONTEXT2 = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[4]/div[1]")  # 项目描述字段
 
-    INFONAMEINPUTTEXT = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[1]/div[2]")  # 项目名称内容
-    INFOCODEINPUTTEXT = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[2]/div[1]/span")  # 项目编码内容
-    INFOMANAGERINPUTTEXT = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[2]/div[2]/span")  # 项目经理内容
-    INFOAPPROVALDATEINPUTTEXT = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[3]/div[1]/span")  # 立项日期内容
-    INFOENDDATEINPUTTEXT = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[3]/div[2]/span")  # 结束日期内容
-    INFODESCRIPTIONINPUTTEXT = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[3]/div[2]/span")  # 项目描述内容
+    INFONAMETEXT3 = ("xpath", INFOCOMMONXPATH3 + "/div[2]/div[1]/div[1]")  # 项目名称字段
+    INFOCODETEXT3 = ("xpath", INFOCOMMONXPATH3 + "/div[2]/div[2]/div[1]")  # 项目编码字段
+    INFOMANAGERTEXT3 = ("xpath", INFOCOMMONXPATH3 + "/div[2]/div[2]/div[2]")  # 项目经理字段
+    INFOAPPROVALDATETEXT3 = ("xpath", INFOCOMMONXPATH3 + "/div[2]/div[3]/div[1]")  # 立项日期字段
+    INFOENDDATETEXT3 = ("xpath", INFOCOMMONXPATH3 + "/div[2]/div[3]/div[2]")  # 结束日期字段
+    INFODESCRIPTIONTEXT3 = ("xpath", INFOCOMMONXPATH3 + "/div[2]/div[4]/div[1]")  # 项目描述字段
+
+    INFONAMEINPUTTEXT2 = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[1]/div[2]")  # 项目名称内容
+    INFOCODEINPUTTEXT2 = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[2]/div[1]/span")  # 项目编码内容
+    INFOMANAGERINPUTTEXT2 = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[2]/div[2]/span")  # 项目经理内容
+    INFOAPPROVALDATEINPUTTEXT2 = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[3]/div[1]/span")  # 立项日期内容
+    INFOENDDATEINPUTTEXT2 = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[3]/div[2]/span")  # 结束日期内容
+    INFODESCRIPTIONINPUTTEXT2 = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[3]/div[2]/span")  # 项目描述内容
+
+    INFONAMEINPUTTEXT3 = ("xpath", INFOCOMMONXPATH3 + "/div[2]/div[1]/div[2]")  # 项目名称内容
+    INFOCODEINPUTTEXT3 = ("xpath", INFOCOMMONXPATH3 + "/div[2]/div[2]/div[1]/span")  # 项目编码内容
+    INFOMANAGERINPUTTEXT3 = ("xpath", INFOCOMMONXPATH3 + "/div[2]/div[2]/div[2]/span")  # 项目经理内容
+    INFOAPPROVALDATEINPUTTEXT3 = ("xpath", INFOCOMMONXPATH3 + "/div[2]/div[3]/div[1]/span")  # 立项日期内容
+    INFOENDDATEINPUTTEXT3 = ("xpath", INFOCOMMONXPATH3 + "/div[2]/div[3]/div[2]/span")  # 结束日期内容
+    INFODESCRIPTIONINPUTTEXT3 = ("xpath", INFOCOMMONXPATH3 + "/div[2]/div[3]/div[2]/span")  # 项目描述内容
 
     # 通用保存、取消、关闭
-    CANCELBTN = ("xpath", INFOCOMMONXPATH2 + "/div[3]/button[1]")  # 取消按钮
-    SAVEBTN = ("xpath", INFOCOMMONXPATH2 + "/div[3]/button[2]")  # 保存按钮
-    CLOSEBTN = ("xpath", INFOCOMMONXPATH2 + "/div[1]/button")  # 右上角关闭按钮
+    CANCELBTN2 = ("xpath", INFOCOMMONXPATH2 + "/div[3]/button[1]")  # 取消按钮
+    SAVEBTN2 = ("xpath", INFOCOMMONXPATH2 + "/div[3]/button[2]")  # 保存按钮
+    CLOSEBTN2 = ("xpath", INFOCOMMONXPATH2 + "/div[1]/button")  # 右上角关闭按钮
+
+    CANCELBTN3 = ("xpath", INFOCOMMONXPATH3 + "/div[3]/button[1]")  # 取消按钮
+    SAVEBTN3 = ("xpath", INFOCOMMONXPATH3 + "/div[3]/button[2]")  # 保存按钮
+    CLOSEBTN3 = ("xpath", INFOCOMMONXPATH3 + "/div[1]/button")  # 右上角关闭按钮
 
     # 项目列表页面下的提示信息
     LISTTOAST = ("xpath", "html/body/div[2]/div/span/div/div/div/div/div[2]")  # 列表页面下弹出的toast提示

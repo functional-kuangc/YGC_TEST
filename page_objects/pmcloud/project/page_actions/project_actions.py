@@ -109,7 +109,7 @@ class ProjectActions(PagePubSelenium):
         :param projcode: 项目编码
         """
 
-        self.sendText(locator=Project.NEWCODEINPUT, text=projcode)
+        self.sendText(locator=Project.NEWCODEINPUT2, text=projcode)
 
     @timeDecorator(1)
     def typeProjectName(self, projname="自动化项目"):
@@ -118,7 +118,7 @@ class ProjectActions(PagePubSelenium):
         :param projname: 项目名称
         """
 
-        self.sendText(locator=Project.NEWNAMEINPUT, text=projname)
+        self.sendText(locator=Project.NEWNAMEINPUT2, text=projname)
 
     @timeDecorator(1)
     def clickApprovalDate(self):
@@ -126,7 +126,7 @@ class ProjectActions(PagePubSelenium):
         点击立项日期控件.
         """
 
-        self.click(locator=Project.NEWAPPROVALDATEINPUT)
+        self.click(locator=Project.NEWAPPROVALDATEINPUT2)
 
     @timeDecorator(1)
     def selectTodayApprovalDate(self):
@@ -134,7 +134,7 @@ class ProjectActions(PagePubSelenium):
         选择今天日期.
         """
 
-        self.click(locator=Project.NEWTODAYDATE)
+        self.click(locator=Project.NEWTODAYDATE3)
 
     def selectProjectApprovalDate(self):
         """
@@ -151,7 +151,7 @@ class ProjectActions(PagePubSelenium):
         :param projdescription: 项目描述内容
         """
 
-        self.sendText(locator=Project.NEWDESCRIPTIONINPUT, text=projdescription)
+        self.sendText(locator=Project.NEWDESCRIPTIONINPUT2, text=projdescription)
 
     @timeDecorator(1)
     def clickCancelCancelButton(self):
@@ -215,7 +215,7 @@ class ProjectActions(PagePubSelenium):
         清空项目描述中的内容.
         """
 
-        self.clear(locator=Project.EDITDESCRIPTIONINPUT)
+        self.clear(locator=Project.EDITDESCRIPTIONINPUT2)
 
     @timeDecorator(1)
     def typeEditProjectDescription(self, projdescription="自动化项目编辑功能编辑项目描述"):
@@ -224,7 +224,7 @@ class ProjectActions(PagePubSelenium):
         :param projdescription: 编辑后的项目描述内容
         """
 
-        self.sendText(locator=Project.EDITDESCRIPTIONINPUT, text=projdescription)
+        self.sendText(locator=Project.EDITDESCRIPTIONINPUT2, text=projdescription)
 
     def editProjectDescription(self, projdescription="自动化项目编辑功能编辑项目描述"):
         """
@@ -242,7 +242,7 @@ class ProjectActions(PagePubSelenium):
         点击结束日期控件.
         """
 
-        self.click(locator=Project.ENDENDDATEINPUT)
+        self.click(locator=Project.ENDENDDATEINPUT2)
 
     @timeDecorator(1)
     def selectTodayEndDate(self):
@@ -250,7 +250,7 @@ class ProjectActions(PagePubSelenium):
         选择今天结束日期.
         """
 
-        self.click(locator=Project.ENDTODAYDATE)
+        self.click(locator=Project.ENDTODAYDATE3)
 
     def selectProjectEndDate(self):
         """
@@ -268,7 +268,7 @@ class ProjectActions(PagePubSelenium):
         点击创建项目编辑窗体的保存按钮.
         """
 
-        self.click(locator=Project.SAVEBTN)
+        self.click(locator=Project.SAVEBTN2)
 
     @timeDecorator(1)
     def clickCancelButton(self):
@@ -276,7 +276,7 @@ class ProjectActions(PagePubSelenium):
         点击创建项目编辑窗体的取消按钮.
         """
 
-        self.click(locator=Project.CANCELBTN)
+        self.click(locator=Project.CANCELBTN2)
 
     @timeDecorator(1)
     def clickCloseButton(self):
@@ -284,7 +284,7 @@ class ProjectActions(PagePubSelenium):
         点击创建项目编辑窗体右上角的关闭按钮.
         """
 
-        self.click(locator=Project.CLOSEBTN)
+        self.click(locator=Project.CLOSEBTN2)
 
     # 流程类操作
     # 搜索
