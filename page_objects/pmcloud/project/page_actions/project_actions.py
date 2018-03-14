@@ -509,3 +509,52 @@ class ProjectActions(PagePubSelenium):
         self.selectFirstProject()
         self.clickDeleteButton()
         self.clickCloseButton()
+
+    # 获取提示信息文字
+    def getListToastMsg(self):
+        """
+        获取列表页面下出现的toast提示信息.
+        :return: 提示信息内容
+        """
+
+        return self.getElementText(locator=Project.LISTTOAST)
+
+    def getCardToastMsg(self):
+        """
+        获取项目详情页面下出现的toast提示信息.
+        :return: 提示信息内容
+        """
+
+        return self.getElementText(locator=Project.CARDTOAST)
+
+    def getRepeatToastMsg(self):
+        """
+        获取校验重复时出现的toast提示信息.
+        :return: 提示信息内容
+        """
+
+        return self.getElementText(locator=Project.REPEATTOAST)
+
+    def getCancelMsg(self):
+        """
+        获取取消操作时弹出的提示信息.
+        :return: 提示信息内容
+        """
+
+        if self.getElementText(locator=Project.CANCELCANCELBTN3) == "取消":
+            return self.getElementText(locator=Project.CANCELMSGDIV3)
+        elif self.getElementText(locator=Project.CANCELCANCELBTN4) == "取消":
+            return self.getElementText(locator=Project.CANCELMSGDIV4)
+        elif self.getElementText(locator=Project.CANCELCANCELBTN5 == "取消"):
+            return self.getElementText(locator=Project.CANCELMSGDIV5)
+
+    def getDeleteMsg(self):
+        """
+        获取删除操作时弹出的提示信息.
+        :return: 提示信息内容
+        """
+
+        if self.getElementText(locator=Project.CANCELBTN2) == "取消":
+            return self.getElementText(locator=Project.DELETEMSG2)
+        elif self.getElementText(locator=Project.CANCELBTN3) == "取消":
+            return self.getElementText(locator=Project.DELETEMSG3)

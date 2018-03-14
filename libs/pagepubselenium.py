@@ -172,7 +172,7 @@ class PagePubSelenium:
         time.sleep(timeout)
         logger.info("页面等待: %s秒." % timeout)
 
-    def findElement(self, locator, timeout=10):
+    def findElement(self, locator, timeout=3):
         """
         定位单个元素方法封装.
         locator支持: "id", "xpath", "link text", "partial link text", "name", "tag name", "class name", "css selector".
@@ -192,7 +192,7 @@ class PagePubSelenium:
         except Exception as msg:
             self.__catchExceptionAndGetScreenshot("定位元素其他异常: %s." % msg)
 
-    def findElements(self, locator, timeout=10):
+    def findElements(self, locator, timeout=3):
         """
         定位一组元素方法封装.
         locator支持: "id", "xpath", "link text", "partial link text", "name", "tag name", "class name", "css selector".
@@ -212,7 +212,7 @@ class PagePubSelenium:
         except Exception as msg:
             self.__catchExceptionAndGetScreenshot("定位元素其他异常: %s." % msg)
 
-    def click(self, locator, timeout=10):
+    def click(self, locator, timeout=3):
         """
         鼠标左键点击元素.
         locator支持: "id", "xpath", "link text", "partial link text", "name", "tag name", "class name", "css selector".
@@ -227,7 +227,7 @@ class PagePubSelenium:
         except Exception as msg:
             self.__catchExceptionAndGetScreenshot("鼠标左键点击指定元素异常: %s." % msg)
 
-    def moveMouseToElement(self, locator, timeout=10):
+    def moveMouseToElement(self, locator, timeout=3):
         """
         鼠标悬停在指定元素上.
         locator支持: "id", "xpath", "link text", "partial link text", "name", "tag name", "class name", "css selector".
@@ -242,7 +242,7 @@ class PagePubSelenium:
         except Exception as msg:
             self.__catchExceptionAndGetScreenshot("鼠标悬停在指定元素上异常: %s." % msg)
 
-    def clear(self, locator, timeout=10):
+    def clear(self, locator, timeout=3):
         """
         清空文本框内容.
         locator支持: "id", "xpath", "link text", "partial link text", "name", "tag name", "class name", "css selector".
@@ -257,7 +257,7 @@ class PagePubSelenium:
         except Exception as msg:
             self.__catchExceptionAndGetScreenshot("清空指定文本框元素中内容异常: %s." % msg)
 
-    def sendText(self, locator, text, timeout=10):
+    def sendText(self, locator, text, timeout=3):
         """
         发送文本到指定文本框.
         locator支持: "id", "xpath", "link text", "partial link text", "name", "tag name", "class name", "css selector".
@@ -274,7 +274,7 @@ class PagePubSelenium:
         except Exception as msg:
             self.__catchExceptionAndGetScreenshot("在指定文本框中输入文本异常: %s." % msg)
 
-    def selectByIndex(self, locator, index, timeout=10):
+    def selectByIndex(self, locator, index, timeout=3):
         """
         根据索引选择下拉框中内容.
         locator支持: "id", "xpath", "link text", "partial link text", "name", "tag name", "class name", "css selector".
@@ -290,7 +290,7 @@ class PagePubSelenium:
         except Exception as msg:
             self.__catchExceptionAndGetScreenshot("根据索引选择下拉框中指定内容异常: %s." % msg)
 
-    def selectByValue(self, locator, value, timeout=10):
+    def selectByValue(self, locator, value, timeout=3):
         """
         根据元素value值选择下拉框中内容.
         locator支持: "id", "xpath", "link text", "partial link text", "name", "tag name", "class name", "css selector".
@@ -306,7 +306,7 @@ class PagePubSelenium:
         except Exception as msg:
             self.__catchExceptionAndGetScreenshot("根据元素value值选择下拉框中指定内容异常: %s." % msg)
 
-    def selectByText(self, locator, text, timeout=10):
+    def selectByText(self, locator, text, timeout=3):
         """
         根据下拉选项内容选择下拉框中内容.
         locator支持: "id", "xpath", "link text", "partial link text", "name", "tag name", "class name", "css selector".
@@ -331,7 +331,7 @@ class PagePubSelenium:
         logger.info("获取当前网页标题: %s." % self.__driver.title)
         return self.__driver.title
 
-    def getElementText(self, locator, timeout=10):
+    def getElementText(self, locator, timeout=3):
         """
         获取元素文本.
         locator支持: "id", "xpath", "link text", "partial link text", "name", "tag name", "class name", "css selector".
@@ -348,7 +348,7 @@ class PagePubSelenium:
         except Exception as msg:
             self.__catchExceptionAndGetScreenshot("获取元素文本异常: %s." % msg)
 
-    def getElementAttribute(self, locator, name, timeout=10):
+    def getElementAttribute(self, locator, name, timeout=3):
         """
         获取元素指定属性的值.
         locator支持: "id", "xpath", "link text", "partial link text", "name", "tag name", "class name", "css selector".
@@ -366,7 +366,7 @@ class PagePubSelenium:
         except Exception as msg:
             self.__catchExceptionAndGetScreenshot("获取元素属性值异常: %s." % msg)
 
-    def switchToFrame(self, locator, timeout=10):
+    def switchToFrame(self, locator, timeout=3):
         """
         切换网页内嵌iframe框架.
         locator支持: "id", "xpath", "link text", "partial link text", "name", "tag name", "class name", "css selector".
@@ -475,7 +475,7 @@ class PagePubSelenium:
         except Exception as msg:
             self.__catchExceptionAndGetScreenshot("在弹窗的文本框中输入信息异常: %s." % msg)
 
-    def isTitle(self, expected_title, timeout=10):
+    def isTitle(self, expected_title, timeout=3):
         """
         验证网页title是否跟期望完全一样.
         :param expected_title: 期望title值
@@ -491,7 +491,7 @@ class PagePubSelenium:
         except Exception as msg:
             self.__catchExceptionAndGetScreenshot("验证title异常: %s." % msg)
 
-    def isTitleContains(self, expected_title, timeout=10):
+    def isTitleContains(self, expected_title, timeout=3):
         """
         验证网页title是否包含期望值.
         :param expected_title: 期望包含title值
@@ -507,7 +507,7 @@ class PagePubSelenium:
         except Exception as msg:
             self.__catchExceptionAndGetScreenshot("验证title异常: %s." % msg)
 
-    def isElementSelected(self, locator, timeout=10):
+    def isElementSelected(self, locator, timeout=3):
         """
         验证元素是否被选中.
         locator支持: "id", "xpath", "link text", "partial link text", "name", "tag name", "class name", "css selector".
