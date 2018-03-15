@@ -1,4 +1,9 @@
 # coding: utf-8
+# 项目编辑框公共部分xpath定位
+INFOCOMMONXPATH3 = "html/body/div[3]/div/div/div/div/div"
+INFOCOMMONXPATH2 = "html/body/div[2]/div/div/div/div/div"
+
+
 def getProjectXpathByIndex(index=1):
     """
     根据项目列表索引获取项目的xpath.
@@ -83,28 +88,24 @@ class Project:
     """项目档案元素定位"""
 
     # 第一个项目档案信息
-    FIRSTPROJECTRADIOBTN = ("xpath", getProjectXpathByIndex(1))  # 单选框
-    FIRSTPROJECTCODE = ("xpath", getProjectCodeXpathByIndex(1))  # 项目编码
-    FIRSTPROJECTNAME = ("xpath", getProjectNameXpathByIndex(1))  # 项目名称
-    FIRSTPROJECTMANAGER = ("xpath", getProjectManagerXpathByIndex(1))  # 项目经理
-    FIRSTPROJECTAPPROVALDATE = ("xpath", getProjectApprovalDateXpathByIndex(1))  # 立项日期
-    FIRSTPROJECTENDDATE = ("xpath", getProjectEndDateXpathByIndex(1))  # 结束日期
-    FIRSTPROJECTDESCRIPTION = ("xpath", getProjectDescriptionXpathByIndex(1))  # 项目描述
+    FIRSTPROJECTRADIOBTN = ("xpath", getProjectXpathByIndex(index=1))  # 单选框
+    FIRSTPROJECTCODE = ("xpath", getProjectCodeXpathByIndex(index=1))  # 项目编码
+    FIRSTPROJECTNAME = ("xpath", getProjectNameXpathByIndex(index=1))  # 项目名称
+    FIRSTPROJECTMANAGER = ("xpath", getProjectManagerXpathByIndex(index=1))  # 项目经理
+    FIRSTPROJECTAPPROVALDATE = ("xpath", getProjectApprovalDateXpathByIndex(index=1))  # 立项日期
+    FIRSTPROJECTENDDATE = ("xpath", getProjectEndDateXpathByIndex(index=1))  # 结束日期
+    FIRSTPROJECTDESCRIPTION = ("xpath", getProjectDescriptionXpathByIndex(index=1))  # 项目描述
 
     # 标题行
     MODULENAME = ("xpath", ".//*[@id='app']/div/div/div/div[1]/div[1]/h4")  # 模块名称
     SEARCHINPUT = ("xpath", ".//*[@id='app']/div/div/div/div[1]/div[2]/input")  # 搜索框
     SEARCHBTN = ("xpath", ".//*[@id='app']/div/div/div/div[1]/div[2]/button")  # 搜索按钮
-    CREATEBTN = ("xpath", getProjectOperationXpathByIndex(1))  # 创建按钮
-    ENTERPRISEBTN = ("xpath", getProjectOperationXpathByIndex(2))  # 项目参与方按钮
-    MEMBERBTN = ("xpath", getProjectOperationXpathByIndex(3))  # 项目团队按钮
-    EDITBTN = ("xpath", getProjectOperationXpathByIndex(4))  # 编辑按钮
-    ENDBTN = ("xpath", getProjectOperationXpathByIndex(5))  # 结束按钮
-    DELETEBTN = ("xpath", getProjectOperationXpathByIndex(6))  # 删除按钮
-
-    # 项目编辑框公共部分xpath定位
-    INFOCOMMONXPATH3 = "html/body/div[3]/div/div/div/div/div"
-    INFOCOMMONXPATH2 = "html/body/div[2]/div/div/div/div/div"
+    CREATEBTN = ("xpath", getProjectOperationXpathByIndex(index=1))  # 创建按钮
+    ENTERPRISEBTN = ("xpath", getProjectOperationXpathByIndex(index=2))  # 项目参与方按钮
+    MEMBERBTN = ("xpath", getProjectOperationXpathByIndex(index=3))  # 项目团队按钮
+    EDITBTN = ("xpath", getProjectOperationXpathByIndex(index=4))  # 编辑按钮
+    ENDBTN = ("xpath", getProjectOperationXpathByIndex(index=5))  # 结束按钮
+    DELETEBTN = ("xpath", getProjectOperationXpathByIndex(index=6))  # 删除按钮
 
     # 项目创建
     NEWCODETEXT2 = ("xpath", INFOCOMMONXPATH2 + "/div[2]/div[1]/div[1]/span")  # 项目编码字段
