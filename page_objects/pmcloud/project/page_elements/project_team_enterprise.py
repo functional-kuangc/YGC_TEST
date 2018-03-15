@@ -6,7 +6,7 @@ ENTERPRISECOMMONXPATH3 = "html/body/div[3]/div/div/div/div/div"
 
 def getEnterpriseListHeadXpathByIndex(index=1, div=2):
     """
-    根据项目参与方列表列的索引获取表头字段的xpath
+    根据项目参与方列表列的索引获取表头字段的xpath.
     :param div: 项目参与方框架所属区域
     :param index: 项目参与方列表列的索引
     :return: 表头字段的xpath
@@ -34,7 +34,7 @@ def getEnterpriseTypeXpathByIndex(index=1, div=2):
 
 def getEnterpriseNameXpathByIndex(index=1, div=2):
     """
-    根据参与方列表索引获取参与方企业名称的xpath
+    根据参与方列表索引获取参与方企业名称的xpath.
     :param div: 项目参与方框架所属区域
     :param index: 参与方列表索引
     :return: 参与方企业名称的xpath

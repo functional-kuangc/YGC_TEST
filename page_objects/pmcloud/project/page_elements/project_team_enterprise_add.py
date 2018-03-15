@@ -6,7 +6,7 @@ ENTERPRISECOMMONXPATH4 = "html/body/div[4]/div/div/div/div"
 
 def getEnterpriseAddListHeadXpathByIndex(index=1, div=3):
     """
-    根据添加参与企业列表列的索引获取表头字段的xpath
+    根据添加参与企业列表列的索引获取表头字段的xpath.
     :param div: 添加参与企业框架所属区域
     :param index: 添加参与企业列表列的索引
     :return: 表头字段的xpath
@@ -34,7 +34,7 @@ def getEnterpriseAddTypeXpathByIndex(index=1, div=3):
 
 def getEnterpriseAddNameXpathByIndex(index=1, div=3):
     """
-    根据添加参与企业列表索引获取参与方企业名称的xpath
+    根据添加参与企业列表索引获取参与方企业名称的xpath.
     :param div: 添加参与企业框架所属区域
     :param index: 添加参与企业列表索引
     :return: 参与方企业名称的xpath
@@ -48,7 +48,7 @@ def getEnterpriseAddNameXpathByIndex(index=1, div=3):
 
 def getEnterpriseAddOperationXpathByIndex(index=1, div=3):
     """
-    根据添加参与企业列表索引获取参与方操作的xpath
+    根据添加参与企业列表索引获取参与方操作的xpath.
     :param div: 添加参与企业框架所属区域
     :param index: 添加参与企业列表索引
     :return: 参与方操作的xpath
@@ -80,7 +80,7 @@ def getEnterpriseAddToastCloseXpath(div=4):
     return "html/body/div[" + str(div) + "]/div/span/div/a/span"
 
 
-class ProjectTeamEnterprise:
+class ProjectTeamEnterpriseAdd:
     """添加参与企业元素定位"""
 
     # 添加参与企业列表字段
@@ -103,17 +103,17 @@ class ProjectTeamEnterprise:
     # 多行参与方
     # 第一个参与方信息
     FIRSTENTERPRISENAME3 = ("xpath", getEnterpriseAddNameXpathByIndex(index=1, div=3))
-    FIRSTENTERPRISEOPERATION3 = ("xpath", getEnterpriseAddOperationXpathByIndex(index=1, div=3) + "/a/span")
+    FIRSTENTERPRISEOPERATION3 = ("xpath", getEnterpriseAddOperationXpathByIndex(index=1, div=3))
 
     FIRSTENTERPRISENAME4 = ("xpath", getEnterpriseAddNameXpathByIndex(index=1, div=4))
-    FIRSTENTERPRISEOPERATION4 = ("xpath", getEnterpriseAddOperationXpathByIndex(index=1, div=4) + "/a/span")
+    FIRSTENTERPRISEOPERATION4 = ("xpath", getEnterpriseAddOperationXpathByIndex(index=1, div=4))
 
     # 第二个参与方信息
     SECONDENTERPRISENAME3 = ("xpath", getEnterpriseAddNameXpathByIndex(index=2, div=3))
-    SECONDENTERPRISEOPERATION3 = ("xpath", getEnterpriseAddOperationXpathByIndex(index=2, div=3) + "/a/span")
+    SECONDENTERPRISEOPERATION3 = ("xpath", getEnterpriseAddOperationXpathByIndex(index=2, div=3))
 
     SECONDENTERPRISENAME4 = ("xpath", getEnterpriseAddNameXpathByIndex(index=2, div=4))
-    SECONDENTERPRISEOPERATION4 = ("xpath", getEnterpriseAddOperationXpathByIndex(index=2, div=4) + "/a/span")
+    SECONDENTERPRISEOPERATION4 = ("xpath", getEnterpriseAddOperationXpathByIndex(index=2, div=4))
 
     # 参与方类型控件组
     # 单行参与方
@@ -164,6 +164,20 @@ class ProjectTeamEnterprise:
     SEARCHBUTTON4 = ("xpath", ENTERPRISECOMMONXPATH4 + "/div[2]/div/div[1]/button")  # 搜索按钮
     SELECTSEARCHLIST41 = ("xpath", ENTERPRISECOMMONXPATH4 + "/div[2]/div/div[1]/div/ul/li[1]")  # 选择第一个企业
     SELECTSEARCHLIST42 = ("xpath", ENTERPRISECOMMONXPATH4 + "/div[2]/div/div[1]/div/ul/li[2]")  # 选择第二个企业
+
+    # 添加参与企业页面下参与方的删除
+    # 单行参与方
+    SINGLEENTERPRISEDELETEBTN3 = ("xpath", SINGLEENTERPRISEOPERATION3[1] + "/a/span")
+    SINGLEENTERPRISEDELETEBTN4 = ("xpath", SINGLEENTERPRISEOPERATION4[1] + "/a/span")
+
+    # 多行参与方
+    # 第一个参与方
+    FIRSTENTERPRISEDELETEBTN3 = ("xpath", FIRSTENTERPRISEOPERATION3[1] + "/a/span")
+    FIRSTENTERPRISEDELETEBTN4 = ("xpath", FIRSTENTERPRISEOPERATION4[1] + "/a/span")
+
+    # 第二个参与方
+    SECONDENTERPRISEDELETEBTN3 = ("xpath", SECONDENTERPRISEOPERATION3[1] + "/a/span")
+    SECONDENTERPRISEDELETEBTN4 = ("xpath", SECONDENTERPRISEOPERATION4[1] + "/a/span")
 
     # 添加参与企业页面下的Toast提示信息
     ENTERPRISEADDTOAST4 = ("xpath", getEnterpriseAddToastXpath(div=4))

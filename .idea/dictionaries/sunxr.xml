@@ -67,6 +67,7 @@
       <w>enterprisetypetext</w>
       <w>filehandler</w>
       <w>firestproject</w>
+      <w>firstenterprisedeletebtn</w>
       <w>firstenterprisename</w>
       <w>firstenterpriseoperation</w>
       <w>firstenterprisetype</w>
@@ -139,6 +140,7 @@
       <w>searchbtn</w>
       <w>searchbutton</w>
       <w>searchinput</w>
+      <w>secondenterprisedeletebtn</w>
       <w>secondenterprisename</w>
       <w>secondenterpriseoperation</w>
       <w>secondenterprisetype</w>
@@ -150,6 +152,8 @@
       <w>selecttext</w>
       <w>selecttitle</w>
       <w>sendkeys</w>
+      <w>singleenterprisedelete</w>
+      <w>singleenterprisedeletebtn</w>
       <w>singleenterprisename</w>
       <w>singleenterpriseoperation</w>
       <w>singleenterprisetype</w>
