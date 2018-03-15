@@ -4,6 +4,16 @@ INFOCOMMONXPATH3 = "html/body/div[3]/div/div/div/div/div"
 INFOCOMMONXPATH2 = "html/body/div[2]/div/div/div/div/div"
 
 
+def getProjectListHeadXpathByIndex(index=2):
+    """
+    根据项目列表列的索引获取表头字段的xpath
+    :param index: 项目列表列的索引
+    :return: 表头字段的xpath
+    """
+
+    return ".//*[@id='app']/div/div/div/div[2]/div/div/div/span/div/table/thead/tr/th[" + str(index) + "]"
+
+
 def getProjectXpathByIndex(index=1):
     """
     根据项目列表索引获取项目的xpath.
@@ -86,6 +96,14 @@ def getProjectOperationXpathByIndex(index=1):
 
 class Project:
     """项目档案元素定位"""
+
+    # 项目档案列表字段名称
+    PROJECTCODETEXT = ("xpath", getProjectListHeadXpathByIndex(index=2))  # 项目编码字段
+    PROJECTNAMETEXT = ("xpath", getProjectListHeadXpathByIndex(index=3))  # 项目名称字段
+    PROJECTMANAGERTEXT = ("xpath", getProjectListHeadXpathByIndex(index=4))  # 项目经理字段
+    PROJECTAPPROVALDATETEXT = ("xpath", getProjectListHeadXpathByIndex(index=5))  # 立项日期字段
+    PROJECTENDDATETEXT = ("xpath", getProjectListHeadXpathByIndex(index=6))  # 结束日期字段
+    PROJECTDESCRIPTIONTEXT = ("xpath", getProjectListHeadXpathByIndex(index=7))  # 项目描述字段
 
     # 第一个项目档案信息
     FIRSTPROJECTRADIOBTN = ("xpath", getProjectXpathByIndex(index=1))  # 单选框
