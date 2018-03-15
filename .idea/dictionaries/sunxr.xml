@@ -1,6 +1,8 @@
 <component name="ProjectDictionaryState">
   <dictionary name="sunxr">
     <words>
+      <w>addbtn</w>
+      <w>addenterprisecommonxpath</w>
       <w>appcenter</w>
       <w>apptenant</w>
       <w>asctime</w>
@@ -52,8 +54,18 @@
       <w>endnametext</w>
       <w>endtodaydate</w>
       <w>enterprisebtn</w>
+      <w>enterprisecommonxpath</w>
+      <w>enterpriselistmsg</w>
+      <w>enterprisenametext</w>
+      <w>enterprisetypetext</w>
       <w>filehandler</w>
       <w>firestproject</w>
+      <w>firstenterprisename</w>
+      <w>firstenterpriseoperation</w>
+      <w>firstenterprisetype</w>
+      <w>firstenterprisetypeselectjl</w>
+      <w>firstenterprisetypeselectsg</w>
+      <w>firstenterprisetypeselectyz</w>
       <w>firstproject</w>
       <w>firstprojectapprovaldate</w>
       <w>firstprojectcode</w>
@@ -101,6 +113,12 @@
       <w>problemreason</w>
       <w>projcode</w>
       <w>projdescription</w>
+      <w>projectapprovaldatetext</w>
+      <w>projectcodetext</w>
+      <w>projectdescriptiontext</w>
+      <w>projectenddatetext</w>
+      <w>projectmanagertext</w>
+      <w>projectnametext</w>
       <w>projname</w>
       <w>pymysql</w>
       <w>repeatclose</w>
@@ -111,16 +129,30 @@
       <w>screenshot</w>
       <w>searchbtn</w>
       <w>searchinput</w>
+      <w>secondenterprisename</w>
+      <w>secondenterpriseoperation</w>
+      <w>secondenterprisetype</w>
+      <w>secondenterprisetypeselectjl</w>
+      <w>secondenterprisetypeselectsg</w>
+      <w>secondenterprisetypeselectyz</w>
       <w>secondproject</w>
       <w>selecttext</w>
       <w>selecttitle</w>
       <w>sendkeys</w>
+      <w>singleenterprisename</w>
+      <w>singleenterpriseoperation</w>
+      <w>singleenterprisetype</w>
+      <w>singleenterprisetypeselect</w>
+      <w>singleenterprisetypeselectjl</w>
+      <w>singleenterprisetypeselectsg</w>
+      <w>singleenterprisetypeselectyz</w>
       <w>smtp</w>
       <w>smtplib</w>
       <w>smtpserver</w>
       <w>streamhandler</w>
       <w>testcase</w>
       <w>testcases</w>
+      <w>thead</w>
       <w>todaydate</w>
       <w>webdriver</w>
       <w>workquality</w>
