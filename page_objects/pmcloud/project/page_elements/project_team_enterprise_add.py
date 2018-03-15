@@ -133,8 +133,14 @@ class ProjectTeamEnterprise:
     # 标题行
     MODULENAME3 = ("xpath", ENTERPRISECOMMONXPATH3 + "/div[1]")  # 模块名称
     CLOSEBTN3 = ("xpath", ENTERPRISECOMMONXPATH3 + "/div[1]/button")  # 右上角关闭按钮
-
+    SEARCHINPUT3 = ("xpath", ENTERPRISECOMMONXPATH3 + "/div[2]/div/div[1]/div/input")  # 搜索文本框
+    SEARCHBUTTON3 = ("xpath", ENTERPRISECOMMONXPATH3 + "/div[2]/div/div[1]/button")  # 搜索按钮
+    SELECTSEARCHLIST31 = ("xpath", ENTERPRISECOMMONXPATH3 + "/div[2]/div/div[1]/div/ul/li[1]")  # 选择第一个企业
+    SELECTSEARCHLIST32 = ("xpath", ENTERPRISECOMMONXPATH3 + "/div[2]/div/div[1]/div/ul/li[2]")  # 选择第二个企业
 
     MODULENAME4 = ("xpath", ENTERPRISECOMMONXPATH4 + "/div[1]")  # 模块名称
     CLOSEBTN4 = ("xpath", ENTERPRISECOMMONXPATH4 + "/div[1]/button")  # 右上角关闭按钮
-
+    SEARCHINPUT4 = ("xpath", ENTERPRISECOMMONXPATH4 + "/div[2]/div/div[1]/div/input")  # 搜索文本框
+    SEARCHBUTTON4 = ("xpath", ENTERPRISECOMMONXPATH4 + "/div[2]/div/div[1]/button")  # 搜索按钮
+    SELECTSEARCHLIST41 = ("xpath", ENTERPRISECOMMONXPATH4 + "/div[2]/div/div[1]/div/ul/li[1]")  # 选择第一个企业
+    SELECTSEARCHLIST42 = ("xpath", ENTERPRISECOMMONXPATH4 + "/div[2]/div/div[1]/div/ul/li[2]")  # 选择第二个企业

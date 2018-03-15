@@ -128,6 +128,7 @@
       <w>savebtn</w>
       <w>screenshot</w>
       <w>searchbtn</w>
+      <w>searchbutton</w>
       <w>searchinput</w>
       <w>secondenterprisename</w>
       <w>secondenterpriseoperation</w>
@@ -136,6 +137,7 @@
       <w>secondenterprisetypeselectsg</w>
       <w>secondenterprisetypeselectyz</w>
       <w>secondproject</w>
+      <w>selectsearchlist</w>
       <w>selecttext</w>
       <w>selecttitle</w>
       <w>sendkeys</w>
