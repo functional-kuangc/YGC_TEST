@@ -160,8 +160,6 @@ class ProjectTeamEnterpriseAddActions(PagePubSelenium):
         elif self.getElementText(locator=ProjectTeamEnterpriseAdd.MODULENAME5) == "添加参与企业":
             return self.getElementText(locator=ProjectTeamEnterpriseAdd.ENTERPRISEADDTOASTCLOSE6)
 
-    pass
-
 # 搜索流程
 
 # 设置流程
