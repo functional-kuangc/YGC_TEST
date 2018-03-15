@@ -1,7 +1,7 @@
 # coding: utf-8
 # 添加参与企业框架公共部分xpath定位
-ENTERPRISECOMMONXPATH3 = "html/body/div[3]/div/div/div/div"
-ENTERPRISECOMMONXPATH4 = "html/body/div[4]/div/div/div/div"
+ENTERPRISEADDCOMMONXPATH3 = "html/body/div[3]/div/div/div/div"
+ENTERPRISEADDCOMMONXPATH4 = "html/body/div[4]/div/div/div/div"
 
 
 def getEnterpriseAddListHeadXpathByIndex(index=1, div=3):
@@ -13,9 +13,9 @@ def getEnterpriseAddListHeadXpathByIndex(index=1, div=3):
     """
 
     if div == 3:
-        return ENTERPRISECOMMONXPATH3 + "/div[2]/div/div[2]/div/div/span/div[1]/table/thead/tr/th[" + str(index) + "]"
+        return ENTERPRISEADDCOMMONXPATH3 + "/div[2]/div/div[2]/div/div/span/div[1]/table/thead/tr/th[" + str(index) + "]"
     elif div == 4:
-        return ENTERPRISECOMMONXPATH4 + "/div[2]/div/div[2]/div/div/span/div[1]/table/thead/tr/th[" + str(index) + "]"
+        return ENTERPRISEADDCOMMONXPATH4 + "/div[2]/div/div[2]/div/div/span/div[1]/table/thead/tr/th[" + str(index) + "]"
 
 
 def getEnterpriseAddTypeXpathByIndex(index=1, div=3):
@@ -27,9 +27,9 @@ def getEnterpriseAddTypeXpathByIndex(index=1, div=3):
     """
 
     if div == 3:
-        return ENTERPRISECOMMONXPATH3 + "/div[2]/div/div[2]/div/div/span/div[2]/table/tbody/tr[" + str(index) + "]/td[1]"
+        return ENTERPRISEADDCOMMONXPATH3 + "/div[2]/div/div[2]/div/div/span/div[2]/table/tbody/tr[" + str(index) + "]/td[1]"
     elif div == 4:
-        return ENTERPRISECOMMONXPATH4 + "/div[2]/div/div[2]/div/div/span/div[2]/table/tbody/tr[" + str(index) + "]/td[1]"
+        return ENTERPRISEADDCOMMONXPATH4 + "/div[2]/div/div[2]/div/div/span/div[2]/table/tbody/tr[" + str(index) + "]/td[1]"
 
 
 def getEnterpriseAddNameXpathByIndex(index=1, div=3):
@@ -41,9 +41,9 @@ def getEnterpriseAddNameXpathByIndex(index=1, div=3):
     """
 
     if div == 3:
-        return ENTERPRISECOMMONXPATH3 + "/div[2]/div/div[2]/div/div/span/div[2]/table/tbody/tr[" + str(index) + "]/td[2]"
+        return ENTERPRISEADDCOMMONXPATH3 + "/div[2]/div/div[2]/div/div/span/div[2]/table/tbody/tr[" + str(index) + "]/td[2]"
     elif div == 4:
-        return ENTERPRISECOMMONXPATH4 + "/div[2]/div/div[2]/div/div/span/div[2]/table/tbody/tr[" + str(index) + "]/td[2]"
+        return ENTERPRISEADDCOMMONXPATH4 + "/div[2]/div/div[2]/div/div/span/div[2]/table/tbody/tr[" + str(index) + "]/td[2]"
 
 
 def getEnterpriseAddOperationXpathByIndex(index=1, div=3):
@@ -55,9 +55,9 @@ def getEnterpriseAddOperationXpathByIndex(index=1, div=3):
     """
 
     if div == 3:
-        return ENTERPRISECOMMONXPATH3 + "/div[2]/div/div[2]/div/div/span/div[2]/table/tbody/tr[" + str(index) + "]/td[3]"
+        return ENTERPRISEADDCOMMONXPATH3 + "/div[2]/div/div[2]/div/div/span/div[2]/table/tbody/tr[" + str(index) + "]/td[3]"
     elif div == 4:
-        return ENTERPRISECOMMONXPATH4 + "/div[2]/div/div[2]/div/div/span/div[2]/table/tbody/tr[" + str(index) + "]/td[3]"
+        return ENTERPRISEADDCOMMONXPATH4 + "/div[2]/div/div[2]/div/div/span/div[2]/table/tbody/tr[" + str(index) + "]/td[3]"
 
 
 def getEnterpriseAddToastXpath(div=4):
@@ -94,11 +94,11 @@ class ProjectTeamEnterpriseAdd:
     ENTERPRISELISTMSG = ("xpath", "html/body/div[4]/div/div/div/div/div[2]/div/div[2]/div/div/div")  # 参与方列表提示信息
 
     # 单行参与方
-    SINGLEENTERPRISENAME3 = ("xpath", ENTERPRISECOMMONXPATH3 + "/div[2]/div/div[2]/div/div/span/div[2]/table/tbody/tr/td[2]")
-    SINGLEENTERPRISEOPERATION3 = ("xpath", ENTERPRISECOMMONXPATH3 + "/div[2]/div/div[2]/div/div/span/div[2]/table/tbody/tr/td[3]")
+    SINGLEENTERPRISENAME3 = ("xpath", ENTERPRISEADDCOMMONXPATH3 + "/div[2]/div/div[2]/div/div/span/div[2]/table/tbody/tr/td[2]")
+    SINGLEENTERPRISEOPERATION3 = ("xpath", ENTERPRISEADDCOMMONXPATH3 + "/div[2]/div/div[2]/div/div/span/div[2]/table/tbody/tr/td[3]")
 
-    SINGLEENTERPRISENAME4 = ("xpath", ENTERPRISECOMMONXPATH4 + "/div[2]/div/div[2]/div/div/span/div[2]/table/tbody/tr/td[2]")
-    SINGLEENTERPRISEOPERATION4 = ("xpath", ENTERPRISECOMMONXPATH4 + "/div[2]/div/div[2]/div/div/span/div[2]/table/tbody/tr/td[3]")
+    SINGLEENTERPRISENAME4 = ("xpath", ENTERPRISEADDCOMMONXPATH4 + "/div[2]/div/div[2]/div/div/span/div[2]/table/tbody/tr/td[2]")
+    SINGLEENTERPRISEOPERATION4 = ("xpath", ENTERPRISEADDCOMMONXPATH4 + "/div[2]/div/div[2]/div/div/span/div[2]/table/tbody/tr/td[3]")
 
     # 多行参与方
     # 第一个参与方信息
@@ -117,12 +117,12 @@ class ProjectTeamEnterpriseAdd:
 
     # 参与方类型控件组
     # 单行参与方
-    SINGLEENTERPRISETYPE3 = ("xpath", ENTERPRISECOMMONXPATH3 + "/div[2]/div/div[2]/div/div/span/div[2]/table/tbody/tr/td[1]/div/div/span")
+    SINGLEENTERPRISETYPE3 = ("xpath", ENTERPRISEADDCOMMONXPATH3 + "/div[2]/div/div[2]/div/div/span/div[2]/table/tbody/tr/td[1]/div/div/span")
     SINGLEENTERPRISETYPESELECTYZ4 = ("xpath", "html/body/div[4]/div/div/div/ul/li[1]")  # 选择业主方
     SINGLEENTERPRISETYPESELECTSG4 = ("xpath", "html/body/div[4]/div/div/div/ul/li[2]")  # 选择施工方
     SINGLEENTERPRISETYPESELECTJL4 = ("xpath", "html/body/div[4]/div/div/div/ul/li[3]")  # 选择监理方
 
-    SINGLEENTERPRISETYPE4 = ("xpath", ENTERPRISECOMMONXPATH4 + "/div[2]/div/div[2]/div/div/span/div[2]/table/tbody/tr/td[1]/div/div/span")
+    SINGLEENTERPRISETYPE4 = ("xpath", ENTERPRISEADDCOMMONXPATH4 + "/div[2]/div/div[2]/div/div/span/div[2]/table/tbody/tr/td[1]/div/div/span")
     SINGLEENTERPRISETYPESELECTYZ5 = ("xpath", "html/body/div[5]/div/div/div/ul/li[1]")  # 选择业主方
     SINGLEENTERPRISETYPESELECTSG5 = ("xpath", "html/body/div[5]/div/div/div/ul/li[2]")  # 选择施工方
     SINGLEENTERPRISETYPESELECTJL5 = ("xpath", "html/body/div[5]/div/div/div/ul/li[3]")  # 选择监理方
@@ -151,19 +151,19 @@ class ProjectTeamEnterpriseAdd:
     SECONDENTERPRISETYPESELECTJL6 = ("xpath", "html/body/div[6]/div/div/div/ul/li[3]")  # 选择监理方
 
     # 标题行
-    MODULENAME3 = ("xpath", ENTERPRISECOMMONXPATH3 + "/div[1]")  # 模块名称
-    CLOSEBTN3 = ("xpath", ENTERPRISECOMMONXPATH3 + "/div[1]/button")  # 右上角关闭按钮
-    SEARCHINPUT3 = ("xpath", ENTERPRISECOMMONXPATH3 + "/div[2]/div/div[1]/div/input")  # 搜索文本框
-    SEARCHBUTTON3 = ("xpath", ENTERPRISECOMMONXPATH3 + "/div[2]/div/div[1]/button")  # 搜索按钮
-    SELECTSEARCHLIST31 = ("xpath", ENTERPRISECOMMONXPATH3 + "/div[2]/div/div[1]/div/ul/li[1]")  # 选择第一个企业
-    SELECTSEARCHLIST32 = ("xpath", ENTERPRISECOMMONXPATH3 + "/div[2]/div/div[1]/div/ul/li[2]")  # 选择第二个企业
+    MODULENAME3 = ("xpath", ENTERPRISEADDCOMMONXPATH3 + "/div[1]")  # 模块名称
+    CLOSEBTN3 = ("xpath", ENTERPRISEADDCOMMONXPATH3 + "/div[1]/button")  # 右上角关闭按钮
+    SEARCHINPUT3 = ("xpath", ENTERPRISEADDCOMMONXPATH3 + "/div[2]/div/div[1]/div/input")  # 搜索文本框
+    SEARCHBUTTON3 = ("xpath", ENTERPRISEADDCOMMONXPATH3 + "/div[2]/div/div[1]/button")  # 搜索按钮
+    SELECTSEARCHLIST31 = ("xpath", ENTERPRISEADDCOMMONXPATH3 + "/div[2]/div/div[1]/div/ul/li[1]")  # 选择第一个企业
+    SELECTSEARCHLIST32 = ("xpath", ENTERPRISEADDCOMMONXPATH3 + "/div[2]/div/div[1]/div/ul/li[2]")  # 选择第二个企业
 
-    MODULENAME4 = ("xpath", ENTERPRISECOMMONXPATH4 + "/div[1]")  # 模块名称
-    CLOSEBTN4 = ("xpath", ENTERPRISECOMMONXPATH4 + "/div[1]/button")  # 右上角关闭按钮
-    SEARCHINPUT4 = ("xpath", ENTERPRISECOMMONXPATH4 + "/div[2]/div/div[1]/div/input")  # 搜索文本框
-    SEARCHBUTTON4 = ("xpath", ENTERPRISECOMMONXPATH4 + "/div[2]/div/div[1]/button")  # 搜索按钮
-    SELECTSEARCHLIST41 = ("xpath", ENTERPRISECOMMONXPATH4 + "/div[2]/div/div[1]/div/ul/li[1]")  # 选择第一个企业
-    SELECTSEARCHLIST42 = ("xpath", ENTERPRISECOMMONXPATH4 + "/div[2]/div/div[1]/div/ul/li[2]")  # 选择第二个企业
+    MODULENAME4 = ("xpath", ENTERPRISEADDCOMMONXPATH4 + "/div[1]")  # 模块名称
+    CLOSEBTN4 = ("xpath", ENTERPRISEADDCOMMONXPATH4 + "/div[1]/button")  # 右上角关闭按钮
+    SEARCHINPUT4 = ("xpath", ENTERPRISEADDCOMMONXPATH4 + "/div[2]/div/div[1]/div/input")  # 搜索文本框
+    SEARCHBUTTON4 = ("xpath", ENTERPRISEADDCOMMONXPATH4 + "/div[2]/div/div[1]/button")  # 搜索按钮
+    SELECTSEARCHLIST41 = ("xpath", ENTERPRISEADDCOMMONXPATH4 + "/div[2]/div/div[1]/div/ul/li[1]")  # 选择第一个企业
+    SELECTSEARCHLIST42 = ("xpath", ENTERPRISEADDCOMMONXPATH4 + "/div[2]/div/div[1]/div/ul/li[2]")  # 选择第二个企业
 
     # 添加参与企业页面下参与方的删除
     # 单行参与方

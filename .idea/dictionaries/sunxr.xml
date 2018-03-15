@@ -55,10 +55,15 @@
       <w>endnametext</w>
       <w>endtodaydate</w>
       <w>enterpriseaddclose</w>
+      <w>enterpriseaddcommonxpath</w>
       <w>enterpriseaddtoast</w>
       <w>enterpriseaddtoastclose</w>
       <w>enterprisebtn</w>
       <w>enterprisecommonxpath</w>
+      <w>enterprisedeletecancelbtn</w>
+      <w>enterprisedeleteclosebtn</w>
+      <w>enterprisedeletemsg</w>
+      <w>enterprisedeleteokbtn</w>
       <w>enterpriselistclose</w>
       <w>enterpriselistmsg</w>
       <w>enterpriselisttoast</w>
