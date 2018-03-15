@@ -87,6 +87,14 @@ class ProjectActions(PagePubSelenium):
         self.click(locator=Project.DELETEBTN)
 
     @timeDecorator(1)
+    def clearSearchKeyword(self):
+        """
+        清空搜索框中关键字.
+        """
+
+        self.clear(locator=Project.SEARCHINPUT)
+
+    @timeDecorator(1)
     def typeSearchKeyword(self, keyword=""):
         """
         在搜索框中输入搜索关键字.
@@ -436,6 +444,7 @@ class ProjectActions(PagePubSelenium):
         :return: 搜索结果
         """
 
+        self.clearSearchKeyword()
         self.typeSearchKeyword(keyword=keyword)
         self.clickSearchButton()
 
