@@ -144,3 +144,5 @@ class ProjectTeamEnterprise:
     SEARCHBUTTON4 = ("xpath", ENTERPRISECOMMONXPATH4 + "/div[2]/div/div[1]/button")  # 搜索按钮
     SELECTSEARCHLIST41 = ("xpath", ENTERPRISECOMMONXPATH4 + "/div[2]/div/div[1]/div/ul/li[1]")  # 选择第一个企业
     SELECTSEARCHLIST42 = ("xpath", ENTERPRISECOMMONXPATH4 + "/div[2]/div/div[1]/div/ul/li[2]")  # 选择第二个企业
+
+    # 添加参与企业页面下的Toast提示信息

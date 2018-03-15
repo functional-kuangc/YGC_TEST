@@ -73,3 +73,5 @@ class ProjectTeamEnterprise:
     DELETEBTN3 = ("xpath", ENTERPRISECOMMONXPATH3 + "/div[2]/div[1]/button[1]")  # 删除按钮
     ADDBTN3 = ("xpath", ENTERPRISECOMMONXPATH3 + "/div[2]/div[1]/button[2]")  # 添加按钮
     CLOSEBTN3 = ("xpath", ENTERPRISECOMMONXPATH3 + "/div[1]/button")  # 右上角关闭按钮
+
+    # 项目参与方页面下的Toast提示信息

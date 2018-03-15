@@ -271,14 +271,14 @@ class Project:
     SAVEBTN3 = ("xpath", INFOCOMMONXPATH3 + "/div[3]/button[2]")  # 保存按钮
     CLOSEBTN3 = ("xpath", INFOCOMMONXPATH3 + "/div[1]/button")  # 右上角关闭按钮
 
-    # 项目列表页面下的提示信息
+    # 项目列表页面下的Toast提示信息
     LISTTOAST = ("xpath", "html/body/div[2]/div/span/div/div/div/div/div[2]")  # 列表页面下弹出的toast提示
     LISTCLOSE = ("xpath", "html/body/div[2]/div/span/div/a/span")  # 关闭提示
 
-    # 项目详情页面下的提示信息
+    # 项目详情页面下的Toast提示信息
     CARDTOAST = ("xpath", "html/body/div[3]/div/span/div/div/div/div/div[2]")  # 项目详情页面下弹出的toast提示
     CARDCLOSE = ("xpath", "html/body/div[3]/div/span/div/a/span")  # 关闭提示
 
-    # 字段重复校验的提示信息
+    # 字段重复校验的Toast提示信息
     REPEATTOAST = ("xpath", "html/body/div[4]/div/span/div/div/div/div/div[2]")  # 校验编码重复弹出的toast提示
     REPEATCLOSE = ("xpath", "html/body/div[4]/div/span/div/a/span")  # 关闭提示
