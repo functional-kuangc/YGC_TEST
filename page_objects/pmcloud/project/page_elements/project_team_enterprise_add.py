@@ -60,6 +60,26 @@ def getEnterpriseAddOperationXpathByIndex(index=1, div=3):
         return ENTERPRISECOMMONXPATH4 + "/div[2]/div/div[2]/div/div/span/div[2]/table/tbody/tr[" + str(index) + "]/td[3]"
 
 
+def getEnterpriseAddToastXpath(div=4):
+    """
+    获取参与企业页面下的Toast提示信息的xpath.
+    :param div: Toast提示所属区域
+    :return: Toast提示信息的xpath
+    """
+
+    return "html/body/div[" + str(div) + "]/div/span/div/div/div/div/div[2]"
+
+
+def getEnterpriseAddToastCloseXpath(div=4):
+    """
+    获取参与企业页面下的Toast提示关闭按钮的xpath.
+    :param div: Toast提示所属区域
+    :return: Toast提示关闭按钮的xpath
+    """
+
+    return "html/body/div[" + str(div) + "]/div/span/div/a/span"
+
+
 class ProjectTeamEnterprise:
     """添加参与企业元素定位"""
 
@@ -146,3 +166,8 @@ class ProjectTeamEnterprise:
     SELECTSEARCHLIST42 = ("xpath", ENTERPRISECOMMONXPATH4 + "/div[2]/div/div[1]/div/ul/li[2]")  # 选择第二个企业
 
     # 添加参与企业页面下的Toast提示信息
+    ENTERPRISEADDTOAST4 = ("xpath", getEnterpriseAddToastXpath(div=4))
+    ENTERPRISEADDTOASTCLOSE4 = ("xpath", getEnterpriseAddToastCloseXpath(div=4))
+
+    ENTERPRISEADDTOAST5 = ("xpath", getEnterpriseAddToastXpath(div=5))
+    ENTERPRISEADDTOASTCLOSE5 = ("xpath", getEnterpriseAddToastCloseXpath(div=5))

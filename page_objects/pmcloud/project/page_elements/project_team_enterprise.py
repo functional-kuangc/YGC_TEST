@@ -75,3 +75,5 @@ class ProjectTeamEnterprise:
     CLOSEBTN3 = ("xpath", ENTERPRISECOMMONXPATH3 + "/div[1]/button")  # 右上角关闭按钮
 
     # 项目参与方页面下的Toast提示信息
+    ENTERPRISELISTTOAST = ("xpath", "html/body/div[3]/div/span/div/div/div/div/div[2]")
+    ENTERPRISELISTTOASTCLOSE = ("xpath", "html/body/div[3]/div/span/div/a/span")

@@ -17,6 +17,7 @@
       <w>cardinfo</w>
       <w>cardmsg</w>
       <w>cardtoast</w>
+      <w>cardtoastclose</w>
       <w>closebtn</w>
       <w>contacttype</w>
       <w>createbtn</w>
@@ -53,9 +54,15 @@
       <w>endnameinputtext</w>
       <w>endnametext</w>
       <w>endtodaydate</w>
+      <w>enterpriseaddclose</w>
+      <w>enterpriseaddtoast</w>
+      <w>enterpriseaddtoastclose</w>
       <w>enterprisebtn</w>
       <w>enterprisecommonxpath</w>
+      <w>enterpriselistclose</w>
       <w>enterpriselistmsg</w>
+      <w>enterpriselisttoast</w>
+      <w>enterpriselisttoastclose</w>
       <w>enterprisenametext</w>
       <w>enterprisetypetext</w>
       <w>filehandler</w>
@@ -93,6 +100,7 @@
       <w>listinfo</w>
       <w>listmsg</w>
       <w>listtoast</w>
+      <w>listtoastclose</w>
       <w>loginbtn</w>
       <w>memberbtn</w>
       <w>modulename</w>
@@ -125,6 +133,7 @@
       <w>repeatinfo</w>
       <w>repeatmsg</w>
       <w>repeattoast</w>
+      <w>repeattoastclose</w>
       <w>savebtn</w>
       <w>screenshot</w>
       <w>searchbtn</w>

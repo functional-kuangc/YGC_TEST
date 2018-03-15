@@ -408,21 +408,21 @@ class ProjectActions(PagePubSelenium):
         关闭列表页面下出现的toast提示信息.
         """
 
-        self.click(locator=Project.LISTCLOSE)
+        self.click(locator=Project.LISTTOASTCLOSE)
 
     def closeCardToast(self):
         """
         关闭项目详情页面下出现的toast提示信息.
         """
 
-        self.click(locator=Project.CARDCLOSE)
+        self.click(locator=Project.CARDTOASTCLOSE)
 
     def closeRepeatToast(self):
         """
         关闭校验重复时出现的toast提示信息.
         """
 
-        self.click(locator=Project.REPEATCLOSE)
+        self.click(locator=Project.REPEATTOASTCLOSE)
 
     # 流程类操作
     # 搜索
