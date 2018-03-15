@@ -1,4 +1,8 @@
 # coding: utf-8
+
+__author__ = "sunxr"
+__version__ = "V1.0"
+
 # 项目编辑框公共部分xpath定位
 INFOCOMMONXPATH3 = "html/body/div[3]/div/div/div/div/div"
 INFOCOMMONXPATH2 = "html/body/div[2]/div/div/div/div/div"

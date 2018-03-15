@@ -1,4 +1,9 @@
 # coding: utf-8
+
+__author__ = "sunxr"
+__version__ = "V1.0"
+
+
 class Workbench:
     """友工程后台外框架元素定位"""
 

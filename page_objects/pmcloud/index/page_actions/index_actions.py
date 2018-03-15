@@ -6,6 +6,9 @@ from page_objects.pmcloud.index.page_elements.index import PMCloudIndex
 # 导入页面等待装饰器
 from libs.timedecorator import timeDecorator
 
+__author__ = "sunxr"
+__version__ = "V1.0"
+
 
 class PMCloudIndexActions(PagePubSelenium):
     """友工程首页操作类"""

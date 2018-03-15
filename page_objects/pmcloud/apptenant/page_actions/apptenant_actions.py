@@ -6,6 +6,9 @@ from page_objects.pmcloud.apptenant.page_elements.apptenant import Apptenant
 # 导入页面等待装饰器
 from libs.timedecorator import timeDecorator
 
+__author__ = "sunxr"
+__version__ = "V1.0"
+
 
 class ApptenantActions(PagePubSelenium):
     """企业帐号选择页操作类"""

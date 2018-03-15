@@ -18,6 +18,9 @@ from page_objects import WorkbenchActions
 # 导入项目档案操作类
 from page_objects import ProjectActions
 
+__author__ = "sunxr"
+__version__ = "V1.0"
+
 logger = Logger("TestProject").getLog()
 
 

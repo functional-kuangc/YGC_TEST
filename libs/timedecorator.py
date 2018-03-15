@@ -2,6 +2,9 @@
 # 导入时间模块
 import time
 
+__author__ = "sunxr"
+__version__ = "V1.0"
+
 
 def timeDecorator(timeout=2):
     """

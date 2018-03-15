@@ -1,4 +1,9 @@
 # coding: utf-8
+
+__author__ = "sunxr"
+__version__ = "V1.0"
+
+
 class PMCloudLogin:
     """友工程登录页元素定位"""
 

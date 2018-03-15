@@ -1,4 +1,9 @@
 # coding: utf-8
+
+__author__ = "sunxr"
+__version__ = "V1.0"
+
+
 class Apptenant:
     """企业帐号选择页元素定位"""
 

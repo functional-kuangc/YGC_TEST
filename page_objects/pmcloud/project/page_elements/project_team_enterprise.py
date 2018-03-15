@@ -1,4 +1,9 @@
 # coding: utf-8
+
+__author__ = "sunxr"
+__version__ = "V1.0"
+
+
 # 项目参与方框架公共部分xpath定位
 ENTERPRISECOMMONXPATH2 = "html/body/div[2]/div/div/div/div/div"
 ENTERPRISECOMMONXPATH3 = "html/body/div[3]/div/div/div/div/div"

@@ -1,4 +1,9 @@
 # coding: utf-8
+
+__author__ = "sunxr"
+__version__ = "V1.0"
+
+
 class PMCloudIndex:
     """友工程首页元素定位"""
 

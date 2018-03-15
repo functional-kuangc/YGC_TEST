@@ -6,6 +6,9 @@ from page_objects.pmcloud.project.page_elements.project_team_enterprise_add impo
 # 导入页面等待装饰器
 from libs.timedecorator import timeDecorator
 
+__author__ = "sunxr"
+__version__ = "V1.0"
+
 
 class ProjectTeamEnterpriseAddActions(PagePubSelenium):
     """添加参与企业操作类"""

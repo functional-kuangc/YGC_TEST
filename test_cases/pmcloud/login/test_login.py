@@ -16,6 +16,9 @@ from page_objects import ApptenantActions
 # 导入友工程后台外框架操作类
 from page_objects import WorkbenchActions
 
+__author__ = "sunxr"
+__version__ = "V1.0"
+
 logger = Logger("TestLogin").getLog()
 
 

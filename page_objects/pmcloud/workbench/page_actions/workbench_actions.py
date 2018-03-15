@@ -6,6 +6,9 @@ from page_objects.pmcloud.workbench.page_elements.workbench import Workbench
 # 导入页面等待装饰器
 from libs.timedecorator import timeDecorator
 
+__author__ = "sunxr"
+__version__ = "V1.0"
+
 
 class WorkbenchActions(PagePubSelenium):
     """友工程后台外框架操作类"""

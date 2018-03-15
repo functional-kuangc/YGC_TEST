@@ -6,6 +6,9 @@ from page_objects.pmcloud.login.page_elements.login import PMCloudLogin
 # 导入页面等待装饰器
 from libs.timedecorator import timeDecorator
 
+__author__ = "sunxr"
+__version__ = "V1.0"
+
 
 class PMCloudLoginActions(PagePubSelenium):
     """友工程登录页操作类"""
