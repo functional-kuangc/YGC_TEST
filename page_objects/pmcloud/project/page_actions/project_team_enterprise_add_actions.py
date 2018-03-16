@@ -75,6 +75,7 @@ class ProjectTeamEnterpriseAddActions(PagePubSelenium):
         elif self.getElementText(locator=ProjectTeamEnterpriseAdd.MODULENAME5) == "添加参与企业":
             self.click(locator=ProjectTeamEnterpriseAdd.SELECTSEARCHLIST51)
 
+    @timeDecorator(1)
     def selectSecondEnterprise(self):
         """
         从搜索结果中选择第二个企业.
@@ -89,6 +90,7 @@ class ProjectTeamEnterpriseAddActions(PagePubSelenium):
         elif self.getElementText(locator=ProjectTeamEnterpriseAdd.MODULENAME5) == "添加参与企业":
             self.click(locator=ProjectTeamEnterpriseAdd.SELECTSEARCHLIST52)
 
+    @timeDecorator(1)
     def clickOKButton(self):
         """
         点击确定按钮.
@@ -103,6 +105,7 @@ class ProjectTeamEnterpriseAddActions(PagePubSelenium):
         elif self.getElementText(locator=ProjectTeamEnterpriseAdd.MODULENAME5) == "添加参与企业":
             self.click(locator=ProjectTeamEnterpriseAdd.OKBTN5)
 
+    @timeDecorator(1)
     def clickCancelButton(self):
         """
         点击取消按钮.
@@ -117,6 +120,7 @@ class ProjectTeamEnterpriseAddActions(PagePubSelenium):
         elif self.getElementText(locator=ProjectTeamEnterpriseAdd.MODULENAME5) == "添加参与企业":
             self.click(locator=ProjectTeamEnterpriseAdd.CANCELBTN5)
 
+    @timeDecorator(1)
     def clickCloseButton(self):
         """
         点击右上角关闭按钮.
@@ -131,6 +135,7 @@ class ProjectTeamEnterpriseAddActions(PagePubSelenium):
         elif self.getElementText(locator=ProjectTeamEnterpriseAdd.MODULENAME5) == "添加参与企业":
             self.click(locator=ProjectTeamEnterpriseAdd.CLOSEBTN5)
 
+    @timeDecorator(1)
     def getToastMsg(self):
         """
         获取toast提示信息.
@@ -146,6 +151,7 @@ class ProjectTeamEnterpriseAddActions(PagePubSelenium):
         elif self.getElementText(locator=ProjectTeamEnterpriseAdd.MODULENAME5) == "添加参与企业":
             return self.getElementText(locator=ProjectTeamEnterpriseAdd.ENTERPRISEADDTOAST6)
 
+    @timeDecorator(1)
     def closeToast(self):
         """
         关闭toast提示.
@@ -154,18 +160,136 @@ class ProjectTeamEnterpriseAddActions(PagePubSelenium):
         if self.getElementText(locator=ProjectTeamEnterpriseAdd.MODULENAME4) == "添加参与企业":
             return self.click(locator=ProjectTeamEnterpriseAdd.ENTERPRISEADDTOASTCLOSE5)
         elif self.getElementText(locator=ProjectTeamEnterpriseAdd.MODULENAME6) == "添加参与企业":
-            return self.getElementText(locator=ProjectTeamEnterpriseAdd.ENTERPRISEADDTOASTCLOSE7)
+            return self.click(locator=ProjectTeamEnterpriseAdd.ENTERPRISEADDTOASTCLOSE7)
         elif self.getElementText(locator=ProjectTeamEnterpriseAdd.MODULENAME3) == "添加参与企业":
-            return self.getElementText(locator=ProjectTeamEnterpriseAdd.ENTERPRISEADDTOASTCLOSE4)
+            return self.click(locator=ProjectTeamEnterpriseAdd.ENTERPRISEADDTOASTCLOSE4)
         elif self.getElementText(locator=ProjectTeamEnterpriseAdd.MODULENAME5) == "添加参与企业":
-            return self.getElementText(locator=ProjectTeamEnterpriseAdd.ENTERPRISEADDTOASTCLOSE6)
+            return self.click(locator=ProjectTeamEnterpriseAdd.ENTERPRISEADDTOASTCLOSE6)
 
-# 搜索流程
+    # 企业列表操作
+    @timeDecorator(1)
+    def getEnterpriseListMsg(self):
+        """
+        添加参与企业列表为空时的提示信息.
+        :return: 提示信息
+        """
 
-# 设置流程
+        if self.getElementText(locator=ProjectTeamEnterpriseAdd.MODULENAME4) == "添加参与企业":
+            return self.getElementText(locator=ProjectTeamEnterpriseAdd.ENTERPRISELISTMSG4)
+        elif self.getElementText(locator=ProjectTeamEnterpriseAdd.MODULENAME6) == "添加参与企业":
+            return self.getElementText(locator=ProjectTeamEnterpriseAdd.ENTERPRISELISTMSG6)
+        elif self.getElementText(locator=ProjectTeamEnterpriseAdd.MODULENAME3) == "添加参与企业":
+            return self.getElementText(locator=ProjectTeamEnterpriseAdd.ENTERPRISELISTMSG3)
+        elif self.getElementText(locator=ProjectTeamEnterpriseAdd.MODULENAME5) == "添加参与企业":
+            return self.getElementText(locator=ProjectTeamEnterpriseAdd.ENTERPRISELISTMSG5)
 
-# 添加流程
+    @timeDecorator(1)
+    def clickFirstEnterpriseType(self):
+        """
+        点击第一个参与方的参与方类型控件.
+        """
 
-# 退出流程
+        if self.getElementText(locator=ProjectTeamEnterpriseAdd.MODULENAME4) == "添加参与企业":
+            return self.click(locator=ProjectTeamEnterpriseAdd.FIRSTENTERPRISETYPE4)
+        elif self.getElementText(locator=ProjectTeamEnterpriseAdd.MODULENAME6) == "添加参与企业":
+            return self.click(locator=ProjectTeamEnterpriseAdd.FIRSTENTERPRISETYPE6)
+        elif self.getElementText(locator=ProjectTeamEnterpriseAdd.MODULENAME3) == "添加参与企业":
+            return self.click(locator=ProjectTeamEnterpriseAdd.FIRSTENTERPRISETYPE3)
+        elif self.getElementText(locator=ProjectTeamEnterpriseAdd.MODULENAME5) == "添加参与企业":
+            return self.click(locator=ProjectTeamEnterpriseAdd.FIRSTENTERPRISETYPE5)
 
+    @timeDecorator(1)
+    def clickSecondEnterpriseType(self):
+        """
+        点击第二个参与方的参与方类型控件.
+        """
 
+        if self.getElementText(locator=ProjectTeamEnterpriseAdd.MODULENAME4) == "添加参与企业":
+            return self.click(locator=ProjectTeamEnterpriseAdd.SECONDENTERPRISETYPE4)
+        elif self.getElementText(locator=ProjectTeamEnterpriseAdd.MODULENAME6) == "添加参与企业":
+            return self.click(locator=ProjectTeamEnterpriseAdd.SECONDENTERPRISETYPE6)
+        elif self.getElementText(locator=ProjectTeamEnterpriseAdd.MODULENAME3) == "添加参与企业":
+            return self.click(locator=ProjectTeamEnterpriseAdd.SECONDENTERPRISETYPE3)
+        elif self.getElementText(locator=ProjectTeamEnterpriseAdd.MODULENAME5) == "添加参与企业":
+            return self.click(locator=ProjectTeamEnterpriseAdd.SECONDENTERPRISETYPE5)
+
+    @timeDecorator(1)
+    def selectFirstEnterpriseTypeSG(self):
+        """
+        选择第一个企业为施工方.
+        """
+
+        if self.getElementText(locator=ProjectTeamEnterpriseAdd.MODULENAME4) == "添加参与企业":
+            return self.click(locator=ProjectTeamEnterpriseAdd.FIRSTENTERPRISETYPESELECTSG5)
+        elif self.getElementText(locator=ProjectTeamEnterpriseAdd.MODULENAME6) == "添加参与企业":
+            return self.click(locator=ProjectTeamEnterpriseAdd.FIRSTENTERPRISETYPESELECTSG7)
+        elif self.getElementText(locator=ProjectTeamEnterpriseAdd.MODULENAME3) == "添加参与企业":
+            return self.click(locator=ProjectTeamEnterpriseAdd.FIRSTENTERPRISETYPESELECTSG4)
+        elif self.getElementText(locator=ProjectTeamEnterpriseAdd.MODULENAME5) == "添加参与企业":
+            return self.click(locator=ProjectTeamEnterpriseAdd.FIRSTENTERPRISETYPESELECTSG6)
+
+    @timeDecorator(1)
+    def selectSecondEnterpriseTypeJL(self):
+        """
+        选择第二个企业为监理方.
+        """
+
+        if self.getElementText(locator=ProjectTeamEnterpriseAdd.MODULENAME4) == "添加参与企业":
+            return self.click(locator=ProjectTeamEnterpriseAdd.SECONDENTERPRISETYPESELECTJL6)
+        elif self.getElementText(locator=ProjectTeamEnterpriseAdd.MODULENAME6) == "添加参与企业":
+            return self.click(locator=ProjectTeamEnterpriseAdd.SECONDENTERPRISETYPESELECTJL8)
+        elif self.getElementText(locator=ProjectTeamEnterpriseAdd.MODULENAME3) == "添加参与企业":
+            return self.click(locator=ProjectTeamEnterpriseAdd.SECONDENTERPRISETYPESELECTJL5)
+        elif self.getElementText(locator=ProjectTeamEnterpriseAdd.MODULENAME5) == "添加参与企业":
+            return self.click(locator=ProjectTeamEnterpriseAdd.SECONDENTERPRISETYPESELECTJL7)
+
+    # 流程类操作
+    def searchEnterprise(self):
+        """
+        搜索并选择两个参与方全流程.
+        """
+
+        self.clearSearchKeyword()
+        self.typeSearchKeyword()
+        self.selectFirstEnterprise()
+        self.clearSearchKeyword()
+        self.typeSearchKeyword()
+        self.selectSecondEnterprise()
+
+    def selectEnterpriseType(self):
+        """
+        设置两个参与方分别为施工方和监理方全流程.
+        :return:
+        """
+
+        self.clickFirstEnterpriseType()
+        self.selectFirstEnterpriseTypeSG()
+        self.clickSecondEnterpriseType()
+        self.selectSecondEnterpriseTypeJL()
+
+    def saveEnterpriseAdd(self):
+        """
+        添加参与方并保存.
+        """
+
+        self.searchEnterprise()
+        self.selectEnterpriseType()
+        self.clickOKButton()
+
+    def cancelEnterpriseAddByCancelButton(self):
+        """
+        通过取消按钮取消添加参与方.
+        """
+
+        self.searchEnterprise()
+        self.selectEnterpriseType()
+        self.clickCancelButton()
+
+    def cancelEnterpriseAddByCloseButton(self):
+        """
+        通过右上角关闭按钮取消添加参与方.
+        """
+
+        self.searchEnterprise()
+        self.selectEnterpriseType()
+        self.clickCloseButton()
