@@ -45,6 +45,8 @@ class TestProjectTeamEnterprise(unittest.TestCase):
         WorkbenchActions(self.__driver).switchToIframe()
         ProjectActions(self.__driver).saveCreateProject()
         ProjectActions(self.__driver).closeListToast()
+        ProjectActions(self.__driver).selectFirstProject()
+        ProjectActions(self.__driver).clickEnterpriseButton()
 
     def tearDown(self):
 
