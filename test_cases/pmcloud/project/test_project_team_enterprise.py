@@ -1,4 +1,5 @@
 # coding: utf-8
+# coding: utf-8
 # 导入测试框架unittest
 import unittest
 # 导入浏览器
@@ -17,15 +18,19 @@ from page_objects import ApptenantActions
 from page_objects import WorkbenchActions
 # 导入项目档案操作类
 from page_objects import ProjectActions
+# 导入项目参与方操作类
+from page_objects import ProjectTeamEnterpriseActions
+# 导入添加参与企业操作类
+from page_objects import ProjectTeamEnterpriseAddActions
 
 __author__ = "sunxr"
 __version__ = "V1.0"
 
-logger = Logger("TestProject").getLog()
+logger = Logger("TestProjectTeamEnterprise").getLog()
 
 
-class TestProject(unittest.TestCase):
-    """测试友工程项目档案"""
+class TestProjectTeamEnterprise(unittest.TestCase):
+    """测试友工程项目参与方"""
 
     def setUp(self):
 
@@ -38,20 +43,27 @@ class TestProject(unittest.TestCase):
         ApptenantActions(self.__driver).apptenantLogin()
         WorkbenchActions(self.__driver).clickProject()
         WorkbenchActions(self.__driver).switchToIframe()
+        ProjectActions(self.__driver).saveCreateProject()
+        ProjectActions(self.__driver).closeListToast()
 
     def tearDown(self):
 
         logger.info("测试后退出.")
+
+        ProjectActions(self.__driver).saveDeleteProject()
         WorkbenchActions(self.__driver).switchBackToFrame()
         WorkbenchActions(self.__driver).logout()
         self.__driver.quit()
 
-    def test_create_and_delete_success(self):
+    def test_add_and_delete_success(self):
 
-        project_page = ProjectActions(self.__driver)
-        project_page.saveCreateProject()
-        project_page.closeListToast()
-        project_page.saveDeleteProject()
+        enterprise_page = ProjectTeamEnterpriseActions(self.__driver)
+        enterprise_page.clickAddButton()
+
+        enterprise_add_page = ProjectTeamEnterpriseAddActions(self.__driver)
+        enterprise_add_page.saveEnterpriseAdd()
+        enterprise_page.saveDeleteEnterprise()
+        enterprise_page.clickCLoseButton()
 
 
 if __name__ == '__main__':

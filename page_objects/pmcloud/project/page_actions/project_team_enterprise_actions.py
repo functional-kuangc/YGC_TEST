@@ -28,6 +28,20 @@ class ProjectTeamEnterpriseActions(PagePubSelenium):
         elif self.getElementText(locator=ProjectTeamEnterprise.MODULENAME4) == "项目参与方":
             self.click(locator=ProjectTeamEnterprise.FIRSTENTERPRISENAME4)
 
+    def selectSingleEnterprise(self):
+        """
+        列表只有一个企业时点击选中.
+        """
+
+        if self.getElementText(locator=ProjectTeamEnterprise.MODULENAME3) == "项目参与方":
+            self.click(locator=ProjectTeamEnterprise.SINGLEENTERPRISENAME3)
+        elif self.getElementText(locator=ProjectTeamEnterprise.MODULENAME5) == "项目参与方":
+            self.click(locator=ProjectTeamEnterprise.SINGLEENTERPRISENAME5)
+        elif self.getElementText(locator=ProjectTeamEnterprise.MODULENAME2) == "项目参与方":
+            self.click(locator=ProjectTeamEnterprise.SINGLEENTERPRISENAME2)
+        elif self.getElementText(locator=ProjectTeamEnterprise.MODULENAME4) == "项目参与方":
+            self.click(locator=ProjectTeamEnterprise.SINGLEENTERPRISENAME4)
+
     @timeDecorator(1)
     def clickAddButton(self):
         """
@@ -143,12 +157,16 @@ class ProjectTeamEnterpriseActions(PagePubSelenium):
     # 删除参与方
     def saveDeleteEnterprise(self):
         """
-        删除第一个参与方全流程.
+        删除两个参与方全流程.
         """
 
         self.selectFirstEnterprise()
         self.clickDeleteButton()
         self.clickDeleteOKButton()
+        self.selectSingleEnterprise()
+        self.clickDeleteButton()
+        self.clickDeleteOKButton()
+        self.selectSingleEnterprise()
 
     def cancelDeleteEnterpriseByCancelButton(self):
         """
