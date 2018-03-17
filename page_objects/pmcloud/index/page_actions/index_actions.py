@@ -14,11 +14,11 @@ class PMCloudIndexActions(PagePubSelenium):
     """友工程首页操作类"""
 
     @timeDecorator(1)
-    def openPMCloudIndex(self, expected_title):
+    def openPMCloudIndex(self, expected_title="用友云工程服务"):
         """
         打开友工程首页，验证网页标题是否正确.
         :param expected_title: 期望网页标题
-        :return: 打开网页，返回布尔值
+        :return: 打开网页
         """
 
         self.openExceptedURL(expected_title=expected_title)

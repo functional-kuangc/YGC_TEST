@@ -43,11 +43,11 @@ class TestLogin(unittest.TestCase):
         expected_result = "测试孙旭冉"
 
         index_page = PMCloudIndexActions(self.__driver)
-        index_page.openPMCloudIndex(expected_title="用友云工程服务")
+        index_page.openPMCloudIndex()
         index_page.clickLoginButton()
 
         login_page = PMCloudLoginActions(self.__driver)
-        login_page.pmcloudLogin(remember_selected=True)
+        login_page.pmcloudLogin()
 
         apptenant_page = ApptenantActions(self.__driver)
         apptenant_page.apptenantLogin()
