@@ -189,43 +189,51 @@ class ProjectTeamEnterpriseAdd:
 
     # 多行参与方
     # 第一个参与方
-    FIRSTENTERPRISETYPE3 = ("xpath", getEnterpriseAddTypeXpathByIndex(index=1, div=3) + "/div/div/span")
+    # FIRSTENTERPRISETYPE3 = ("xpath", getEnterpriseAddTypeXpathByIndex(index=1, div=3) + "/div/div/span")
+    FIRSTENTERPRISETYPE3 = ("xpath", getEnterpriseAddTypeXpathByIndex(index=1, div=3) + "/div/div")
     FIRSTENTERPRISETYPESELECTYZ4 = ("xpath", "html/body/div[4]/div/div/div/ul/li[1]")  # 选择业主方
     FIRSTENTERPRISETYPESELECTSG4 = ("xpath", "html/body/div[4]/div/div/div/ul/li[2]")  # 选择施工方
     FIRSTENTERPRISETYPESELECTJL4 = ("xpath", "html/body/div[4]/div/div/div/ul/li[3]")  # 选择监理方
 
-    FIRSTENTERPRISETYPE4 = ("xpath", getEnterpriseAddTypeXpathByIndex(index=1, div=4) + "/div/div/span")
+    # FIRSTENTERPRISETYPE4 = ("xpath", getEnterpriseAddTypeXpathByIndex(index=1, div=4) + "/div/div/span")
+    FIRSTENTERPRISETYPE4 = ("xpath", getEnterpriseAddTypeXpathByIndex(index=1, div=4) + "/div/div")
     FIRSTENTERPRISETYPESELECTYZ5 = ("xpath", "html/body/div[5]/div/div/div/ul/li[1]")  # 选择业主方
     FIRSTENTERPRISETYPESELECTSG5 = ("xpath", "html/body/div[5]/div/div/div/ul/li[2]")  # 选择施工方
     FIRSTENTERPRISETYPESELECTJL5 = ("xpath", "html/body/div[5]/div/div/div/ul/li[3]")  # 选择监理方
 
-    FIRSTENTERPRISETYPE5 = ("xpath", getEnterpriseAddTypeXpathByIndex(index=1, div=5) + "/div/div/span")
+    # FIRSTENTERPRISETYPE5 = ("xpath", getEnterpriseAddTypeXpathByIndex(index=1, div=5) + "/div/div/span")
+    FIRSTENTERPRISETYPE5 = ("xpath", getEnterpriseAddTypeXpathByIndex(index=1, div=5) + "/div/div")
     FIRSTENTERPRISETYPESELECTYZ6 = ("xpath", "html/body/div[6]/div/div/div/ul/li[1]")  # 选择业主方
     FIRSTENTERPRISETYPESELECTSG6 = ("xpath", "html/body/div[6]/div/div/div/ul/li[2]")  # 选择施工方
     FIRSTENTERPRISETYPESELECTJL6 = ("xpath", "html/body/div[6]/div/div/div/ul/li[3]")  # 选择监理方
 
-    FIRSTENTERPRISETYPE6 = ("xpath", getEnterpriseAddTypeXpathByIndex(index=1, div=6) + "/div/div/span")
+    # FIRSTENTERPRISETYPE6 = ("xpath", getEnterpriseAddTypeXpathByIndex(index=1, div=6) + "/div/div/span")
+    FIRSTENTERPRISETYPE6 = ("xpath", getEnterpriseAddTypeXpathByIndex(index=1, div=6) + "/div/div")
     FIRSTENTERPRISETYPESELECTYZ7 = ("xpath", "html/body/div[7]/div/div/div/ul/li[1]")  # 选择业主方
     FIRSTENTERPRISETYPESELECTSG7 = ("xpath", "html/body/div[7]/div/div/div/ul/li[2]")  # 选择施工方
     FIRSTENTERPRISETYPESELECTJL7 = ("xpath", "html/body/div[7]/div/div/div/ul/li[3]")  # 选择监理方
 
     # 第二个参与方
-    SECONDENTERPRISETYPE3 = ("xpath", getEnterpriseAddTypeXpathByIndex(index=2, div=3) + "/div/div/span")
+    # SECONDENTERPRISETYPE3 = ("xpath", getEnterpriseAddTypeXpathByIndex(index=2, div=3) + "/div/div/span")
+    SECONDENTERPRISETYPE3 = ("xpath", getEnterpriseAddTypeXpathByIndex(index=2, div=3) + "/div/div")
     SECONDENTERPRISETYPESELECTYZ5 = ("xpath", "html/body/div[5]/div/div/div/ul/li[1]")  # 选择业主方
     SECONDENTERPRISETYPESELECTSG5 = ("xpath", "html/body/div[5]/div/div/div/ul/li[2]")  # 选择施工方
     SECONDENTERPRISETYPESELECTJL5 = ("xpath", "html/body/div[5]/div/div/div/ul/li[3]")  # 选择监理方
 
-    SECONDENTERPRISETYPE4 = ("xpath", getEnterpriseAddTypeXpathByIndex(index=2, div=4) + "/div/div/span")
+    # SECONDENTERPRISETYPE4 = ("xpath", getEnterpriseAddTypeXpathByIndex(index=2, div=4) + "/div/div/span")
+    SECONDENTERPRISETYPE4 = ("xpath", getEnterpriseAddTypeXpathByIndex(index=2, div=4) + "/div/div")
     SECONDENTERPRISETYPESELECTYZ6 = ("xpath", "html/body/div[6]/div/div/div/ul/li[1]")  # 选择业主方
     SECONDENTERPRISETYPESELECTSG6 = ("xpath", "html/body/div[6]/div/div/div/ul/li[2]")  # 选择施工方
     SECONDENTERPRISETYPESELECTJL6 = ("xpath", "html/body/div[6]/div/div/div/ul/li[3]")  # 选择监理方
 
-    SECONDENTERPRISETYPE5 = ("xpath", getEnterpriseAddTypeXpathByIndex(index=2, div=5) + "/div/div/span")
+    # SECONDENTERPRISETYPE5 = ("xpath", getEnterpriseAddTypeXpathByIndex(index=2, div=5) + "/div/div/span")
+    SECONDENTERPRISETYPE5 = ("xpath", getEnterpriseAddTypeXpathByIndex(index=2, div=5) + "/div/div")
     SECONDENTERPRISETYPESELECTYZ7 = ("xpath", "html/body/div[7]/div/div/div/ul/li[1]")  # 选择业主方
     SECONDENTERPRISETYPESELECTSG7 = ("xpath", "html/body/div[7]/div/div/div/ul/li[2]")  # 选择施工方
     SECONDENTERPRISETYPESELECTJL7 = ("xpath", "html/body/div[7]/div/div/div/ul/li[3]")  # 选择监理方
 
-    SECONDENTERPRISETYPE6 = ("xpath", getEnterpriseAddTypeXpathByIndex(index=2, div=6) + "/div/div/span")
+    # SECONDENTERPRISETYPE6 = ("xpath", getEnterpriseAddTypeXpathByIndex(index=2, div=6) + "/div/div/span")
+    SECONDENTERPRISETYPE6 = ("xpath", getEnterpriseAddTypeXpathByIndex(index=2, div=6) + "/div/div")
     SECONDENTERPRISETYPESELECTYZ8 = ("xpath", "html/body/div[8]/div/div/div/ul/li[1]")  # 选择业主方
     SECONDENTERPRISETYPESELECTSG8 = ("xpath", "html/body/div[8]/div/div/div/ul/li[2]")  # 选择施工方
     SECONDENTERPRISETYPESELECTJL8 = ("xpath", "html/body/div[8]/div/div/div/ul/li[3]")  # 选择监理方
