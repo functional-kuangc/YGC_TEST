@@ -4,8 +4,10 @@ __author__ = "sunxr"
 __version__ = "V1.0"
 
 # 项目编辑框公共部分xpath定位
-INFOCOMMONXPATH3 = "html/body/div[3]/div/div/div/div/div"
 INFOCOMMONXPATH2 = "html/body/div[2]/div/div/div/div/div"
+INFOCOMMONXPATH3 = "html/body/div[3]/div/div/div/div/div"
+INFOCOMMONXPATH4 = "html/body/div[4]/div/div/div/div/div"
+INFOCOMMONXPATH5 = "html/body/div[5]/div/div/div/div/div"
 
 
 def getProjectListHeadXpathByIndex(index=2):
@@ -274,6 +276,14 @@ class Project:
     CANCELBTN3 = ("xpath", INFOCOMMONXPATH3 + "/div[3]/button[1]")  # 取消按钮
     SAVEBTN3 = ("xpath", INFOCOMMONXPATH3 + "/div[3]/button[2]")  # 保存按钮
     CLOSEBTN3 = ("xpath", INFOCOMMONXPATH3 + "/div[1]/button")  # 右上角关闭按钮
+
+    CANCELBTN4 = ("xpath", INFOCOMMONXPATH4 + "/div[3]/button[1]")  # 取消按钮
+    SAVEBTN4 = ("xpath", INFOCOMMONXPATH4 + "/div[3]/button[2]")  # 保存按钮
+    CLOSEBTN4 = ("xpath", INFOCOMMONXPATH4 + "/div[1]/button")  # 右上角关闭按钮
+
+    CANCELBTN5 = ("xpath", INFOCOMMONXPATH5 + "/div[3]/button[1]")  # 取消按钮
+    SAVEBTN5 = ("xpath", INFOCOMMONXPATH5 + "/div[3]/button[2]")  # 保存按钮
+    CLOSEBTN5 = ("xpath", INFOCOMMONXPATH5 + "/div[1]/button")  # 右上角关闭按钮
 
     # 项目列表页面下的Toast提示信息
     LISTTOAST = ("xpath", "html/body/div[2]/div/span/div/div/div/div/div[2]")  # 列表页面下弹出的toast提示

@@ -97,29 +97,29 @@ class ProjectTeamEnterprise:
     # 多行参与方
     # 第一个参与方信息
     FIRSTENTERPRISETYPE2 = ("xpath", getEnterpriseTypeXpathByIndex(index=1, div=2))  # 参与方类型
-    FIRSTENTERPRISENAME2 = ("xpath", getEnterpriseTypeXpathByIndex(index=1, div=2))  # 参与方企业名称
+    FIRSTENTERPRISENAME2 = ("xpath", getEnterpriseNameXpathByIndex(index=1, div=2))  # 参与方企业名称
 
     FIRSTENTERPRISETYPE3 = ("xpath", getEnterpriseTypeXpathByIndex(index=1, div=3))  # 参与方类型
-    FIRSTENTERPRISENAME3 = ("xpath", getEnterpriseTypeXpathByIndex(index=1, div=3))  # 参与方企业名称
+    FIRSTENTERPRISENAME3 = ("xpath", getEnterpriseNameXpathByIndex(index=1, div=3))  # 参与方企业名称
 
     FIRSTENTERPRISETYPE4 = ("xpath", getEnterpriseTypeXpathByIndex(index=1, div=4))  # 参与方类型
-    FIRSTENTERPRISENAME4 = ("xpath", getEnterpriseTypeXpathByIndex(index=1, div=4))  # 参与方企业名称
+    FIRSTENTERPRISENAME4 = ("xpath", getEnterpriseNameXpathByIndex(index=1, div=4))  # 参与方企业名称
 
     FIRSTENTERPRISETYPE5 = ("xpath", getEnterpriseTypeXpathByIndex(index=1, div=5))  # 参与方类型
-    FIRSTENTERPRISENAME5 = ("xpath", getEnterpriseTypeXpathByIndex(index=1, div=5))  # 参与方企业名称
+    FIRSTENTERPRISENAME5 = ("xpath", getEnterpriseNameXpathByIndex(index=1, div=5))  # 参与方企业名称
 
     # 第二个参与方信息
     SECONDENTERPRISETYPE2 = ("xpath", getEnterpriseTypeXpathByIndex(index=2, div=2))  # 参与方类型
-    SECONDENTERPRISENAME2 = ("xpath", getEnterpriseTypeXpathByIndex(index=2, div=2))  # 参与方企业名称
+    SECONDENTERPRISENAME2 = ("xpath", getEnterpriseNameXpathByIndex(index=2, div=2))  # 参与方企业名称
 
     SECONDENTERPRISETYPE3 = ("xpath", getEnterpriseTypeXpathByIndex(index=2, div=3))  # 参与方类型
-    SECONDENTERPRISENAME3 = ("xpath", getEnterpriseTypeXpathByIndex(index=2, div=3))  # 参与方企业名称
+    SECONDENTERPRISENAME3 = ("xpath", getEnterpriseNameXpathByIndex(index=2, div=3))  # 参与方企业名称
 
     SECONDENTERPRISETYPE4 = ("xpath", getEnterpriseTypeXpathByIndex(index=2, div=4))  # 参与方类型
-    SECONDENTERPRISENAME4 = ("xpath", getEnterpriseTypeXpathByIndex(index=2, div=4))  # 参与方企业名称
+    SECONDENTERPRISENAME4 = ("xpath", getEnterpriseNameXpathByIndex(index=2, div=4))  # 参与方企业名称
 
     SECONDENTERPRISETYPE5 = ("xpath", getEnterpriseTypeXpathByIndex(index=2, div=5))  # 参与方类型
-    SECONDENTERPRISENAME5 = ("xpath", getEnterpriseTypeXpathByIndex(index=2, div=5))  # 参与方企业名称
+    SECONDENTERPRISENAME5 = ("xpath", getEnterpriseNameXpathByIndex(index=2, div=5))  # 参与方企业名称
 
     # 标题行
     MODULENAME2 = ("xpath", ENTERPRISECOMMONXPATH2 + "/div[1]/h4")  # 模块名称

@@ -339,8 +339,12 @@ class ProjectActions(PagePubSelenium):
 
         if self.getElementText(locator=Project.CANCELBTN2) == "取消":
             self.click(locator=Project.SAVEBTN2)
+        elif self.getElementText(locator=Project.CANCELBTN5) == "取消":
+            self.click(locator=Project.SAVEBTN5)
         elif self.getElementText(locator=Project.CANCELBTN3) == "取消":
             self.click(locator=Project.SAVEBTN3)
+        elif self.getElementText(locator=Project.CANCELBTN4) == "取消":
+            self.click(locator=Project.SAVEBTN4)
 
     @timeDecorator(1)
     def clickCancelButton(self):
@@ -350,8 +354,12 @@ class ProjectActions(PagePubSelenium):
 
         if self.getElementText(locator=Project.CANCELBTN2) == "取消":
             self.click(locator=Project.CANCELBTN2)
+        elif self.getElementText(locator=Project.CANCELBTN5) == "取消":
+            self.click(locator=Project.CANCELBTN5)
         elif self.getElementText(locator=Project.CANCELBTN3) == "取消":
             self.click(locator=Project.CANCELBTN3)
+        elif self.getElementText(locator=Project.CANCELBTN4) == "取消":
+            self.click(locator=Project.CANCELBTN4)
 
     @timeDecorator(1)
     def clickCloseButton(self):
@@ -361,8 +369,12 @@ class ProjectActions(PagePubSelenium):
 
         if self.getElementText(locator=Project.CANCELBTN2) == "取消":
             self.click(locator=Project.CLOSEBTN2)
+        elif self.getElementText(locator=Project.CANCELBTN5) == "取消":
+            self.click(locator=Project.CLOSEBTN5)
         elif self.getElementText(locator=Project.CANCELBTN3) == "取消":
             self.click(locator=Project.CLOSEBTN3)
+        elif self.getElementText(locator=Project.CANCELBTN4) == "取消":
+            self.click(locator=Project.CLOSEBTN4)
 
     # 获取提示信息
     def getListToastMsg(self):
