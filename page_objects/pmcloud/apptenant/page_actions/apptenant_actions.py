@@ -29,6 +29,14 @@ class ApptenantActions(PagePubSelenium):
 
         return self.getElementText(locator=Apptenant.SELECTTEXT)
 
+    def getSelectApptenantText(self):
+        """
+        获取选择的具体企业账号的名称.
+        :return: 具体企业账号名称
+        """
+
+        return self.getElementText(locator=Apptenant.APPTENANT)
+
     @timeDecorator(1)
     def clickSelect(self):
         """

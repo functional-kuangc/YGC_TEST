@@ -10,5 +10,5 @@ class Apptenant:
     # 选择框
     SELECTTEXT = ("xpath", ".//*[@id='tenantSelect']/div/div/span")  # 选择框名称
     SELECT = ("xpath", ".//*[@id='combo1']/div/span")  # 下拉框
-    APPTENANT = ("xpath", ".//*[@id='combo1']/ul/li[2]/span")  # 下拉框选项：数据中心-回归验证004
+    APPTENANT = ("xpath", '//*[@id="combo1"]/ul/li[2]')  # 下拉框选择中的名称
     OKBTN = ("id", "submitbtn")  # 确定按钮
