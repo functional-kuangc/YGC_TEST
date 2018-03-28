@@ -23,7 +23,7 @@ class TestApptenant(unittest.TestCase):
 
     def tearDown(self):
 
-        logger.info("测试后退出")
+        logger.info("测试后退出.")
         self.driver.quit()
 
     def test_apptenant_login_success(self):
