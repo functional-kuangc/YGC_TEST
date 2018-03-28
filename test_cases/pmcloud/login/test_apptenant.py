@@ -32,11 +32,29 @@ class TestApptenant(unittest.TestCase):
 
         if apptenant_page.getApptenantTitle() == "企业帐号":
 
+            expected_select_text = "回归验证004"
+
+            apptenant_page.clickSelect()
+            result_select_text = apptenant_page.getSelectApptenantText()
+            apptenant_page.clickApptenant()
+            apptenant_page.clickOKButton()
+
+            self.assertEqual(expected_select_text, result_select_text,
+                             msg="测试不通过, 期望结果为: {expect}, 实际结果为: {result}."
+                             .format(expect=expected_select_text, result=result_select_text))
+
+    def test_apptenant_login_error(self):
+
+        apptenant_page = ApptenantActions(self.driver)
+
+        if apptenant_page.getApptenantTitle() == "企业帐号":
+
             expected_select_text = "回归验证005"
 
             apptenant_page.clickSelect()
             result_select_text = apptenant_page.getSelectApptenantText()
             apptenant_page.clickApptenant()
+            apptenant_page.clickOKButton()
 
             self.assertEqual(expected_select_text, result_select_text,
                              msg="测试不通过, 期望结果为: {expect}, 实际结果为: {result}."
