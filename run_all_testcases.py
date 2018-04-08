@@ -8,4 +8,4 @@ __author__ = "sunxr"
 __version__ = "V1.2"
 
 TestCaseSuite().executeTestCases()
-SendMail().sendTestReport()
+# SendMail().sendTestReport()

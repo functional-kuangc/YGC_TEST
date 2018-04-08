@@ -51,7 +51,7 @@ class TestWorkbench(unittest.TestCase):
 
         cls.workbench_page.clickProject()
 
-        expected_result = "项目档案"
+        expected_result = "项目档案1"
         result = cls.workbench_page.getElementText(locator=("xpath", '//*[@id="app"]/div/div/div/div[1]/h1'))
 
         cls.assertEqual(expected_result, result, msg="测试不通过，期望结果为：{expect}, 实际结果为：{result}."
@@ -64,7 +64,7 @@ class TestWorkbench(unittest.TestCase):
 
         cls.workbench_page.clickProduce()
 
-        expected_result = "工序"
+        expected_result = "工序1"
         result = cls.workbench_page.getElementText(locator=("xpath", '//*[@id="app"]/div/div/div/div[1]/h1'))
 
         cls.assertEqual(expected_result, result, msg="测试不通过，期望结果为：{expect}, 实际结果为：{result}."
@@ -77,7 +77,7 @@ class TestWorkbench(unittest.TestCase):
 
         cls.workbench_page.clickWorkQuality()
 
-        expected_result = "质量标准"
+        expected_result = "质量标准1"
         result = cls.workbench_page.getElementText(locator=("xpath", '//*[@id="app"]/div/div/div/div[1]/h4'))
 
         cls.assertEqual(expected_result, result, msg="测试不通过，期望结果为：{expect}, 实际结果为：{result}."
@@ -90,7 +90,7 @@ class TestWorkbench(unittest.TestCase):
 
         cls.workbench_page.clickProblemReason()
 
-        expected_result = "问题原因"
+        expected_result = "问题原因1"
         result = cls.workbench_page.getElementText(locator=("xpath", '//*[@id="app"]/div/div/div/div[1]/h1'))
 
         cls.assertEqual(expected_result, result, msg="测试不通过，期望结果为：{expect}, 实际结果为：{result}."
@@ -103,7 +103,7 @@ class TestWorkbench(unittest.TestCase):
 
         cls.workbench_page.clickContactType()
 
-        expected_result = "联系类型"
+        expected_result = "联系类型1"
         result = cls.workbench_page.getElementText(locator=("xpath", '//*[@id="app"]/div/div/div/div[1]'))
 
         cls.assertEqual(expected_result, result, msg="测试不通过，期望结果为：{expect}, 实际结果为：{result}."
