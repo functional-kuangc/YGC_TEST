@@ -31,13 +31,11 @@ class WorkbenchActions(PagePubSelenium):
         self.click(locator=Workbench.SELECT)
 
     @timeDecorator(1)
-    def logout(self):
+    def clickLogout(self):
         """
-        注销.
-        :return: 退出登录
+        点击注销按钮.
         """
 
-        self.clickSelect()
         self.click(locator=Workbench.LOGOUT)
 
     @timeDecorator(1)
@@ -47,7 +45,9 @@ class WorkbenchActions(PagePubSelenium):
         :return: 跳转到项目档案页面.
         """
 
+        self.switchBackToFrame()
         self.click(locator=Workbench.PROJECT)
+        self.switchToIframe()
 
     @timeDecorator(1)
     def moveMouseToBasicArchives(self):
@@ -56,6 +56,7 @@ class WorkbenchActions(PagePubSelenium):
         :return: 展开基础档案后面的菜单
         """
 
+        self.switchBackToFrame()
         self.moveMouseToElement(locator=Workbench.BASICARCHIVES)
 
     @timeDecorator(1)
@@ -67,6 +68,7 @@ class WorkbenchActions(PagePubSelenium):
 
         self.moveMouseToBasicArchives()
         self.click(locator=Workbench.PRODUCE)
+        self.switchToIframe()
 
     @timeDecorator(1)
     def clickWorkQuality(self):
@@ -77,6 +79,7 @@ class WorkbenchActions(PagePubSelenium):
 
         self.moveMouseToBasicArchives()
         self.click(locator=Workbench.WORKQUALITY)
+        self.switchToIframe()
 
     @timeDecorator(1)
     def clickProblemReason(self):
@@ -87,6 +90,7 @@ class WorkbenchActions(PagePubSelenium):
 
         self.moveMouseToBasicArchives()
         self.click(locator=Workbench.PROBLEMREASON)
+        self.switchToIframe()
 
     @timeDecorator(1)
     def clickContactType(self):
@@ -97,6 +101,7 @@ class WorkbenchActions(PagePubSelenium):
 
         self.moveMouseToBasicArchives()
         self.click(locator=Workbench.CONTACTTYPE)
+        self.switchToIframe()
 
     @timeDecorator(1)
     def switchToIframe(self):
@@ -113,3 +118,12 @@ class WorkbenchActions(PagePubSelenium):
         """
 
         self.switchToDefaultContent()
+
+    def logout(self):
+        """
+        注销全流程.
+        """
+
+        self.switchBackToFrame()
+        self.clickSelect()
+        self.clickLogout()
