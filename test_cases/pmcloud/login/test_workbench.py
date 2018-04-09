@@ -44,70 +44,70 @@ class TestWorkbench(unittest.TestCase):
         WorkbenchActions(cls.__driver).logout()
         cls.__driver.quit()
 
-    def test_1_click_project(cls):
+    def test_1_click_project(self):
         """
         测试点击项目档案.
         """
 
-        cls.workbench_page.clickProject()
+        self.workbench_page.clickProject()
 
         expected_result = "项目档案1"
-        result = cls.workbench_page.getElementText(locator=("xpath", '//*[@id="app"]/div/div/div/div[1]/h1'))
+        result = self.workbench_page.getElementText(locator=("xpath", '//*[@id="app"]/div/div/div/div[1]/h1'))
 
-        cls.assertEqual(expected_result, result, msg="测试不通过，期望结果为：{expect}, 实际结果为：{result}."
+        self.assertEqual(expected_result, result, msg="测试不通过，期望结果为：{expect}, 实际结果为：{result}."
                          .format(expect=expected_result, result=result))
 
-    def test_2_click_produce(cls):
+    def test_2_click_produce(self):
         """
         测试点击工序.
         """
 
-        cls.workbench_page.clickProduce()
+        self.workbench_page.clickProduce()
 
         expected_result = "工序1"
-        result = cls.workbench_page.getElementText(locator=("xpath", '//*[@id="app"]/div/div/div/div[1]/h1'))
+        result = self.workbench_page.getElementText(locator=("xpath", '//*[@id="app"]/div/div/div/div[1]/h1'))
 
-        cls.assertEqual(expected_result, result, msg="测试不通过，期望结果为：{expect}, 实际结果为：{result}."
-                        .format(expect=expected_result, result=result))
+        self.assertEqual(expected_result, result, msg="测试不通过，期望结果为：{expect}, 实际结果为：{result}."
+                         .format(expect=expected_result, result=result))
 
-    def test_3_click_work_quality(cls):
+    def test_3_click_work_quality(self):
         """
         测试点击质量标准.
         """
 
-        cls.workbench_page.clickWorkQuality()
+        self.workbench_page.clickWorkQuality()
 
         expected_result = "质量标准1"
-        result = cls.workbench_page.getElementText(locator=("xpath", '//*[@id="app"]/div/div/div/div[1]/h4'))
+        result = self.workbench_page.getElementText(locator=("xpath", '//*[@id="app"]/div/div/div/div[1]/h4'))
 
-        cls.assertEqual(expected_result, result, msg="测试不通过，期望结果为：{expect}, 实际结果为：{result}."
-                        .format(expect=expected_result, result=result))
+        self.assertEqual(expected_result, result, msg="测试不通过，期望结果为：{expect}, 实际结果为：{result}."
+                         .format(expect=expected_result, result=result))
 
-    def test_4_click_problem_reason(cls):
+    def test_4_click_problem_reason(self):
         """
         测试点击问题原因.
         """
 
-        cls.workbench_page.clickProblemReason()
+        self.workbench_page.clickProblemReason()
 
         expected_result = "问题原因1"
-        result = cls.workbench_page.getElementText(locator=("xpath", '//*[@id="app"]/div/div/div/div[1]/h1'))
+        result = self.workbench_page.getElementText(locator=("xpath", '//*[@id="app"]/div/div/div/div[1]/h1'))
 
-        cls.assertEqual(expected_result, result, msg="测试不通过，期望结果为：{expect}, 实际结果为：{result}."
-                        .format(expect=expected_result, result=result))
+        self.assertEqual(expected_result, result, msg="测试不通过，期望结果为：{expect}, 实际结果为：{result}."
+                         .format(expect=expected_result, result=result))
 
-    def test_5_click_contact_type(cls):
+    def test_5_click_contact_type(self):
         """
         测试点击联系类型.
         """
 
-        cls.workbench_page.clickContactType()
+        self.workbench_page.clickContactType()
 
         expected_result = "联系类型1"
-        result = cls.workbench_page.getElementText(locator=("xpath", '//*[@id="app"]/div/div/div/div[1]'))
+        result = self.workbench_page.getElementText(locator=("xpath", '//*[@id="app"]/div/div/div/div[1]'))
 
-        cls.assertEqual(expected_result, result, msg="测试不通过，期望结果为：{expect}, 实际结果为：{result}."
-                        .format(expect=expected_result, result=result))
+        self.assertEqual(expected_result, result, msg="测试不通过，期望结果为：{expect}, 实际结果为：{result}."
+                         .format(expect=expected_result, result=result))
 
 
 if __name__ == '__main__':
