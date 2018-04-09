@@ -31,8 +31,7 @@ class TestWorkbench(unittest.TestCase):
         logger.info("测试前准备.")
         cls.__driver = browser(glo.GLO_BROWSER_TYPE)
 
-        PMCloudIndexActions(cls.__driver).openPMCloudIndex()
-        PMCloudIndexActions(cls.__driver).clickLoginButton()
+        PMCloudIndexActions(cls.__driver).login()
         PMCloudLoginActions(cls.__driver).pmcloudLogin()
         ApptenantActions(cls.__driver).apptenantLogin()
         cls.workbench_page = WorkbenchActions(cls.__driver)

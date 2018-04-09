@@ -31,3 +31,11 @@ class PMCloudIndexActions(PagePubSelenium):
         """
 
         self.click(locator=PMCloudIndex.LOGINBTN)
+
+    def login(self):
+        """
+        登录全流程.
+        """
+
+        self.openPMCloudIndex()
+        self.clickLoginButton()
