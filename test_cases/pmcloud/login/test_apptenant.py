@@ -11,6 +11,7 @@ logger = Logger("TestApptenant").getLog()
 
 
 class TestApptenant(unittest.TestCase):
+    """测试友工程的企业帐号"""
 
     def setUp(self):
 
@@ -27,6 +28,7 @@ class TestApptenant(unittest.TestCase):
         self.driver.quit()
 
     def test_apptenant_login_success(self):
+        """企业帐号验证通过"""
 
         apptenant_page = ApptenantActions(self.driver)
 
@@ -44,6 +46,7 @@ class TestApptenant(unittest.TestCase):
                              .format(expect=expected_select_text, result=result_select_text))
 
     def test_apptenant_login_error(self):
+        """企业帐号验证不通过"""
 
         apptenant_page = ApptenantActions(self.driver)
 

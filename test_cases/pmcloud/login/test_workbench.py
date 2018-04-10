@@ -44,65 +44,55 @@ class TestWorkbench(unittest.TestCase):
         cls.__driver.quit()
 
     def test_1_click_project(self):
-        """
-        测试点击项目档案.
-        """
+        """测试点击项目档案"""
 
         self.workbench_page.clickProject()
 
-        expected_result = "项目档案1"
+        expected_result = "项目档案"
         result = self.workbench_page.getElementText(locator=("xpath", '//*[@id="app"]/div/div/div/div[1]/h1'))
 
         self.assertEqual(expected_result, result, msg="测试不通过，期望结果为：{expect}, 实际结果为：{result}."
                          .format(expect=expected_result, result=result))
 
     def test_2_click_produce(self):
-        """
-        测试点击工序.
-        """
+        """测试点击工序"""
 
         self.workbench_page.clickProduce()
 
-        expected_result = "工序1"
+        expected_result = "工序"
         result = self.workbench_page.getElementText(locator=("xpath", '//*[@id="app"]/div/div/div/div[1]/h1'))
 
         self.assertEqual(expected_result, result, msg="测试不通过，期望结果为：{expect}, 实际结果为：{result}."
                          .format(expect=expected_result, result=result))
 
     def test_3_click_work_quality(self):
-        """
-        测试点击质量标准.
-        """
+        """测试点击质量标准"""
 
         self.workbench_page.clickWorkQuality()
 
-        expected_result = "质量标准1"
+        expected_result = "质量标准"
         result = self.workbench_page.getElementText(locator=("xpath", '//*[@id="app"]/div/div/div/div[1]/h4'))
 
         self.assertEqual(expected_result, result, msg="测试不通过，期望结果为：{expect}, 实际结果为：{result}."
                          .format(expect=expected_result, result=result))
 
     def test_4_click_problem_reason(self):
-        """
-        测试点击问题原因.
-        """
+        """测试点击问题原因"""
 
         self.workbench_page.clickProblemReason()
 
-        expected_result = "问题原因1"
+        expected_result = "问题原因"
         result = self.workbench_page.getElementText(locator=("xpath", '//*[@id="app"]/div/div/div/div[1]/h1'))
 
         self.assertEqual(expected_result, result, msg="测试不通过，期望结果为：{expect}, 实际结果为：{result}."
                          .format(expect=expected_result, result=result))
 
     def test_5_click_contact_type(self):
-        """
-        测试点击联系类型.
-        """
+        """测试点击联系类型"""
 
         self.workbench_page.clickContactType()
 
-        expected_result = "联系类型1"
+        expected_result = "联系类型"
         result = self.workbench_page.getElementText(locator=("xpath", '//*[@id="app"]/div/div/div/div[1]'))
 
         self.assertEqual(expected_result, result, msg="测试不通过，期望结果为：{expect}, 实际结果为：{result}."
