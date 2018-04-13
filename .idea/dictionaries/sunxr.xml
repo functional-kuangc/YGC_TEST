@@ -2,7 +2,13 @@
   <dictionary name="sunxr">
     <words>
       <w>addbtn</w>
+      <w>addcontacttypebtn</w>
+      <w>addcontacttypecancelbtn</w>
+      <w>addcontacttypeinput</w>
+      <w>addcontacttypesavebtn</w>
+      <w>addcontacttypetext</w>
       <w>addenterprisecommonxpath</w>
+      <w>addtoast</w>
       <w>appcenter</w>
       <w>apptenant</w>
       <w>asctime</w>
@@ -19,11 +25,25 @@
       <w>cardtoast</w>
       <w>cardtoastclose</w>
       <w>closebtn</w>
+      <w>contactaddbtn</w>
       <w>contacttype</w>
+      <w>contacttypeaddbtn</w>
+      <w>contacttypeaddinput</w>
+      <w>contacttypeinput</w>
+      <w>contacttypetext</w>
+      <w>contacttypetextinput</w>
       <w>createbtn</w>
       <w>deletebtn</w>
       <w>deletecancelbtn</w>
       <w>deleteclosebtn</w>
+      <w>deletecontacttypebtn</w>
+      <w>deletecontacttypecancelbtn</w>
+      <w>deletecontacttypeclosebtn</w>
+      <w>deletecontacttypemsg</w>
+      <w>deletecontacttypenousebtn</w>
+      <w>deletecontacttypeokbtn</w>
+      <w>deletecontacttypetext</w>
+      <w>deletecontacttypeusebtn</w>
       <w>deletemsg</w>
       <w>deleteokbtn</w>
       <w>dropdown</w>
@@ -33,6 +53,11 @@
       <w>editbtn</w>
       <w>editcodeinputtext</w>
       <w>editcodetext</w>
+      <w>editcontacttypebtn</w>
+      <w>editcontacttypecancelbtn</w>
+      <w>editcontacttypeinput</w>
+      <w>editcontacttypesavebtn</w>
+      <w>editcontacttypetext</w>
       <w>editdescriptioninput</w>
       <w>editdescriptioninputtext</w>
       <w>editdescriptiontext</w>
@@ -142,6 +167,7 @@
       <w>repeattoastclose</w>
       <w>safaridriver</w>
       <w>savebtn</w>
+      <w>savebutton</w>
       <w>screenshot</w>
       <w>searchbtn</w>
       <w>searchbutton</w>
