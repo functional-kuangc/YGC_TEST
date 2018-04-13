@@ -5,6 +5,7 @@ from .pmcloud.workbench.page_actions.workbench_actions import WorkbenchActions
 from .pmcloud.project.page_actions.project_actions import ProjectActions
 from .pmcloud.project.page_actions.project_team_enterprise_actions import ProjectTeamEnterpriseActions
 from .pmcloud.project.page_actions.project_team_enterprise_add_actions import ProjectTeamEnterpriseAddActions
+from .pmcloud.contacttype.page_actions.contacttype_actions import ContactTypeActions
 
 __author__ = "sunxr"
 __version__ = "V1.0"
