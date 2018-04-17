@@ -14,5 +14,6 @@ class PMCloudLogin:
     LOGINBTN = ("id", "submit_btn_login")  # 登录按钮
 
     # 账号
-    USER = "zxcyui9637410@126.com"
+    # USER = "zxcyui9637410@126.com"
+    USER = "17610781109"
     PSW = "123qwe!@#"

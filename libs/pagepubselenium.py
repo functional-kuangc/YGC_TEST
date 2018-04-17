@@ -204,6 +204,7 @@ class PagePubSelenium:
         try:
             # EC.presence_of_all_elements_located  判断是否至少有1个元素存在于DOM树
             elements = WebDriverWait(self.__driver, timeout, 1).until(EC.presence_of_all_elements_located(locator))
+            # elements = self.__driver.find_elements(locator)
             logger.info("定位到指定元素: {key} => {value}.".format(key=locator[0], value=locator[1]))
             return elements
         except TimeoutException:

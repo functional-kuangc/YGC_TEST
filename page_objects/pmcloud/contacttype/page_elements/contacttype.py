@@ -32,3 +32,4 @@ class ContactType:
 
     # 公共定位
     TOAST = ("xpath", "html/body/div[3]/div/span/div/div/div/div/div[2]")  # toast提示
+    CONTACTTYPELISTS = ("xpath", "/html/body/div[1]/div/div/div/div[2]/div[1]/span//input")  # 联系类型列表
