@@ -35,29 +35,108 @@ class TestContactTypeAdd(unittest.TestCase):
         PMCloudLoginActions(self.__driver).pmcloudLogin()
         ApptenantActions(self.__driver).apptenantLogin()
         WorkbenchActions(self.__driver).clickContactType()
+        self.contacttype_page = ContactTypeActions(self.__driver)
 
     def tearDown(self):
 
-        logger.info("测试后退出.")
         WorkbenchActions(self.__driver).logout()
+        logger.info("测试后退出.")
         self.__driver.quit()
 
-    def test_contacttypelist(self):
+    def test_contacttype_add_success(self):
+        """新增联系类型成功"""
 
-        contacttype_page = ContactTypeActions(self.__driver)
+        expected_contacttype = "自动化测试新增联系类型"
 
-        contacttype_page.click(ContactType.ADDCONTACTTYPECANCELBTN)
-        contacttype_page.pageSleep(2)
+        self.contacttype_page.clickAddContactTypeCancelButton()
+        self.contacttype_page.saveAddContactType()
 
-        elements = contacttype_page.findElements(("xpath", "/html/body/div[1]/div/div/div/div[2]/div[1]/span//input"))
-        # print(elements)
-        for element in elements:
-            print(element.get_attribute("value"))
-        elements = self.__driver.find_elements_by_class_name("widget__input")
-        # print(elements)
-        for element in elements:
-            e = element.find_element_by_tag_name("input")
-            print(e.get_attribute("value"))
+        actual_contacttype = self.contacttype_page.getAddContactTypeText()
+        contacttype_list = self.contacttype_page.getContactTypeLists()
+
+        self.contacttype_page.saveDeleteContactType()  # 测试完成后要删除，并且放在断言前面
+
+        self.assertEqual(expected_contacttype, actual_contacttype,
+                         msg="测试不通过，期望结果为：{expected}, 实际结果为：{actual}."
+                         .format(expected=expected_contacttype, actual=actual_contacttype))
+        self.assertIn(expected_contacttype, contacttype_list, msg="测试不通过，联系类型【{expected}】不存在"
+                      .format(expected=expected_contacttype))
+
+    def test_contacttype_add_cancel(self):
+        """取消新增联系类型"""
+
+        expected_contacttype = "自动化测试新增联系类型"
+
+        self.contacttype_page.clickAddContactTypeCancelButton()
+        self.contacttype_page.clickAddContactTypeButton()
+        self.contacttype_page.typeContactType()
+        self.contacttype_page.clickAddContactTypeCancelButton()
+
+        contacttype_list = self.contacttype_page.getContactTypeLists()
+
+        self.assertNotIn(expected_contacttype, contacttype_list, msg="测试不通过，联系类型【{expected}】不应该存在."
+                         .format(expected=expected_contacttype))
+
+    def test_contacttype_add_error_name_repeat(self):
+        """新增联系类型名称重复"""
+
+        expected_toast_msg = "名称重复，保存失败！"
+
+        self.contacttype_page.clickAddContactTypeCancelButton()
+        self.contacttype_page.saveAddContactType(contact_type="大型吊装作业")
+
+        actual_toast_msg = self.contacttype_page.getToastMsg()
+
+        self.contacttype_page.closeToast()
+
+        self.assertEqual(expected_toast_msg, actual_toast_msg,
+                         msg="测试不通过，期望结果为：{expected}, 实际结果为：{actual}."
+                         .format(expected=expected_toast_msg, actual=actual_toast_msg))
+
+    def test_contacttype_add_error_name_null(self):
+        """新增联系类型名称为空"""
+
+        expected_toast_msg = "请输入具体内容！"
+
+        self.contacttype_page.clickAddContactTypeCancelButton()
+        self.contacttype_page.saveAddContactType(contact_type="")
+
+        actual_toast_msg = self.contacttype_page.getToastMsg()
+
+        self.contacttype_page.closeToast()
+
+        self.assertEqual(expected_toast_msg, actual_toast_msg,
+                         msg="测试不通过，期望结果为：{expected}, 实际结果为：{actual}."
+                         .format(expected=expected_toast_msg, actual=actual_toast_msg))
+
+    def test_contacttype_add_error_name_over_length(self):
+        """新增联系类型名称长度超过50字符"""
+
+        expected_toast_msg = "请限制在50个字符！"
+        expected_contacttype = "一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十"
+
+        self.contacttype_page.clickAddContactTypeCancelButton()
+        self.contacttype_page.clickAddContactTypeButton()
+        self.contacttype_page.typeContactType(contact_type="一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十一二三四五六七八九十")
+
+        actual_toast_msg = self.contacttype_page.getToastMsg()
+
+        self.contacttype_page.closeToast()
+        self.contacttype_page.clickAddContactTypeSaveButton()
+
+        actual_contacttype = self.contacttype_page.getAddContactTypeText()
+        contacttype_list = self.contacttype_page.getContactTypeLists()
+
+        self.contacttype_page.saveDeleteContactType()  # 测试完成后要删除，并且放在断言前面
+
+        self.assertEqual(expected_toast_msg, actual_toast_msg,
+                         msg="测试不通过，期望结果为：{expected}, 实际结果为：{actual}."
+                         .format(expected=expected_toast_msg, actual=actual_toast_msg))
+        self.assertEqual(expected_contacttype, actual_contacttype,
+                         msg="测试不通过，期望结果为：{expected}, 实际结果为：{actual}."
+                         .format(expected=expected_contacttype, actual=actual_contacttype))
+        self.assertIn(expected_contacttype, contacttype_list, msg="测试不通过，联系类型【{expected}】不存在"
+                      .format(expected=expected_contacttype))
 
 
 if __name__ == '__main__':

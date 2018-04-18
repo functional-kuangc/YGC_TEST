@@ -178,6 +178,14 @@ class ContactTypeActions(PagePubSelenium):
         return self.getElementText(locator=ContactType.TOAST)
 
     @timeDecorator(1)
+    def closeToast(self):
+        """
+        关闭toast提示信息.
+        """
+
+        self.click(locator=ContactType.TOASTCLOSEBTN)
+
+    @timeDecorator(1)
     def getContactTypeLists(self):
         """
         获取所有联系类型.
