@@ -75,7 +75,7 @@ class ContactTypeActions(PagePubSelenium):
         self.clear(locator=ContactType.EDITCONTACTTYPEINPUT)
 
     @timeDecorator(1)
-    def editContactType(self, contact_type="自动化测试新增联系类型"):
+    def editContactType(self, contact_type="自动化测试编辑联系类型"):
         """
         编辑联系类型.
         :param contact_type: 修改后联系类型名称.
@@ -193,3 +193,22 @@ class ContactTypeActions(PagePubSelenium):
         return contact_type_list
 
     # 流程类操作
+    def saveAddContactType(self, contact_type="自动化测试新增联系类型"):
+        """
+        新增联系类型全流程.
+        :param contact_type: 新增联系类型名称
+        """
+
+        self.clickAddContactTypeButton()
+        self.typeContactType(contact_type=contact_type)
+        self.clickAddContactTypeSaveButton()
+
+    def saveEditContactType(self, contact_type="自动化测试编辑联系类型"):
+        """
+        编辑联系类型全流程.
+        :param contact_type: 修改后联系类型名称
+        """
+
+        self.clickEditContactTypeButton()
+        self.editContactType()
+        self.clickEditContactTypeSaveButton()
