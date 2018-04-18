@@ -24,11 +24,16 @@ class ContactType:
     # 联系类型删除
     DELETECONTACTTYPENOTUSEDBTN = ("xpath", ".//*[@id='app']/div/div/div/div[2]/div[1]/span/div[5]/div/div[2]/div[2]/button")  # 联系类型未被引用删除按钮
     DELETECONTACTTYPEUSEDBTN = ("xpath", ".//*[@id='app']/div/div/div/div[2]/div[1]/span/div[1]/div/div[2]/div[2]/button")  # 联系类型被引用删除按钮
-    DELETECONTACTTYPEMSG = ("xpath", "html/body/div[4]/div/div[2]/div/div/div[2]")  # 联系类型删除提示信息
-    DELETECONTACTTYPEOKBTN = ("xpath", "html/body/div[4]/div/div[2]/div/div/div[3]/div/button[2]")  # 删除确定按钮
-    DELETECONTACTTYPECANCELBTN = ("xpath", "html/body/div[4]/div/div[2]/div/div/div[3]/div/button[1]")  # 删除取消按钮
-    DELETECONTACTTYPECLOSEBTN = ("xpath", "html/body/div[4]/div/div[2]/div/div/div[1]/button")  # 删除右上角关闭按钮
     DELETECONTACTTYPETEXT = ("xpath", "/html/body/div[1]/div/div/div/div[2]/div[1]/span/div[5]/div/div[1]/input")  # 删除后的联系类型
+
+    DELETECONTACTTYPEMSG3 = ("xpath", "html/body/div[3]/div/div[2]/div/div/div[2]")  # 联系类型删除提示信息
+    DELETECONTACTTYPEOKBTN3 = ("xpath", "html/body/div[3]/div/div[2]/div/div/div[3]/div/button[2]")  # 删除确定按钮
+    DELETECONTACTTYPECANCELBTN3 = ("xpath", "html/body/div[3]/div/div[2]/div/div/div[3]/div/button[1]")  # 删除取消按钮
+    DELETECONTACTTYPECLOSEBTN3 = ("xpath", "html/body/div[3]/div/div[2]/div/div/div[1]/button")  # 删除右上角关闭按钮
+    DELETECONTACTTYPEMSG4 = ("xpath", "html/body/div[4]/div/div[2]/div/div/div[2]")  # 联系类型删除提示信息
+    DELETECONTACTTYPEOKBTN4 = ("xpath", "html/body/div[4]/div/div[2]/div/div/div[3]/div/button[2]")  # 删除确定按钮
+    DELETECONTACTTYPECANCELBTN4 = ("xpath", "html/body/div[4]/div/div[2]/div/div/div[3]/div/button[1]")  # 删除取消按钮
+    DELETECONTACTTYPECLOSEBTN4 = ("xpath", "html/body/div[4]/div/div[2]/div/div/div[1]/button")  # 删除右上角关闭按钮
 
     # 公共定位
     TOAST = ("xpath", "html/body/div[3]/div/span/div/div/div/div/div[2]")  # toast提示

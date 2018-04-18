@@ -133,7 +133,10 @@ class ContactTypeActions(PagePubSelenium):
         :return: 提示信息内容
         """
 
-        return self.getElementText(locator=ContactType.DELETECONTACTTYPEMSG)
+        if self.getElementText(locator=ContactType.DELETECONTACTTYPECANCELBTN3) == "取消":
+            return self.getElementText(locator=ContactType.DELETECONTACTTYPEMSG3)
+        else:
+            return self.getElementText(locator=ContactType.DELETECONTACTTYPEMSG4)
 
     @timeDecorator(1)
     def clickDeleteOKButton(self):
@@ -141,7 +144,10 @@ class ContactTypeActions(PagePubSelenium):
         在弹出的删除确认框中点击确定.
         """
 
-        self.click(locator=ContactType.DELETECONTACTTYPEOKBTN)
+        if self.getElementText(locator=ContactType.DELETECONTACTTYPECANCELBTN3) == "取消":
+            self.click(locator=ContactType.DELETECONTACTTYPEOKBTN3)
+        else:
+            self.click(locator=ContactType.DELETECONTACTTYPEOKBTN4)
 
     @timeDecorator(1)
     def clickDeleteCancelButton(self):
@@ -149,7 +155,10 @@ class ContactTypeActions(PagePubSelenium):
         在弹出的删除确认框中点击取消.
         """
 
-        self.click(locator=ContactType.DELETECONTACTTYPECANCELBTN)
+        if self.getElementText(locator=ContactType.DELETECONTACTTYPECANCELBTN3) == "取消":
+            self.click(locator=ContactType.DELETECONTACTTYPECANCELBTN3)
+        else:
+            self.click(locator=ContactType.DELETECONTACTTYPECANCELBTN4)
 
     @timeDecorator(1)
     def clickDeleteCloseButton(self):
@@ -157,7 +166,10 @@ class ContactTypeActions(PagePubSelenium):
         在弹出的删除确认框中点击右上角关闭.
         """
 
-        self.click(locator=ContactType.DELETECONTACTTYPECLOSEBTN)
+        if self.getElementText(locator=ContactType.DELETECONTACTTYPECANCELBTN3) == "取消":
+            self.click(locator=ContactType.DELETECONTACTTYPECLOSEBTN3)
+        else:
+            self.click(locator=ContactType.DELETECONTACTTYPECLOSEBTN4)
 
     @timeDecorator(1)
     def getDeleteContactTypeText(self):
