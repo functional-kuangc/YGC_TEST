@@ -131,7 +131,7 @@ class TestContactTypeEdit(unittest.TestCase):
                          msg="测试不通过，期望结果为：{expected}, 实际结果为：{actual}."
                          .format(expected=expected_contacttype, actual=actual_contacttype))
 
-    def test_contacttype_error_name_over_length(self):
+    def test_contacttype_edit_error_name_over_length(self):
         """编辑联系类型名称长度超过50字符"""
 
         expected_toast_msg = "请限制在50个字符！"
