@@ -125,7 +125,6 @@ class TestContactTypeAdd(unittest.TestCase):
         self.contacttype_page.clickAddContactTypeSaveButton()
 
         actual_contacttype = self.contacttype_page.getAddContactTypeText()
-        contacttype_list = self.contacttype_page.getContactTypeLists()
 
         self.contacttype_page.saveDeleteContactType()  # 测试完成后要删除，并且放在断言前面
 
@@ -135,8 +134,6 @@ class TestContactTypeAdd(unittest.TestCase):
         self.assertEqual(expected_contacttype, actual_contacttype,
                          msg="测试不通过，期望结果为：{expected}, 实际结果为：{actual}."
                          .format(expected=expected_contacttype, actual=actual_contacttype))
-        self.assertIn(expected_contacttype, contacttype_list, msg="测试不通过，联系类型【{expected}】不存在"
-                      .format(expected=expected_contacttype))
 
 
 if __name__ == '__main__':
