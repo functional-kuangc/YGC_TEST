@@ -349,10 +349,11 @@ class PagePubSelenium:
         except Exception as msg:
             self.__catchExceptionAndGetScreenshot("获取元素文本异常: %s." % msg)
 
-    def getElementAttribute(self, locator, name, timeout=3):
+    def getElementAttribute(self, name, locator="", element="", timeout=3):
         """
         获取元素指定属性的值.
         locator支持: "id", "xpath", "link text", "partial link text", "name", "tag name", "class name", "css selector".
+        :param element: 已经定位到的元素
         :param locator: ("id", "xxx")
         :param name: 属性名称
         :param timeout: 查找元素等待时间
@@ -360,10 +361,15 @@ class PagePubSelenium:
         """
 
         try:
-            element = self.findElement(locator=locator, timeout=timeout)
-            value = element.get_attribute(name)
-            logger.info("获取到的元素属性值为: {name} => {value}.".format(name=name, value=value))
-            return value
+            if locator == "":
+                value = element.get_attribute(name)
+                logger.info("获取到的元素属性值为: {name} => {value}.".format(name=name, value=value))
+                return value
+            else:
+                element = self.findElement(locator=locator, timeout=timeout)
+                value = element.get_attribute(name)
+                logger.info("获取到的元素属性值为: {name} => {value}.".format(name=name, value=value))
+                return value
         except Exception as msg:
             self.__catchExceptionAndGetScreenshot("获取元素属性值异常: %s." % msg)
 

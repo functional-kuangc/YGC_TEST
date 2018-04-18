@@ -22,8 +22,8 @@ class ContactType:
     EDITCONTACTTYPETEXT = ("xpath", "/html/body/div[1]/div/div/div/div[2]/div[1]/span/div[5]/div/div[1]/input")  # 编辑后的联系类型
 
     # 联系类型删除
-    DELETECONTACTTYPENOUSEBTN = ("xpath", ".//*[@id='app']/div/div/div/div[2]/div[1]/span/div[5]/div/div[2]/div[2]/button")  # 联系类型未被引用删除按钮
-    DELETECONTACTTYPEUSEBTN = ("xpath", ".//*[@id='app']/div/div/div/div[2]/div[1]/span/div[1]/div/div[2]/div[2]/button")  # 联系类型被引用删除按钮
+    DELETECONTACTTYPENOTUSEDBTN = ("xpath", ".//*[@id='app']/div/div/div/div[2]/div[1]/span/div[5]/div/div[2]/div[2]/button")  # 联系类型未被引用删除按钮
+    DELETECONTACTTYPEUSEDBTN = ("xpath", ".//*[@id='app']/div/div/div/div[2]/div[1]/span/div[1]/div/div[2]/div[2]/button")  # 联系类型被引用删除按钮
     DELETECONTACTTYPEMSG = ("xpath", "html/body/div[4]/div/div[2]/div/div/div[2]")  # 联系类型删除提示信息
     DELETECONTACTTYPEOKBTN = ("xpath", "html/body/div[4]/div/div[2]/div/div/div[3]/div/button[2]")  # 删除确定按钮
     DELETECONTACTTYPECANCELBTN = ("xpath", "html/body/div[4]/div/div[2]/div/div/div[3]/div/button[1]")  # 删除取消按钮

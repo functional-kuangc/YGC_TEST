@@ -42,10 +42,12 @@
       <w>deletecontacttypecancelbtn</w>
       <w>deletecontacttypeclosebtn</w>
       <w>deletecontacttypemsg</w>
+      <w>deletecontacttypenotusedbtn</w>
       <w>deletecontacttypenousebtn</w>
       <w>deletecontacttypeokbtn</w>
       <w>deletecontacttypetext</w>
       <w>deletecontacttypeusebtn</w>
+      <w>deletecontacttypeusedbtn</w>
       <w>deletemsg</w>
       <w>deleteokbtn</w>
       <w>dropdown</w>
