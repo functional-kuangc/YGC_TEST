@@ -52,7 +52,6 @@ class TestContactType(unittest.TestCase):
         # print(elements)
         for element in elements:
             print(element.get_attribute("value"))
-
         elements = self.__driver.find_elements_by_class_name("widget__input")
         # print(elements)
         for element in elements:
