@@ -210,5 +210,13 @@ class ContactTypeActions(PagePubSelenium):
         """
 
         self.clickEditContactTypeButton()
-        self.editContactType()
+        self.editContactType(contact_type=contact_type)
         self.clickEditContactTypeSaveButton()
+
+    def saveDeleteContactType(self):
+        """
+        删除新建的联系类型全流程.
+        """
+
+        self.clickDeleteNotUsedContactTypeButton()
+        self.clickDeleteOKButton()
