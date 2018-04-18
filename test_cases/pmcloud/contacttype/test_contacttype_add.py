@@ -17,15 +17,16 @@ from page_objects import ApptenantActions
 from page_objects import WorkbenchActions
 # 导入友工程联系类型操作类
 from page_objects import ContactTypeActions
-from page_objects.pmcloud.contacttype.page_elements.contacttype import ContactType
 
 __author__ = "sunxr"
 __version__ = "V1.0"
 
-logger = Logger("TestContactType").getLog()
+logger = Logger("TestContactTypeAdd").getLog()
 
 
-class TestContactType(unittest.TestCase):
+class TestContactTypeAdd(unittest.TestCase):
+    """联系类型新增相关测试"""
+
     def setUp(self):
 
         logger.info("测试前准备.")
