@@ -40,7 +40,7 @@ class TestLogin(unittest.TestCase):
         """登录成功"""
 
         logger.info("执行TestLogin_test_login_success测试用例.")
-        expected_result = "测试孙旭冉"
+        expected_result = "孙旭冉"
 
         index_page = PMCloudIndexActions(self.__driver)
         index_page.openPMCloudIndex()

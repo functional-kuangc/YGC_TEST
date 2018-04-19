@@ -34,7 +34,7 @@ class TestApptenant(unittest.TestCase):
 
         if apptenant_page.getApptenantTitle() == "企业帐号":
 
-            expected_select_text = "回归验证004"
+            expected_select_text = "友工程正式环境测试租户001"
 
             apptenant_page.clickSelect()
             result_select_text = apptenant_page.getSelectApptenantText()
@@ -52,7 +52,7 @@ class TestApptenant(unittest.TestCase):
 
         if apptenant_page.getApptenantTitle() == "企业帐号":
 
-            expected_select_text = "回归验证005"
+            expected_select_text = "友工程正式环境测试租户001error"
 
             apptenant_page.clickSelect()
             result_select_text = apptenant_page.getSelectApptenantText()
