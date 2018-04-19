@@ -24,6 +24,7 @@ __version__ = "V1.0"
 logger = Logger("TestContactTypeAdd").getLog()
 
 
+@unittest.skip
 class TestContactTypeAdd(unittest.TestCase):
     """联系类型新增相关测试"""
 
