@@ -29,6 +29,7 @@ __version__ = "V1.0"
 logger = Logger("TestProjectTeamEnterprise").getLog()
 
 
+@unittest.skip
 class TestProjectTeamEnterprise(unittest.TestCase):
     """测试友工程项目参与方"""
 

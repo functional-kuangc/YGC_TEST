@@ -24,6 +24,7 @@ __version__ = "V1.0"
 logger = Logger("TestProject").getLog()
 
 
+@unittest.skip
 class TestProject(unittest.TestCase):
     """测试友工程项目档案"""
 
