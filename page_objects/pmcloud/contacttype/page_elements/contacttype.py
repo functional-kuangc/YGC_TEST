@@ -30,6 +30,7 @@ class ContactType:
     DELETECONTACTTYPEOKBTN3 = ("xpath", "html/body/div[3]/div/div[2]/div/div/div[3]/div/button[2]")  # 删除确定按钮
     DELETECONTACTTYPECANCELBTN3 = ("xpath", "html/body/div[3]/div/div[2]/div/div/div[3]/div/button[1]")  # 删除取消按钮
     DELETECONTACTTYPECLOSEBTN3 = ("xpath", "html/body/div[3]/div/div[2]/div/div/div[1]/button")  # 删除右上角关闭按钮
+
     DELETECONTACTTYPEMSG4 = ("xpath", "html/body/div[4]/div/div[2]/div/div/div[2]")  # 联系类型删除提示信息
     DELETECONTACTTYPEOKBTN4 = ("xpath", "html/body/div[4]/div/div[2]/div/div/div[3]/div/button[2]")  # 删除确定按钮
     DELETECONTACTTYPECANCELBTN4 = ("xpath", "html/body/div[4]/div/div[2]/div/div/div[3]/div/button[1]")  # 删除取消按钮

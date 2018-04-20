@@ -29,7 +29,7 @@ class ContactTypeActions(PagePubSelenium):
         :param contact_type: 联系类型名称
         """
 
-        self.clear(locator=ContactType.ADDCONTACTTYPEINPUT)
+        # self.clear(locator=ContactType.ADDCONTACTTYPEINPUT)
         self.sendText(locator=ContactType.ADDCONTACTTYPEINPUT, text=contact_type)
 
     @timeDecorator(1)
@@ -81,7 +81,7 @@ class ContactTypeActions(PagePubSelenium):
         :param contact_type: 修改后联系类型名称.
         """
 
-        self.editClearContactType()
+        # self.editClearContactType()
         self.sendText(locator=ContactType.EDITCONTACTTYPEINPUT, text=contact_type)
 
     @timeDecorator(1)
